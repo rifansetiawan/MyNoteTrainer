@@ -32,6 +32,218 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB3082C928AA102400FADEEE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB3082E428AA182A00FADEEE /* Extentions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BB3082CA28AA102A00FADEEE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		BB3082CB28AA103600FADEEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB3082E228AA168700FADEEE /* ScalesLearn */,
+				BB3082E128AA168100FADEEE /* ScalesQuiz */,
+				BB3082E028AA167900FADEEE /* MusicalNoteLearn */,
+				BB3082DF28AA167000FADEEE /* MusicalNoteQuiz */,
+				BB3082DE28AA166A00FADEEE /* ClefLearn */,
+				BB3082DD28AA166200FADEEE /* ClefQuiz */,
+				BB3082DC28AA165A00FADEEE /* SightReading */,
+				BB3082DB28AA165200FADEEE /* Onboarding */,
+				BB3082DA28AA164800FADEEE /* Practice */,
+				BB3082D928AA163600FADEEE /* Settings */,
+				BB3082D828AA163000FADEEE /* Dashboard */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB3082CC28AA103A00FADEEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB3082D728AA161300FADEEE /* Dashboard */,
+				BB3082D628AA160800FADEEE /* Settings */,
+				BB3082D528AA15FA00FADEEE /* Practice */,
+				BB3082D428AA15EB00FADEEE /* Onboarding */,
+				BB3082D328AA15D200FADEEE /* SightReading */,
+				BB3082D228AA15C400FADEEE /* ClefQuiz */,
+				BB3082D128AA15BA00FADEEE /* ClefLearn */,
+				BB3082D028AA15B200FADEEE /* MusicalNoteQuiz */,
+				BB3082CF28AA15A500FADEEE /* MusicalNoteLearn */,
+				BB3082CE28AA158600FADEEE /* ScalesQuiz */,
+				BB3082CD28AA156900FADEEE /* ScalesLearn */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB3082CD28AA156900FADEEE /* ScalesLearn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScalesLearn;
+			sourceTree = "<group>";
+		};
+		BB3082CE28AA158600FADEEE /* ScalesQuiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScalesQuiz;
+			sourceTree = "<group>";
+		};
+		BB3082CF28AA15A500FADEEE /* MusicalNoteLearn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicalNoteLearn;
+			sourceTree = "<group>";
+		};
+		BB3082D028AA15B200FADEEE /* MusicalNoteQuiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicalNoteQuiz;
+			sourceTree = "<group>";
+		};
+		BB3082D128AA15BA00FADEEE /* ClefLearn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClefLearn;
+			sourceTree = "<group>";
+		};
+		BB3082D228AA15C400FADEEE /* ClefQuiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClefQuiz;
+			sourceTree = "<group>";
+		};
+		BB3082D328AA15D200FADEEE /* SightReading */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SightReading;
+			sourceTree = "<group>";
+		};
+		BB3082D428AA15EB00FADEEE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BB3082D528AA15FA00FADEEE /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		BB3082D628AA160800FADEEE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BB3082D728AA161300FADEEE /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BB3082D828AA163000FADEEE /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BB3082D928AA163600FADEEE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BB3082DA28AA164800FADEEE /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		BB3082DB28AA165200FADEEE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BB3082DC28AA165A00FADEEE /* SightReading */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SightReading;
+			sourceTree = "<group>";
+		};
+		BB3082DD28AA166200FADEEE /* ClefQuiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClefQuiz;
+			sourceTree = "<group>";
+		};
+		BB3082DE28AA166A00FADEEE /* ClefLearn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClefLearn;
+			sourceTree = "<group>";
+		};
+		BB3082DF28AA167000FADEEE /* MusicalNoteQuiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicalNoteQuiz;
+			sourceTree = "<group>";
+		};
+		BB3082E028AA167900FADEEE /* MusicalNoteLearn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicalNoteLearn;
+			sourceTree = "<group>";
+		};
+		BB3082E128AA168100FADEEE /* ScalesQuiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScalesQuiz;
+			sourceTree = "<group>";
+		};
+		BB3082E228AA168700FADEEE /* ScalesLearn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScalesLearn;
+			sourceTree = "<group>";
+		};
+		BB3082E428AA182A00FADEEE /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		BBC593A328A64A6800DEEF74 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +263,10 @@
 		BBC593AE28A64A6800DEEF74 /* MyNoteTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				BB3082CC28AA103A00FADEEE /* View */,
+				BB3082CB28AA103600FADEEE /* Model */,
+				BB3082CA28AA102A00FADEEE /* Sounds */,
+				BB3082C928AA102400FADEEE /* Utils */,
 				BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */,
 				BBC593B128A64A6800DEEF74 /* ContentView.swift */,
 				BBC593B328A64A6B00DEEF74 /* Assets.xcassets */,
