@@ -11,7 +11,16 @@
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
-		CBE98F1328AE434A00FF8EA8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1228AE434A00FF8EA8 /* Color.swift */; };
+		CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */; };
+		CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1628AE55B100FF8EA8 /* LearnView.swift */; };
+		CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */; };
+		CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1A28AE8E9600FF8EA8 /* SettingView.swift */; };
+		CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1C28AE8EBA00FF8EA8 /* TabBarView.swift */; };
+		CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1E28AE9BD500FF8EA8 /* PopupQuizView.swift */; };
+		CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F2128AEA13C00FF8EA8 /* PopupView.swift */; };
+		CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F2328AEA27200FF8EA8 /* Color+Ext.swift */; };
+		CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F2528AEA2AC00FF8EA8 /* View+Ext.swift */; };
+		CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F2828AEA33900FF8EA8 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +29,16 @@
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CBE98F1228AE434A00FF8EA8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		CBE98F1628AE55B100FF8EA8 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		CBE98F1A28AE8E9600FF8EA8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		CBE98F1C28AE8EBA00FF8EA8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		CBE98F1E28AE9BD500FF8EA8 /* PopupQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupQuizView.swift; sourceTree = "<group>"; };
+		CBE98F2128AEA13C00FF8EA8 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		CBE98F2328AEA27200FF8EA8 /* Color+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		CBE98F2528AEA2AC00FF8EA8 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		CBE98F2828AEA33900FF8EA8 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,7 @@
 		CBE98EF728AE414300FF8EA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBE98F2028AEA11700FF8EA8 /* General */,
 				CBE98F0228AE420800FF8EA8 /* Onboarding */,
 				CBE98F0128AE41EB00FF8EA8 /* Settings */,
 				CBE98F0028AE41DF00FF8EA8 /* Practice */,
@@ -94,6 +113,10 @@
 		CBE98EF828AE414C00FF8EA8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */,
+				CBE98F1628AE55B100FF8EA8 /* LearnView.swift */,
+				CBE98F1C28AE8EBA00FF8EA8 /* TabBarView.swift */,
+				CBE98F1E28AE9BD500FF8EA8 /* PopupQuizView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -150,6 +173,7 @@
 		CBE98F0028AE41DF00FF8EA8 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -157,6 +181,7 @@
 		CBE98F0128AE41EB00FF8EA8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				CBE98F1A28AE8E9600FF8EA8 /* SettingView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -171,6 +196,7 @@
 		CBE98F0328AE421B00FF8EA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CBE98F2728AEA31400FF8EA8 /* General */,
 				CBE98F0E28AE42AA00FF8EA8 /* Onboarding */,
 				CBE98F0D28AE42A000FF8EA8 /* Settings */,
 				CBE98F0C28AE428C00FF8EA8 /* Practice */,
@@ -281,9 +307,26 @@
 		CBE98F1128AE42EE00FF8EA8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				CBE98F1228AE434A00FF8EA8 /* Color.swift */,
+				CBE98F2328AEA27200FF8EA8 /* Color+Ext.swift */,
+				CBE98F2528AEA2AC00FF8EA8 /* View+Ext.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		CBE98F2028AEA11700FF8EA8 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CBE98F2128AEA13C00FF8EA8 /* PopupView.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		CBE98F2728AEA31400FF8EA8 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CBE98F2828AEA33900FF8EA8 /* RoundedCorner.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +399,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
+				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
+				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
+				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
+				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
+				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
-				CBE98F1328AE434A00FF8EA8 /* Color.swift in Sources */,
+				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
+				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
+				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
+				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -469,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -487,7 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = AK3CFW6FWF;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,7 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = AK3CFW6FWF;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
