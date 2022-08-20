@@ -13,6 +13,13 @@
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
+		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
+		CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5428B0D5BE00A2D8F0 /* PianoModel.swift */; };
+		CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5628B0D60700A2D8F0 /* PianoSound.swift */; };
+		CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5828B0D64E00A2D8F0 /* PianoKeyModel.swift */; };
+		CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */; };
+		CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5C28B0D6E700A2D8F0 /* KeyShape.swift */; };
+		CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */; };
 		CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */; };
 		CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1628AE55B100FF8EA8 /* LearnView.swift */; };
 		CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */; };
@@ -33,6 +40,13 @@
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
+		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
+		CB3CEF5428B0D5BE00A2D8F0 /* PianoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoModel.swift; sourceTree = "<group>"; };
+		CB3CEF5628B0D60700A2D8F0 /* PianoSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoSound.swift; sourceTree = "<group>"; };
+		CB3CEF5828B0D64E00A2D8F0 /* PianoKeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyModel.swift; sourceTree = "<group>"; };
+		CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyView.swift; sourceTree = "<group>"; };
+		CB3CEF5C28B0D6E700A2D8F0 /* KeyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyShape.swift; sourceTree = "<group>"; };
+		CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emuaps_8mb.sf2; sourceTree = "<group>"; };
 		CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		CBE98F1628AE55B100FF8EA8 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -298,6 +312,7 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -323,6 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				CBE98F2128AEA13C00FF8EA8 /* PopupView.swift */,
+				CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */,
+				CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -330,7 +347,11 @@
 		CBE98F2728AEA31400FF8EA8 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				CB3CEF5428B0D5BE00A2D8F0 /* PianoModel.swift */,
 				CBE98F2828AEA33900FF8EA8 /* RoundedCorner.swift */,
+				CB3CEF5628B0D60700A2D8F0 /* PianoSound.swift */,
+				CB3CEF5828B0D64E00A2D8F0 /* PianoKeyModel.swift */,
+				CB3CEF5C28B0D6E700A2D8F0 /* KeyShape.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -394,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
+				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,18 +428,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */,
+				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
+				CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */,
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
+				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
+				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
+				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
+				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

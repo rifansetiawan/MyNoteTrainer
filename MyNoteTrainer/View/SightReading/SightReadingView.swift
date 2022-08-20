@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SightReadingView: View {
+    @State var keyInfo: KeyInfo?
     @State var onTap = false
     
     var body: some View {
@@ -46,12 +47,15 @@ struct SightReadingView: View {
                 
                 Image("twinkle")
                     .frame(alignment: .center)
-                    .offset(x: self.onTap ? -1250 : 700, y: -18)
+                    .offset(x: self.onTap ? -1250 : 300, y: -18)
                     .animation(
                         .linear(duration: 15.0)
                     )
             }
+            
             Spacer()
+            Text("key info \(keyInfo?.n ?? -1)")
+            PianoView(keyInfo: $keyInfo)
         }.padding(40)
         
     }
