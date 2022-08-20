@@ -11,6 +11,7 @@ struct TabBarFixedNew: View {
     
 //    @State var connect: DashboardView = DashboardView(isShowPopup: false)
     @State private var tabSelection = 1
+
     
     
     var body: some View {
@@ -44,7 +45,9 @@ struct TabBarFixedNew: View {
             .navigationBarTitle(Text(navigationBarTitle), displayMode: .large)
 //            .navigationBarHidden(connect.isShowPopup)
         }
+
     }
+        
 }
 
 struct TabBarFixedNew_Previews: PreviewProvider {
