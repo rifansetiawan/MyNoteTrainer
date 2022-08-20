@@ -72,6 +72,33 @@ class PianoKeyModel: ObservableObject {
             }
         }
     }
+    
+    var noteName: String {
+        var res : String = ""
+        if (color == .white) {
+            let x = n % 7
+            let octave = 4 + (abs(n / 7))
+            switch(x) {
+            case 0:
+                res =  "C\(octave)"
+            case 1:
+                res =  "D\(octave)"
+            case 2:
+                res =  "E\(octave)"
+            case 3:
+                res =  "F\(octave)"
+            case 4:
+                res =  "G\(octave)"
+            case 5:
+                res =  "A\(octave)"
+            case 6:
+                res =  "B\(octave)"
+            default:
+                return res
+            }
+        }
+        return res
+    }
 
     init(color: KeyColor, type: KeyType, n: Int) {
         self.color = color

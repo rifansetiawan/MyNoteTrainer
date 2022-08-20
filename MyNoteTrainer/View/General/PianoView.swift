@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PianoView: View {
-    @Binding var keyInfo: KeyInfo?
+//    @Binding var keyInfo: KeyInfo?
     @State var location: CGPoint = .zero
     let model = SoundModel()
 
@@ -37,7 +37,7 @@ struct PianoView: View {
             }
         }
 //        .padding(20)
-        .background(Color.black)
+        .background(Color.pink)
         .gesture(drag)
     }
 
@@ -58,7 +58,7 @@ struct PianoView: View {
         }
         return view.onEvent(handler: { (keyInfo) in
             self.model.called(keyInfo: keyInfo)
-            self.keyInfo = keyInfo
+//            self.keyInfo = keyInfo
         })
     }
 
@@ -67,29 +67,29 @@ struct PianoView: View {
         return PianoKeyView(model: model, location: self.$location)
             .onEvent(handler: { (keyInfo) in
                 self.model.called(keyInfo: keyInfo)
-                self.keyInfo = keyInfo
+//                self.keyInfo = keyInfo
             })
     }
 
     private func blackKeys(n: Int) -> AnyView {
         switch n % 7 {
         case 2, 6:
-            return AnyView(Spacer().frame(width: 24))
+            return AnyView(Spacer().frame(width: 34))
         default:
             let model = PianoKeyModel(color: .black, type: .plain, n: n)
             let view = PianoKeyView(model: model, location: self.$location)
                 .onEvent(handler: { (keyInfo) in
                     self.model.called(keyInfo: keyInfo)
-                    self.keyInfo = keyInfo
+//                    self.keyInfo = keyInfo
                 })
             return AnyView(view)
         }
     }
 }
 
-struct PianoView_Previews: PreviewProvider {
-    static var previews: some View {
-        PianoView(keyInfo: .constant(nil))
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct PianoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PianoView(keyInfo: .constant(nil))
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}
