@@ -12,7 +12,7 @@ class SRHelper {
     static func generateBlock(offsetBpm: Int, notes: [Note]) -> [[Int]] {
         var arr = [Double(offsetBpm)]
         for i in notes {
-            arr.append(i.beat.rawValue)
+            arr.append(i.noteType.beat.rawValue)
         }
         var arr2 : [[Int]] = []
         var arr3 : [Int : Int] = [:]

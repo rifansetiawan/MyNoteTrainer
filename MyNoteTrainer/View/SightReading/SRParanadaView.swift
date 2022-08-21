@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct ParanadaView: View {
-    var notes: [Note] = [.quarterNote, .halfNote, .eighthNote]
-    var notesBlock = SRHelper.generateBlock(offsetBpm: 1, notes: [.quarterNote, .halfNote, .eighthNote])
+struct SRParanadaView: View {
+//    var notes: [Note] = [.quarterNote, .halfNote, .eighthNote, .quarterNote, .quarterNote, .quarterNote, .quarterNote]
+//    var notesBlock = SRHelper.generateBlock(offsetBpm: 1, notes: [.quarterNote, .halfNote, .eighthNote, .quarterNote, .quarterNote, .quarterNote, .quarterNote])
+    var notes: [Note] = []
+    var notesBlock: [[Int]] = []
     
     var body: some View {
         ZStack(alignment: .trailing){
@@ -54,7 +56,7 @@ struct ParanadaView: View {
                             HStack{
                                 ZStack(alignment: .bottom){
                                     if(block.count > 1 && block[1] > 0) {
-                                        Image(notes[block[1]-1].image)
+                                        Image(notes[block[1]-1].noteType.image)
                                             .resizable()
                                             .aspectRatio(1, contentMode: .fit)
                                             .frame(width: 35, height: 38, alignment: .bottom)
@@ -91,9 +93,9 @@ struct ParanadaView: View {
     }
 }
 
-struct ParanadaView_Previews: PreviewProvider {
+struct SRParanadaView_Previews: PreviewProvider {
     static var previews: some View {
-        ParanadaView()
+        SRParanadaView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

@@ -25,9 +25,10 @@ struct SightReadingView: View {
                     .font(.system(size: 24, weight: .semibold))
                 
                 Spacer()
-            }.padding()
+            }
+            .padding()
             
-            ParanadaView()
+            SRParanadaView()
             
             Text("\(conductor.noteNumber ?? -1)")
             

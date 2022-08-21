@@ -91,8 +91,10 @@ struct DashboardView: View {
                                 
                             }
                         })
-                        
-                        Button(action: {}, label: {
+                    NavigationLink(destination: ScalesLearnView()) {
+                        Button(action: {
+                            
+                        }, label: {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)
@@ -128,6 +130,8 @@ struct DashboardView: View {
                                 
                             }
                         })
+                    }
+                        
                         
                     Button(action: {
                         isShowPopup = true
