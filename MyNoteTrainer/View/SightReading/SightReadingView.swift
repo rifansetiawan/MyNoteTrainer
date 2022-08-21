@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SightReadingView: View {
+    @StateObject var conductor = InstrumentEXSConductor()
     @State var keyInfo: KeyInfo?
     @State var onTap = false
     
@@ -24,39 +25,16 @@ struct SightReadingView: View {
                     .font(.system(size: 24, weight: .semibold))
                 
                 Spacer()
-            }
+            }.padding()
             
-            ZStack(alignment: .top){
-                VStack(spacing: 18){
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -72)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -64)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -56)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -48)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -40)
-                }
-                
-                Image("twinkle")
-                    .frame(alignment: .center)
-                    .offset(x: self.onTap ? -1250 : 300, y: -18)
-                    .animation(
-                        .linear(duration: 15.0)
-                    )
-            }
+            ParanadaView()
             
-            Spacer()
-            Text("key info \(keyInfo?.n ?? -1)")
-            PianoView(keyInfo: $keyInfo)
-        }.padding(40)
+            Text("\(conductor.noteNumber ?? -1)")
+            
+            InstrumentEXSView(conductor: conductor)
+                .frame(maxWidth: .infinity, maxHeight: 175)
+//            PianoView(keyInfo: $keyInfo)
+        }
         
     }
 }
