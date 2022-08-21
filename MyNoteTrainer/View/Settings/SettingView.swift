@@ -18,7 +18,7 @@ struct SettingView: View {
                 .ignoresSafeArea()
             
             VStack{
-                DarkModeToggle()
+//                DarkModeToggle()
                 
                 VStack(alignment: .leading){
                     Text("Privacy")

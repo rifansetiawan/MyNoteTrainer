@@ -30,12 +30,24 @@ struct SightReadingView: View {
             
             SRParanadaView()
             
-            Text("\(conductor.noteNumber ?? -1)")
+//            Text("\(conductor.noteNumber ?? -1)")
             
             InstrumentEXSView(conductor: conductor)
                 .frame(maxWidth: .infinity, maxHeight: 175)
 //            PianoView(keyInfo: $keyInfo)
         }
+        .onAppear{
+            AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+                    UINavigationController.attemptRotationToDeviceOrientation()
+        }
+        .onDisappear {
+                DispatchQueue.main.async {
+                    AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+                    UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                    UINavigationController.attemptRotationToDeviceOrientation()
+                }
+            }
         
     }
 }

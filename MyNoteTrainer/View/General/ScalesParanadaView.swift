@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct ScalesParanadaView: View {
+    
+    //wait
+    @ObservedObject var conductor: InstrumentEXSConductor
     var notes: [Note] = [
         Note(noteType: .quarterNote, sound: Sound(tone: .C)),
         Note(noteType: .quarterNote, sound: Sound(tone: .D)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .E)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .F)),
+        Note(noteType: .quarterNote, sound: Sound(tone: .E, accidental: .sharp)),
+        Note(noteType: .quarterNote, sound: Sound(tone: .F, accidental: .sharp)),
         Note(noteType: .quarterNote, sound: Sound(tone: .G)),
         Note(noteType: .quarterNote, sound: Sound(tone: .A)),
         Note(noteType: .quarterNote, sound: Sound(tone: .B)),
         Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
     ]
     
+    
+    // naik setengha kan? hmmm
+    
     var body: some View {
         ZStack(alignment: .trailing){
-            VStack(spacing: 18){
+            VStack(spacing: 15){
                 Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
                     .foregroundColor(Color.grayColor)
@@ -47,19 +53,19 @@ struct ScalesParanadaView: View {
                             Image("sharp")
                                 .offset(x: 0, y: 6)
                         }
-                        .offset(x: 0, y: -73.5)
+                        .offset(x: 0, y: -63)
 //                        .background(.green)
                     }
-                    .frame(maxHeight: 85, alignment: .bottom)
+                    .frame(maxHeight: 71, alignment: .bottom)
                     ZStack{
                         VStack{
                             Image("sharp")
                                 .offset(x: 0, y: 6)
                         }
-                        .offset(x: 0, y: -63)
+                        .offset(x: 0, y: -54)
 //                        .background(.green)
                     }
-                    .frame(maxHeight: 85, alignment: .bottom)
+                    .frame(maxHeight: 71, alignment: .bottom)
                 }
                 
     
@@ -68,14 +74,15 @@ struct ScalesParanadaView: View {
                     ForEach(notes, id: \.id) { note in
                         HStack{
                             ZStack(alignment: .bottom){
-                                Image(note.noteType.image)
+                                Image("\(note.noteType.image)\(conductor.noteNumber == note.sound.key ? "Blue" : "")")
                                         .resizable()
                                         .aspectRatio(1, contentMode: .fit)
-                                        .frame(width: 60, height: 70, alignment: .bottom)
+                                        .frame(width: 50, height: 60, alignment: .bottom)
+//                                        .background(conductor.noteNumber == note.sound.key ? .red : .clear)
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
 //                            .background(.pink)
-                            .offset(x: 0, y: note.sound.position * 21)
+                            .offset(x: 0, y: note.sound.position * 18)
                             //naik satu nada -10,5
                             
                         }
@@ -83,7 +90,7 @@ struct ScalesParanadaView: View {
 
                     }
                     
-                    .frame(maxHeight: 85)
+                    .frame(maxHeight: 71)
                     
                 }
                     .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .leading)
@@ -100,7 +107,7 @@ struct ScalesParanadaView: View {
 
 struct ScalesParanadaView_Previews: PreviewProvider {
     static var previews: some View {
-        ScalesParanadaView()
+        ScalesParanadaView(conductor: InstrumentEXSConductor())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

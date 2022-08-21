@@ -92,9 +92,6 @@ struct DashboardView: View {
                             }
                         })
                     NavigationLink(destination: ScalesLearnView()) {
-                        Button(action: {
-                            
-                        }, label: {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)
@@ -129,7 +126,6 @@ struct DashboardView: View {
                                 .frame(width: 345, height: 105, alignment: .leading)
                                 
                             }
-                        })
                     }
                         
                         

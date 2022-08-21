@@ -24,18 +24,52 @@ enum Tone: String {
     case A
     case B
     
-    
+    var toneKey: Int8 {
+        switch(self) {
+        case .C:
+            return 60
+        case .D:
+            return 62
+        case .E:
+            return 64
+        case .F:
+            return 65
+        case .G:
+            return 67
+        case .A:
+            return 69
+        case .B:
+            return 71
+            
+        }
+    }
 }
 
-enum Accidental: String {
-    case sharp
-    case flat
+enum ToneKey: Int8 {
+    case C = 60 // c5 -72 > 72-60 brp aldi? wkwkwk 12?
+    case D = 62
+    case E = 64
+    case F = 65
+    case G = 67
+    case A = 69
+    case B = 71
+    //woe, itu lag ga? coba play di real device // bisa ga? aku lag
+}
+
+enum Accidental: Int8 {
+    case sharp = 1
+    case flat = -1
 }
 
 struct Sound {
     var tone: Tone
     var octave: Int = 4
     var accidental: Accidental?
+    
+    var key: Int8 {
+        let res = (tone.toneKey + Int8(((octave - 4) * 12))) + (accidental?.rawValue ?? 0)
+        return res
+    }
     
     var position: Double {
         print(self.tone.rawValue)
@@ -56,7 +90,6 @@ struct Sound {
         case .B:
             return -1.5 - x //b4 -> -1.5 , b5 -> -5
         }
-        
     }
 }
 

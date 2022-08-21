@@ -31,6 +31,7 @@
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
 		CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */; };
 		CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195928B235D500A1AD67 /* ScalesLearnView.swift */; };
+		CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195B28B2871200A1AD67 /* AppDelegate.swift */; };
 		CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */; };
 		CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1628AE55B100FF8EA8 /* LearnView.swift */; };
 		CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */; };
@@ -65,6 +66,7 @@
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
 		CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195928B235D500A1AD67 /* ScalesLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesLearnView.swift; sourceTree = "<group>"; };
+		CB8C195B28B2871200A1AD67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		CBE98F1628AE55B100FF8EA8 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				CBE98EF728AE414300FF8EA8 /* View */,
 				BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */,
 				BBC593B128A64A6800DEEF74 /* ContentView.swift */,
+				CB8C195B28B2871200A1AD67 /* AppDelegate.swift */,
 				BBC593B328A64A6B00DEEF74 /* Assets.xcassets */,
 				BBC593B528A64A6B00DEEF74 /* Preview Content */,
 			);
@@ -490,6 +493,7 @@
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
+				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
 				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
