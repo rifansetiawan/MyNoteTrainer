@@ -77,23 +77,74 @@ struct ScalesQuizView: View {
                     .font(.system(size: 36, weight: .semibold))
                 
                 
-                Button(action:{
-                    self.showActionSheet = true
-                    self.buttonAction(n: 0)
-                    
-                },label: {
-                    Text(scaleQuiz[self.i].answer[0])
-                        .font(.system(size: 45, weight: .semibold))
-                        .foregroundColor(.primaryColor)
-                        .padding()
-                        .frame(maxWidth: 74, maxHeight: 74)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.primaryColor,lineWidth: 2)
-                        )
-                })
-                
-                
+                HStack {
+                    if(self.i < scaleQuiz.count){
+                        //pilihan 1
+                        Button(action:{
+                            self.showActionSheet = true
+                            self.buttonAction(n: 0)
+                            
+                        },label: {
+                            Text(scaleQuiz[self.i].answer[0])
+                                .font(.system(size: 45, weight: .semibold))
+                                .foregroundColor(.primaryColor)
+                                .padding()
+                                .frame(maxWidth: 74, maxHeight: 74)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.primaryColor,lineWidth: 2)
+                                )
+                    })
+                        //pilihan 2
+                        Button(action:{
+                            self.showActionSheet = true
+                            self.buttonAction(n: 1)
+                            
+                        },label: {
+                            Text(scaleQuiz[self.i].answer[1])
+                                .font(.system(size: 45, weight: .semibold))
+                                .foregroundColor(.primaryColor)
+                                .padding()
+                                .frame(maxWidth: 74, maxHeight: 74)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.primaryColor,lineWidth: 2)
+                                )
+                    })
+                        //pilihan 3
+                        Button(action:{
+                            self.showActionSheet = true
+                            self.buttonAction(n: 2)
+                            
+                        },label: {
+                            Text(scaleQuiz[self.i].answer[2])
+                                .font(.system(size: 45, weight: .semibold))
+                                .foregroundColor(.primaryColor)
+                                .padding()
+                                .frame(maxWidth: 74, maxHeight: 74)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.primaryColor,lineWidth: 2)
+                                )
+                    })
+                        //pilihan 4
+                        Button(action:{
+                            self.showActionSheet = true
+                            self.buttonAction(n: 3)
+                            
+                        },label: {
+                            Text(scaleQuiz[self.i].answer[3])
+                                .font(.system(size: 45, weight: .semibold))
+                                .foregroundColor(.primaryColor)
+                                .padding()
+                                .frame(maxWidth: 74, maxHeight: 74)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.primaryColor,lineWidth: 2)
+                                )
+                    })
+                    }
+                }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

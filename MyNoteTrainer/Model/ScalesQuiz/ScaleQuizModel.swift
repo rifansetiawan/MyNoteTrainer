@@ -12,6 +12,8 @@ struct QuizModel  {
     var correct : Int?
 }
 var scaleQuiz : [QuizModel] = [
-    QuizModel(img: "kunciG", answer: ["A","D","E","G"], correct: 4),
-    QuizModel(img: "kunciG", answer: ["A","D","E","G"], correct: 4)
+    QuizModel(img: "kunciG", answer: ["A","D","E","G"], correct: 3),
+    QuizModel(img: "kunciG", answer: ["B","C","B","F"], correct: 2),
+    QuizModel(img: "kunciG", answer: ["C","E","B","A"], correct: 2),
+    QuizModel(img: "kunciG", answer: ["C","E","B","A"], correct: 2)
 ]
