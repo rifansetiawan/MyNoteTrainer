@@ -91,8 +91,7 @@ struct DashboardView: View {
                                 
                             }
                         })
-                        
-                        Button(action: {}, label: {
+                    NavigationLink(destination: ScalesLearnView()) {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)
@@ -127,9 +126,12 @@ struct DashboardView: View {
                                 .frame(width: 345, height: 105, alignment: .leading)
                                 
                             }
-                        })
+                    }
                         
-                    Button(action: {isShowPopup = true}, label: {
+                        
+                    Button(action: {
+                        isShowPopup = true
+                    }, label: {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)
@@ -146,7 +148,9 @@ struct DashboardView: View {
                     }
                 if isShowPopup {
                     PopupQuizView()
-                        .myCustomPopUp(onTapoutside: {isShowPopup = false}, withCloseBtn: true)
+                        .myCustomPopUp(onTapoutside: {
+                            isShowPopup = false
+                        }, withCloseBtn: true)
                 }
                 
             }
@@ -157,6 +161,6 @@ struct DashboardView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-            DashboardView()
+        DashboardView()
     }
 }

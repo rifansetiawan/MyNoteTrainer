@@ -16,8 +16,7 @@ struct PracticeView: View {
                 
                 VStack(spacing: 15){
                     
-                        
-                    Button(action: {}, label: {
+                    NavigationLink(destination: SightReadingView()){
                         ZStack{
                             Rectangle()
                                 .frame(width: 345, height: 105)
@@ -55,7 +54,7 @@ struct PracticeView: View {
                             .frame(width: 345, height: 105, alignment: .leading)
                             
                         }
-                    })
+                    }
                     
                     Button(action: {}, label: {
                         ZStack{

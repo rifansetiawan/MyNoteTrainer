@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
@@ -20,6 +21,20 @@
 		CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */; };
 		CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5C28B0D6E700A2D8F0 /* KeyShape.swift */; };
 		CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */; };
+		CB3CEF6228B1243300A2D8F0 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF6128B1243300A2D8F0 /* AudioKit */; };
+		CB3CEF6528B1244E00A2D8F0 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF6428B1244E00A2D8F0 /* AudioKitUI */; };
+		CB3CEF6828B124EC00A2D8F0 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF6728B124EC00A2D8F0 /* Keyboard */; };
+		CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = CB3CEF8E28B1256700A2D8F0 /* Sounds */; };
+		CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */; };
+		CB3CEF9428B125E600A2D8F0 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */; };
+		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
+		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
+		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
+		CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */; };
+		CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195928B235D500A1AD67 /* ScalesLearnView.swift */; };
+		CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195B28B2871200A1AD67 /* AppDelegate.swift */; };
+		CB8C196028B32BD700A1AD67 /* ScalesQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195F28B32BD700A1AD67 /* ScalesQuizView.swift */; };
+		CB8C196228B338FD00A1AD67 /* ScaleQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C196128B338FD00A1AD67 /* ScaleQuizModel.swift */; };
 		CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */; };
 		CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1628AE55B100FF8EA8 /* LearnView.swift */; };
 		CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */; };
@@ -33,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +63,16 @@
 		CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyView.swift; sourceTree = "<group>"; };
 		CB3CEF5C28B0D6E700A2D8F0 /* KeyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyShape.swift; sourceTree = "<group>"; };
 		CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emuaps_8mb.sf2; sourceTree = "<group>"; };
+		CB3CEF8E28B1256700A2D8F0 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView2.swift; sourceTree = "<group>"; };
+		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
+		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
+		CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesParanadaView.swift; sourceTree = "<group>"; };
+		CB8C195928B235D500A1AD67 /* ScalesLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesLearnView.swift; sourceTree = "<group>"; };
+		CB8C195B28B2871200A1AD67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB8C195F28B32BD700A1AD67 /* ScalesQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesQuizView.swift; sourceTree = "<group>"; };
+		CB8C196128B338FD00A1AD67 /* ScaleQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleQuizModel.swift; sourceTree = "<group>"; };
 		CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		CBE98F1628AE55B100FF8EA8 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -64,6 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3CEF6828B124EC00A2D8F0 /* Keyboard in Frameworks */,
+				CB3CEF6528B1244E00A2D8F0 /* AudioKitUI in Frameworks */,
+				CB3CEF9428B125E600A2D8F0 /* SoundpipeAudioKit in Frameworks */,
+				CB3CEF6228B1243300A2D8F0 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +103,7 @@
 		BBC593A328A64A6800DEEF74 = {
 			isa = PBXGroup;
 			children = (
+				CB3CEF8E28B1256700A2D8F0 /* Sounds */,
 				BBC593AE28A64A6800DEEF74 /* MyNoteTrainer */,
 				BBC593AD28A64A6800DEEF74 /* Products */,
 			);
@@ -95,6 +126,7 @@
 				CBE98EF728AE414300FF8EA8 /* View */,
 				BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */,
 				BBC593B128A64A6800DEEF74 /* ContentView.swift */,
+				CB8C195B28B2871200A1AD67 /* AppDelegate.swift */,
 				BBC593B328A64A6B00DEEF74 /* Assets.xcassets */,
 				BBC593B528A64A6B00DEEF74 /* Preview Content */,
 			);
@@ -170,6 +202,7 @@
 		CBE98EFD28AE41AD00FF8EA8 /* ScalesLearn */ = {
 			isa = PBXGroup;
 			children = (
+				CB8C195928B235D500A1AD67 /* ScalesLearnView.swift */,
 			);
 			path = ScalesLearn;
 			sourceTree = "<group>";
@@ -177,6 +210,7 @@
 		CBE98EFE28AE41C600FF8EA8 /* ScalesQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				CB8C195F28B32BD700A1AD67 /* ScalesQuizView.swift */,
 			);
 			path = ScalesQuiz;
 			sourceTree = "<group>";
@@ -184,6 +218,7 @@
 		CBE98EFF28AE41D400FF8EA8 /* SightReading */ = {
 			isa = PBXGroup;
 			children = (
+				CB8C195128B1364900A1AD67 /* SRParanadaView.swift */,
 				CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */,
 			);
 			path = SightReading;
@@ -277,6 +312,7 @@
 		CBE98F0A28AE427000FF8EA8 /* ScalesQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				CB8C196128B338FD00A1AD67 /* ScaleQuizModel.swift */,
 			);
 			path = ScalesQuiz;
 			sourceTree = "<group>";
@@ -284,6 +320,7 @@
 		CBE98F0B28AE427A00FF8EA8 /* SightReading */ = {
 			isa = PBXGroup;
 			children = (
+				CB8C195528B13FFF00A1AD67 /* SRHelper.swift */,
 			);
 			path = SightReading;
 			sourceTree = "<group>";
@@ -330,6 +367,7 @@
 			children = (
 				CBE98F2328AEA27200FF8EA8 /* Color+Ext.swift */,
 				CBE98F2528AEA2AC00FF8EA8 /* View+Ext.swift */,
+				0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -340,6 +378,8 @@
 				CBE98F2128AEA13C00FF8EA8 /* PopupView.swift */,
 				CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */,
 				CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */,
+				CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */,
+				CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -352,6 +392,7 @@
 				CB3CEF5628B0D60700A2D8F0 /* PianoSound.swift */,
 				CB3CEF5828B0D64E00A2D8F0 /* PianoKeyModel.swift */,
 				CB3CEF5C28B0D6E700A2D8F0 /* KeyShape.swift */,
+				CB8C195328B13F9900A1AD67 /* Note.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -372,6 +413,12 @@
 			dependencies = (
 			);
 			name = MyNoteTrainer;
+			packageProductDependencies = (
+				CB3CEF6128B1243300A2D8F0 /* AudioKit */,
+				CB3CEF6428B1244E00A2D8F0 /* AudioKitUI */,
+				CB3CEF6728B124EC00A2D8F0 /* Keyboard */,
+				CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */,
+			);
 			productName = MyNoteTrainer;
 			productReference = BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */;
 			productType = "com.apple.product-type.application";
@@ -400,6 +447,12 @@
 				Base,
 			);
 			mainGroup = BBC593A328A64A6800DEEF74;
+			packageReferences = (
+				CB3CEF6028B1243300A2D8F0 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				CB3CEF6328B1244E00A2D8F0 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+				CB3CEF6628B124EC00A2D8F0 /* XCRemoteSwiftPackageReference "Keyboard" */,
+				CB3CEF9228B125E600A2D8F0 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+			);
 			productRefGroup = BBC593AD28A64A6800DEEF74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -416,6 +469,7 @@
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
+				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,24 +483,34 @@
 			files = (
 				CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */,
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
+				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
 				CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */,
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
+				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
+				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
+				CB8C196228B338FD00A1AD67 /* ScaleQuizModel.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
+				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
+				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
+				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
+				0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */,
+				CB8C196028B32BD700A1AD67 /* ScalesQuizView.swift in Sources */,
+				CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +711,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB3CEF6028B1243300A2D8F0 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CB3CEF6328B1244E00A2D8F0 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		CB3CEF6628B124EC00A2D8F0 /* XCRemoteSwiftPackageReference "Keyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Keyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		CB3CEF9228B125E600A2D8F0 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB3CEF6128B1243300A2D8F0 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB3CEF6028B1243300A2D8F0 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		CB3CEF6428B1244E00A2D8F0 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB3CEF6328B1244E00A2D8F0 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
+		CB3CEF6728B124EC00A2D8F0 /* Keyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB3CEF6628B124EC00A2D8F0 /* XCRemoteSwiftPackageReference "Keyboard" */;
+			productName = Keyboard;
+		};
+		CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB3CEF9228B125E600A2D8F0 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
+			productName = SoundpipeAudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBC593A428A64A6800DEEF74 /* Project object */;
 }

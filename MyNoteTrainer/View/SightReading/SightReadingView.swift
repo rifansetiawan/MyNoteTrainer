@@ -8,55 +8,52 @@
 import SwiftUI
 
 struct SightReadingView: View {
-//    @State var keyInfo: KeyInfo?
+    @StateObject var conductor = InstrumentEXSConductor()
+    @State var keyInfo: KeyInfo?
     @State var onTap = false
     
     var body: some View {
-        VStack{
-            HStack {
-                Button(action: { self.onTap.toggle() } ) {
-                    Text("Start")
-                        .font(.system(size: 22, weight: .bold))
+        ZStack {
+            Color.bgColor
+                .ignoresSafeArea()
+            
+            VStack{
+                HStack {
+                    Button(action: { self.onTap.toggle() } ) {
+                        Text("Start")
+                            .font(.system(size: 22, weight: .bold))
+                    }
+                    Spacer()
+                    
+                    Text("Twinkle Twinkle")
+                        .font(.system(size: 24, weight: .semibold))
+                    
+                    Spacer()
                 }
-                Spacer()
+                .padding()
                 
-                Text("Twinkle Twinkle")
-                    .font(.system(size: 24, weight: .semibold))
+                SRParanadaView()
                 
-                Spacer()
+                //            Text("\(conductor.noteNumber ?? -1)")
+                
+                InstrumentEXSView(conductor: conductor)
+                    .frame(maxWidth: .infinity, maxHeight: 175)
+                //            PianoView(keyInfo: $keyInfo)
             }
             
-            ZStack(alignment: .top){
-                VStack(spacing: 18){
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -72)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -64)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -56)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -48)
-                    Rectangle()
-                        .frame(width: 1000, height: 3, alignment: .center)
-//                        .offset(x: 0, y: -40)
-                }
-                
-                Image("twinkle")
-                    .frame(alignment: .center)
-                    .offset(x: self.onTap ? -1250 : 300, y: -18)
-                    .animation(
-                        .linear(duration: 15.0)
-                    )
+            .onAppear{
+                AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
+                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+                UINavigationController.attemptRotationToDeviceOrientation()
             }
-            
-            Spacer()
-//            Text("key info \(keyInfo?.n ?? -1)")
-            PianoView()
-        }.padding(40)
+            .onDisappear {
+                DispatchQueue.main.async {
+                    AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+                    UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                    UINavigationController.attemptRotationToDeviceOrientation()
+                }
+            }
+        }
         
     }
 }
