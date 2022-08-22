@@ -13,41 +13,46 @@ struct SightReadingView: View {
     @State var onTap = false
     
     var body: some View {
-        VStack{
-            HStack {
-                Button(action: { self.onTap.toggle() } ) {
-                    Text("Start")
-                        .font(.system(size: 22, weight: .bold))
+        ZStack {
+            Color.bgColor
+            .ignoresSafeArea()
+            
+            VStack{
+                HStack {
+                    Button(action: { self.onTap.toggle() } ) {
+                        Text("Start")
+                            .font(.system(size: 22, weight: .bold))
+                    }
+                    Spacer()
+                    
+                    Text("Twinkle Twinkle")
+                        .font(.system(size: 24, weight: .semibold))
+                    
+                    Spacer()
                 }
-                Spacer()
+                .padding()
                 
-                Text("Twinkle Twinkle")
-                    .font(.system(size: 24, weight: .semibold))
+                SRParanadaView()
                 
-                Spacer()
+    //            Text("\(conductor.noteNumber ?? -1)")
+                
+                InstrumentEXSView(conductor: conductor)
+                    .frame(maxWidth: .infinity, maxHeight: 175)
+    //            PianoView(keyInfo: $keyInfo)
             }
-            .padding()
-            
-            SRParanadaView()
-            
-//            Text("\(conductor.noteNumber ?? -1)")
-            
-            InstrumentEXSView(conductor: conductor)
-                .frame(maxWidth: .infinity, maxHeight: 175)
-//            PianoView(keyInfo: $keyInfo)
-        }
-        .onAppear{
-            AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
-            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-                    UINavigationController.attemptRotationToDeviceOrientation()
-        }
-        .onDisappear {
-                DispatchQueue.main.async {
-                    AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
-                    UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-                    UINavigationController.attemptRotationToDeviceOrientation()
-                }
+            .onAppear{
+                AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
+                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+                        UINavigationController.attemptRotationToDeviceOrientation()
             }
+            .onDisappear {
+                    DispatchQueue.main.async {
+                        AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+                        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                        UINavigationController.attemptRotationToDeviceOrientation()
+                    }
+        }
+        }
         
     }
 }

@@ -33,22 +33,13 @@ struct SRParanadaView: View {
     
     var body: some View {
         ZStack(alignment: .trailing){
-            VStack(spacing: 15){
-                Rectangle()
+            VStack(spacing: 18){
+                ForEach((1...5).reversed(), id: \.self) {_ in
+                    Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
                     .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
+                }
+                
             }
             HStack {
                 Image("kunciG")

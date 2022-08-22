@@ -28,21 +28,12 @@ struct ScalesParanadaView: View {
     var body: some View {
         ZStack(alignment: .trailing){
             VStack(spacing: 15){
-                Rectangle()
+                ForEach((1...5).reversed(), id: \.self) {_ in
+                    Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
                     .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                    .foregroundColor(Color.grayColor)
-                Rectangle()
-                .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
-                .foregroundColor(Color.grayColor)
+                }
+                
             }
             HStack {
                 Image("kunciG")
