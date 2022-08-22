@@ -11,6 +11,8 @@
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
+		C83E61F628B2787100E1680D /* ClefLearnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E61F528B2787100E1680D /* ClefLearnScreen.swift */; };
+		C83E61F828B27C1900E1680D /* g-clef-symbol 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C83E61F728B27C1900E1680D /* g-clef-symbol 2.png */; };
 		CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */; };
 		CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1628AE55B100FF8EA8 /* LearnView.swift */; };
 		CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */; };
@@ -29,6 +31,8 @@
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C83E61F528B2787100E1680D /* ClefLearnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefLearnScreen.swift; sourceTree = "<group>"; };
+		C83E61F728B27C1900E1680D /* g-clef-symbol 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "g-clef-symbol 2.png"; sourceTree = "<group>"; };
 		CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		CBE98F1628AE55B100FF8EA8 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */,
 				BBC593B128A64A6800DEEF74 /* ContentView.swift */,
 				BBC593B328A64A6B00DEEF74 /* Assets.xcassets */,
+				C83E61F728B27C1900E1680D /* g-clef-symbol 2.png */,
 				BBC593B528A64A6B00DEEF74 /* Preview Content */,
 			);
 			path = MyNoteTrainer;
@@ -138,6 +143,7 @@
 		CBE98EFB28AE418100FF8EA8 /* ClefLearn */ = {
 			isa = PBXGroup;
 			children = (
+				C83E61F528B2787100E1680D /* ClefLearnScreen.swift */,
 			);
 			path = ClefLearn;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
+				C83E61F828B27C1900E1680D /* g-clef-symbol 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
+				C83E61F628B2787100E1680D /* ClefLearnScreen.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
