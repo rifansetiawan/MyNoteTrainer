@@ -6,122 +6,56 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ClefLearnScreen: View {
+    @State var audioPlayer: AVAudioPlayer!
+    var vm: ClefViewModel = ClefViewModel()
+    private var whiteKeys : [Int8] = [60, 62, 64, 65, 67, 69, 71, 72]
+    private var blackKeys : [Int8] = [61, 63, 66, 68, 70]
+    var notes: [Note] = []
+    @State private var tappedKey: Int8 = -1
     
     var body: some View {
         NavigationView{
             VStack{
                 Spacer()
-                ledgerLines()
+                ledgerLines(tappedKey: tappedKey)
                 Spacer()
+                
+                Text("\(tappedKey)")
                 
                 ZStack{
                     Rectangle()
-                        .frame(width: .infinity, height: 255)
+                        .frame(width: .infinity, height: 305)
                     
                     HStack(spacing: 5){
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
                         
-                        Button {
+                        ForEach(whiteKeys, id: \.self){key in
                             
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 250)
-                                .foregroundColor(.white)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                            Button {
+                                self.vm.play(toneKey: key)
+                                self.tappedKey = key
+                            } label: {
+                                Rectangle()
+                                    .frame(width: 45, height: 300)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                            }
                         }
                     }
-                    HStack(spacing: 5){
-                        Button {
+                    HStack(spacing: 7){
+                        ForEach(blackKeys, id: \.self){key in
                             
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 150)
-                                .foregroundColor(.black)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 150)
-                                .foregroundColor(.black)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        .padding(.trailing, 55)
-                        
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 150)
-                                .foregroundColor(.black)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 150)
-                                .foregroundColor(.black)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                        }
-                        Button {
-                            
-                        } label: {
-                            Rectangle()
-                                .frame(width: 50, height: 150)
-                                .foregroundColor(.black)
-                                .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                            Button {
+                                self.vm.play(toneKey: key)
+                            } label: {
+                                Rectangle()
+                                    .frame(width: 45, height: 200)
+                                    .foregroundColor(.black)
+                                    .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                            }
+                            .padding(.trailing, key == 63 ? 95 : 0)
                         }
                     }
                     .padding(.bottom, 100)
@@ -161,32 +95,89 @@ struct ClefLearnScreen_Previews: PreviewProvider {
 }
 
 struct ledgerLines: View {
+    var tappedKey: Int8
+    
     var body: some View {
         ZStack{
             VStack(alignment: .center, spacing: 25){
                 Rectangle()
                     .frame(width: .infinity, height: 4)
                     .foregroundColor(.gray)
+                    
                 Rectangle()
                     .frame(width: .infinity, height: 4)
                     .foregroundColor(.gray)
+
                 Rectangle()
                     .frame(width: .infinity, height: 4)
-                    .foregroundColor(.gray)
+                    .foregroundColor(tappedKey == 71 ? .primaryColor : .gray)
+                    .shadow(color: tappedKey == 69 ? .primaryColor : .clear, radius: 8,x: 0, y: tappedKey == 69 ? 5 : tappedKey == 71 ? 0 : 0)
                 Rectangle()
                     .frame(width: .infinity, height: 4)
-                    .foregroundColor(.gray)
+                    .foregroundColor(tappedKey == 67 ? .primaryColor : .gray)
+                    .shadow(color: tappedKey == 65 || tappedKey == 69  ? .primaryColor : .clear, radius: 8,x: 0, y: tappedKey == 65 ? 5 : tappedKey == 67 ? 0 : tappedKey == 69 ? -5 : 0)
                 Rectangle()
                     .frame(width: .infinity, height: 4)
-                    .foregroundColor(.gray)
+                    .foregroundColor(tappedKey == 64 ? .primaryColor : .gray)
+                    .shadow(color: tappedKey == 62 || tappedKey == 65 ? .primaryColor : .clear, radius: 8,x: 0, y: tappedKey == 62 ? 5 : tappedKey == 64 ? 0 : tappedKey == 65 ? -5 : 0)
+                Rectangle()
+                    .frame(width: 45, height: 4)
+                    .foregroundColor(tappedKey == 60 ? .primaryColor : .gray)
+                    .padding(.trailing, 160)
+                    .shadow(color: tappedKey == 60 || tappedKey == 62 ? .primaryColor : .clear, radius: 8,x: 0, y: tappedKey == 60 ? 0 : tappedKey == 62 ? -5 : 0)
             }
             HStack{
                 Image("trebleClef")
                     .resizable()
-                    .frame(width: 172, height: 172)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 160, height: 172)
                     .padding(.top, 15)
                 
                 Spacer()
+            }
+            
+            HStack(spacing: -30){
+                Spacer()
+                Image(tappedKey == 60 ? "quarterNoteBlue" : "quarterNote")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 70, height: 70)
+                    
+                    .padding(.top, 100)
+                
+                Image(tappedKey == 62 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 70, height: 70)
+                
+                .padding(.top, 70)
+                
+                Image(tappedKey == 64 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 70, height: 70)
+                
+                .padding(.top, 40)
+                
+                Image(tappedKey == 65 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 70, height: 70)
+                
+                .padding(.top, 10)
+                
+                Image(tappedKey == 67 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 70, height: 70)
+                .padding(.bottom, 21)
+                
+                Image(tappedKey == 69 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 70, height: 70)
+                .padding(.bottom, 48)
+                
+                Image(tappedKey == 71 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 70, height: 70)
+                .padding(.bottom, 75)
+                
             }
         }
     }

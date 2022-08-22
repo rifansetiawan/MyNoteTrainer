@@ -11,6 +11,22 @@
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
+		C8C2D23428B321B9008CCF78 /* ClefLearnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */; };
+		C8C2D25C28B32207008CCF78 /* 64.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D24F28B32206008CCF78 /* 64.wav */; };
+		C8C2D25D28B32207008CCF78 /* 62.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25028B32206008CCF78 /* 62.wav */; };
+		C8C2D25E28B32207008CCF78 /* 72.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25128B32207008CCF78 /* 72.wav */; };
+		C8C2D25F28B32207008CCF78 /* 61.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25228B32207008CCF78 /* 61.wav */; };
+		C8C2D26028B32207008CCF78 /* 66.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25328B32207008CCF78 /* 66.wav */; };
+		C8C2D26128B32207008CCF78 /* 71.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25428B32207008CCF78 /* 71.wav */; };
+		C8C2D26228B32207008CCF78 /* 63.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25528B32207008CCF78 /* 63.wav */; };
+		C8C2D26328B32207008CCF78 /* 60.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25628B32207008CCF78 /* 60.wav */; };
+		C8C2D26428B32207008CCF78 /* 68.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25728B32207008CCF78 /* 68.wav */; };
+		C8C2D26528B32207008CCF78 /* 65.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25828B32207008CCF78 /* 65.wav */; };
+		C8C2D26628B32207008CCF78 /* 70.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25928B32207008CCF78 /* 70.wav */; };
+		C8C2D26728B32207008CCF78 /* 67.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25A28B32207008CCF78 /* 67.wav */; };
+		C8C2D26828B32207008CCF78 /* 69.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25B28B32207008CCF78 /* 69.wav */; };
+		C8C2D26E28B32374008CCF78 /* ClefAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */; };
+		C8C2D27028B32508008CCF78 /* ClefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
 		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
@@ -50,6 +66,22 @@
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefLearnScreen.swift; sourceTree = "<group>"; };
+		C8C2D24F28B32206008CCF78 /* 64.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 64.wav; sourceTree = "<group>"; };
+		C8C2D25028B32206008CCF78 /* 62.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 62.wav; sourceTree = "<group>"; };
+		C8C2D25128B32207008CCF78 /* 72.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 72.wav; sourceTree = "<group>"; };
+		C8C2D25228B32207008CCF78 /* 61.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 61.wav; sourceTree = "<group>"; };
+		C8C2D25328B32207008CCF78 /* 66.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 66.wav; sourceTree = "<group>"; };
+		C8C2D25428B32207008CCF78 /* 71.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 71.wav; sourceTree = "<group>"; };
+		C8C2D25528B32207008CCF78 /* 63.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 63.wav; sourceTree = "<group>"; };
+		C8C2D25628B32207008CCF78 /* 60.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 60.wav; sourceTree = "<group>"; };
+		C8C2D25728B32207008CCF78 /* 68.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 68.wav; sourceTree = "<group>"; };
+		C8C2D25828B32207008CCF78 /* 65.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 65.wav; sourceTree = "<group>"; };
+		C8C2D25928B32207008CCF78 /* 70.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 70.wav; sourceTree = "<group>"; };
+		C8C2D25A28B32207008CCF78 /* 67.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 67.wav; sourceTree = "<group>"; };
+		C8C2D25B28B32207008CCF78 /* 69.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 69.wav; sourceTree = "<group>"; };
+		C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefAudioPlayer.swift; sourceTree = "<group>"; };
+		C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefViewModel.swift; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -182,6 +214,9 @@
 		CBE98EFB28AE418100FF8EA8 /* ClefLearn */ = {
 			isa = PBXGroup;
 			children = (
+				C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */,
+				C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */,
+				C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */,
 			);
 			path = ClefLearn;
 			sourceTree = "<group>";
@@ -341,6 +376,19 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				C8C2D25628B32207008CCF78 /* 60.wav */,
+				C8C2D25228B32207008CCF78 /* 61.wav */,
+				C8C2D25028B32206008CCF78 /* 62.wav */,
+				C8C2D25528B32207008CCF78 /* 63.wav */,
+				C8C2D24F28B32206008CCF78 /* 64.wav */,
+				C8C2D25828B32207008CCF78 /* 65.wav */,
+				C8C2D25328B32207008CCF78 /* 66.wav */,
+				C8C2D25A28B32207008CCF78 /* 67.wav */,
+				C8C2D25728B32207008CCF78 /* 68.wav */,
+				C8C2D25B28B32207008CCF78 /* 69.wav */,
+				C8C2D25928B32207008CCF78 /* 70.wav */,
+				C8C2D25428B32207008CCF78 /* 71.wav */,
+				C8C2D25128B32207008CCF78 /* 72.wav */,
 				CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */,
 			);
 			path = Sound;
@@ -458,9 +506,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C2D25D28B32207008CCF78 /* 62.wav in Resources */,
+				C8C2D26628B32207008CCF78 /* 70.wav in Resources */,
+				C8C2D26228B32207008CCF78 /* 63.wav in Resources */,
+				C8C2D26528B32207008CCF78 /* 65.wav in Resources */,
+				C8C2D25E28B32207008CCF78 /* 72.wav in Resources */,
+				C8C2D26328B32207008CCF78 /* 60.wav in Resources */,
+				C8C2D25C28B32207008CCF78 /* 64.wav in Resources */,
+				C8C2D25F28B32207008CCF78 /* 61.wav in Resources */,
+				C8C2D26028B32207008CCF78 /* 66.wav in Resources */,
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
+				C8C2D26728B32207008CCF78 /* 67.wav in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
+				C8C2D26828B32207008CCF78 /* 69.wav in Resources */,
+				C8C2D26128B32207008CCF78 /* 71.wav in Resources */,
+				C8C2D26428B32207008CCF78 /* 68.wav in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,11 +541,13 @@
 				CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */,
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
 				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
+				C8C2D23428B321B9008CCF78 /* ClefLearnScreen.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
+				C8C2D26E28B32374008CCF78 /* ClefAudioPlayer.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
@@ -494,6 +557,7 @@
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
 				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
+				C8C2D27028B32508008CCF78 /* ClefViewModel.swift in Sources */,
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
 				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
@@ -627,7 +691,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = X97QK42J7B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -656,7 +720,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = X97QK42J7B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
