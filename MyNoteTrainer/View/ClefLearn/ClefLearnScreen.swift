@@ -18,72 +18,77 @@ struct ClefLearnScreen: View {
     
     var body: some View {
         NavigationView{
-            VStack{
-                Spacer()
-                ledgerLines(tappedKey: tappedKey)
-                Spacer()
+            ZStack{
                 
-                Text("\(tappedKey)")
                 
-                ZStack{
-                    Rectangle()
-                        .frame(width: .infinity, height: 305)
+                VStack{
+                    Spacer()
+                    ledgerLines(tappedKey: tappedKey)
+                    Spacer()
                     
-                    HStack(spacing: 5){
-                        
-                        ForEach(whiteKeys, id: \.self){key in
-                            
-                            Button {
-                                self.vm.play(toneKey: key)
-                                self.tappedKey = key
-                            } label: {
-                                Rectangle()
-                                    .frame(width: 45, height: 300)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                            }
-                        }
-                    }
-                    HStack(spacing: 7){
-                        ForEach(blackKeys, id: \.self){key in
-                            
-                            Button {
-                                self.vm.play(toneKey: key)
-                            } label: {
-                                Rectangle()
-                                    .frame(width: 45, height: 200)
-                                    .foregroundColor(.black)
-                                    .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
-                            }
-                            .padding(.trailing, key == 63 ? 95 : 0)
-                        }
-                    }
-                    .padding(.bottom, 100)
-                }
-            }
-            .navigationTitle("Treble Clef")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.blue)
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "questionmark.circle.fill")
-                            .resizable()
-                            .frame(width: 27, height: 27)
+                    ZStack{
+                        Rectangle()
+                            .frame(width: .infinity, height: 360)
                             .foregroundColor(.black)
+                        
+                        HStack(spacing: 5){
+                            
+                            ForEach(whiteKeys, id: \.self){key in
+                                
+                                Button {
+                                    self.vm.play(toneKey: key)
+                                    self.tappedKey = key
+                                } label: {
+                                    Rectangle()
+                                        .frame(width: 45, height: 305)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                                }
+                            }
+                        }
+                        .padding(.bottom, 50)
+                        HStack(spacing: 7){
+                            ForEach(blackKeys, id: \.self){key in
+                                
+                                Button {
+                                    self.vm.play(toneKey: key)
+                                } label: {
+                                    Rectangle()
+                                        .frame(width: 50, height: 200)
+                                        .foregroundColor(.black)
+                                        .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                                }
+                                .padding(.trailing, key == 63 ? 85 : 0)
+                            }
+                        }
+                        .padding(.bottom, 160)
+                    }
+                }
+                .navigationTitle("Treble Clef")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "questionmark.circle.fill")
+                                .resizable()
+                                .frame(width: 27, height: 27)
+                                .foregroundColor(.black)
+                        }
                     }
                 }
             }
+            .ignoresSafeArea()
         }
     }
 }
@@ -123,14 +128,15 @@ struct ledgerLines: View {
                 Rectangle()
                     .frame(width: 45, height: 4)
                     .foregroundColor(tappedKey == 60 ? .primaryColor : .gray)
-                    .padding(.trailing, 160)
+                    .padding(.trailing, 166)
                     .shadow(color: tappedKey == 60 || tappedKey == 62 ? .primaryColor : .clear, radius: 8,x: 0, y: tappedKey == 60 ? 0 : tappedKey == 62 ? -5 : 0)
+                
             }
             HStack{
                 Image("trebleClef")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 160, height: 172)
+                    .frame(width: 127, height: 172)
                     .padding(.top, 15)
                 
                 Spacer()
@@ -141,42 +147,43 @@ struct ledgerLines: View {
                 Image(tappedKey == 60 ? "quarterNoteBlue" : "quarterNote")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 70, height: 70)
-                    
+                    .frame(width: 65, height: 65)
                     .padding(.top, 100)
                 
                 Image(tappedKey == 62 ? "quarterNoteBlue" : "quarterNote")
                 .resizable()
-                .frame(width: 70, height: 70)
-                
-                .padding(.top, 70)
+                .frame(width: 65, height: 65)
+                .padding(.top, 73)
                 
                 Image(tappedKey == 64 ? "quarterNoteBlue" : "quarterNote")
                 .resizable()
-                .frame(width: 70, height: 70)
-                
-                .padding(.top, 40)
+                .frame(width: 65, height: 65)
+                .padding(.top, 43)
                 
                 Image(tappedKey == 65 ? "quarterNoteBlue" : "quarterNote")
                 .resizable()
-                .frame(width: 70, height: 70)
-                
-                .padding(.top, 10)
+                .frame(width: 65, height: 65)
+                .padding(.top, 13)
                 
                 Image(tappedKey == 67 ? "quarterNoteBlue" : "quarterNote")
                 .resizable()
-                .frame(width: 70, height: 70)
-                .padding(.bottom, 21)
+                .frame(width: 65, height: 65)
+                .padding(.bottom, 18)
                 
                 Image(tappedKey == 69 ? "quarterNoteBlue" : "quarterNote")
                 .resizable()
-                .frame(width: 70, height: 70)
-                .padding(.bottom, 48)
+                .frame(width: 65, height: 65)
+                .padding(.bottom, 45)
                 
                 Image(tappedKey == 71 ? "quarterNoteBlue" : "quarterNote")
                 .resizable()
-                .frame(width: 70, height: 70)
-                .padding(.bottom, 75)
+                .frame(width: 65, height: 65)
+                .padding(.bottom, 72)
+                
+                Image(tappedKey == 72 ? "quarterNoteBlue" : "quarterNote")
+                .resizable()
+                .frame(width: 65, height: 65)
+                .padding(.bottom, 102)
                 
             }
         }

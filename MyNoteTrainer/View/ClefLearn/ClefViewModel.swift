@@ -12,7 +12,7 @@ class ClefViewModel {
     var players: [Int8 : ClefAudioPlayer] = [:]
     
     init() {
-        for i in 60...71 {
+        for i in 60...72 {
             players[Int8(i)] = ClefAudioPlayer(fileName: String(i), fileExtension: "wav")
             
         }
