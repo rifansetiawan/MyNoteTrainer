@@ -30,51 +30,12 @@ struct ClefLearnScreen: View {
     private var blackKeys : [Int8] = [61, 63, 66, 68, 70]
     var notes: [Note] = []
     @State private var tappedKey: Int8 = -1
-    
-//    var generatedBlock : [[Int]]
-//    var totalTime: TimeInterval
-//    var onStart: () -> ()
-//    @Binding var x: CGFloat
-//    @State var totalX: CGFloat
-//    @ObservedObject var coachmarkManager: CoachmarkManager
-//
-//    var onTap: (_ tapTime: TimeInterval) -> ()
-//    @Binding var tapIndicatorState : TapIndicatorState
-//
-//    var blockWidth = CGFloat(Config.BLOCK_WIDTH)
-//
-//    @State var isPressed : Bool = false
-//    @State var buttonLabel : TapButtonState = .start
-//
-//    @State var indicatorFrame : CGRect?
-//    @State var indicatorSize : CGSize?
-//
-//
-//    var coachmarkStepIndex : Int = 0
+    @State private var isShowTutorial: Bool = false
+
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             ZStack{
-//                let isShowIndicatorCm = coachmarkManager.coachmarkIndex == 0
-//                let isShowMetronomeCm = coachmarkManager.coachmarkIndex == 1
-//                let isShowIndicatorColorGreenCm = coachmarkManager.coachmarkIndex == 3
-//                let isShowIndicatorColorRedCm = coachmarkManager.coachmarkIndex == 2
-//                let shadowColor : Color = isShowIndicatorCm || isShowIndicatorColorGreenCm || isShowIndicatorColorRedCm ? .white : .clear
-//                let foregroundColor: Color = isShowIndicatorCm ? .blue : isShowIndicatorColorGreenCm ? .green : isShowIndicatorColorRedCm ? .red : tapIndicatorState == .right ? .green : tapIndicatorState == .wrong ? .red : .blue
-//                Rectangle()
-//                    .frame(width: blockWidth, height: 50, alignment: .center)
-//                    .foregroundColor(foregroundColor)
-//                    .offset(x: 0, y: 0)
-//                    .opacity(0.3)
-//                    .shadow(color: shadowColor, radius: 10)
-//                    .shadow(color: shadowColor, radius: 10)
-//                    .shadow(color: shadowColor, radius: 10)
-//                    .background(reader(isShowCoachmark: isShowIndicatorCm || isShowIndicatorColorGreenCm || isShowIndicatorColorRedCm, type: .tap, coachmarkManager: coachmarkManager))
-//                    .zIndex(isShowIndicatorCm || isShowIndicatorColorGreenCm || isShowIndicatorColorRedCm ? 1 : 0)
-//                Rectangle()
-//                    .frame(width: 1, height: 50, alignment: .center)
-//                    .foregroundColor(.black)
-//                    .offset(x: 0, y: 0)
                 VStack{
                     Spacer()
                     ledgerLines(tappedKey: tappedKey)
@@ -124,29 +85,28 @@ struct ClefLearnScreen: View {
                 .navigationTitle("Treble Clef")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "chevron.left")
-                                .foregroundColor(.blue)
-                        }
-                    }
-                    
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            
-                        } label: {
+                        Button(action: {
+                            self.isShowTutorial = true
+                        }, label: {
                             Image(systemName: "questionmark.circle.fill")
                                 .resizable()
                                 .frame(width: 27, height: 27)
                                 .foregroundColor(.black)
-                        }
+                        })
+
                     }
+                    
+                }
+                
+                if( isShowTutorial) {
+                    clefTutorial(onTap: {
+                        self.isShowTutorial = false
+                    })
                 }
             }
             .ignoresSafeArea()
-        }
+//        }
     }
 }
 
@@ -241,7 +201,6 @@ struct ledgerLines: View {
                 .resizable()
                 .frame(width: 65, height: 65)
                 .padding(.bottom, 102)
-                
             }
         }
     }
@@ -271,3 +230,331 @@ extension View {
     }
 }
 
+
+struct clefTutorial: View {
+    
+    var vm: ClefViewModel = ClefViewModel()
+     var whiteKeys : [Int8] = [60, 62, 64, 65, 67, 69, 71, 72]
+     var blackKeys : [Int8] = [61, 63, 66, 68, 70]
+    var notes: [Note] = []
+    @State  var tappedKey: Int8 = -1
+    @State var onTap : ()->()
+    @State var step: Int = 1
+    var body: some View{
+        ZStack {
+            if( step == 1) {
+                ZStack{
+                    VStack{
+                        HStack{
+                            Spacer()
+                            Text("Treble Clef")
+                                .bold()
+                                .multilineTextAlignment(.center)
+                                .font(.title3)
+                                .padding(.trailing, 100)
+                            Image(systemName: "questionmark.circle.fill")
+                                .resizable()
+                                .frame(width: 27, height: 27)
+                                .foregroundColor(.black)
+                        }
+                        Spacer()
+                        
+                        ZStack{
+                            Rectangle()
+                                .frame(width: .infinity, height: 360)
+                                .foregroundColor(.black)
+                            
+                            HStack(spacing: 5){
+                                
+                                ForEach(whiteKeys, id: \.self){key in
+                                    
+                                    Button {
+                                        self.vm.play(toneKey: key)
+                                        self.tappedKey = key
+                                    } label: {
+                                        Rectangle()
+                                            .frame(width: 45, height: 305)
+                                            .foregroundColor(.white)
+                                            .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                                    }
+                                }
+                            }
+                            .padding(.bottom, 50)
+                            HStack(spacing: 7){
+                                
+                                ForEach(blackKeys, id: \.self){key in
+                                    
+                                    Button {
+                                        self.vm.play(toneKey: key)
+                                    } label: {
+                                        Rectangle()
+                                            .frame(width: 45, height: 200)
+                                            .foregroundColor(.black)
+                                            .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                                    }
+                                    .padding(.trailing, key == 63 ? 45 : 0)
+                                    .padding(.leading, key == 61 ? 25 : 0)
+                                }
+                                Spacer()
+                            }
+                            .padding(.bottom, 160)
+                            
+                            
+                        }
+                    }
+                    .ignoresSafeArea()
+                    
+                    Rectangle()
+                        .frame(width: .infinity, height: .infinity)
+                        .ignoresSafeArea()
+                        .opacity(0.7)
+                    
+                    VStack{
+                        Image("clefPage1")
+                            .resizable()
+                            .frame(width: 365, height: 126, alignment: .center)
+                        ZStack{
+                            Image("clefPage1.1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 321, height: 149, alignment: .center)
+                            
+                            Text("""
+        Staff is foundation upon which notes are drawn
+
+        Modern staff comprises
+        five(5) lines and four(4) spaces
+        """)
+                            .font(.system(size: 15))
+                            .multilineTextAlignment(.center)
+                            .frame(width: 300, height: 100, alignment: .center)
+                        }
+                        .padding(.bottom, 200)
+                        
+                        
+                        
+                        Text("Tap anywhere to next")
+                            .foregroundColor(.white)
+                        
+                    }
+                }
+                .onTapGesture{
+                    self.step = 2
+                }
+            }
+            else if (step == 2) {
+                ZStack{
+                    Text("tutorial 2")
+                }
+                    .onTapGesture{
+                        self.step = 3
+                    }
+            } else if (step == 3) {
+                Text("tutorial 3")
+                    .onTapGesture{
+                        self.step = 4
+                    }
+            } else if (step == 4) {
+                Text("tutorial 4")
+                    .onTapGesture{
+                        self.step = 5
+                    }
+            } else if (step == 5) {
+                Text("tutorial 5")
+                    .onTapGesture{
+                        self.onTap()
+                    }
+            }
+            
+        } .navigationBarTitle("")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+    }
+}
+    
+struct clefTutorial_Previews: PreviewProvider {
+    static var previews: some View {
+        clefTutorial(onTap: {})
+    }
+}
+
+struct clefTutorial2: View {
+    
+    var vm: ClefViewModel = ClefViewModel()
+    private var whiteKeys : [Int8] = [60, 62, 64, 65, 67, 69, 71, 72]
+    private var blackKeys : [Int8] = [61, 63, 66, 68, 70]
+    var notes: [Note] = []
+    @State private var tappedKey: Int8 = -1
+    
+    var body: some View{
+        ZStack{
+            VStack{
+                //                    Spacer()
+                //                    ZStack{
+                //                        VStack(alignment: .center, spacing: 25){
+                //                            Rectangle()
+                //                                .frame(width: .infinity, height: 4)
+                //                                .foregroundColor(.gray)
+                //                            Rectangle()
+                //                                .frame(width: .infinity, height: 4)
+                //                                .foregroundColor(.gray)
+                //                            Rectangle()
+                //                                .frame(width: .infinity, height: 4)
+                //                                .foregroundColor(.gray)
+                //                            Rectangle()
+                //                                .frame(width: .infinity, height: 4)
+                //                                .foregroundColor(.gray)
+                //                            Rectangle()
+                //                                .frame(width: .infinity, height: 4)
+                //                                .foregroundColor(.gray)
+                //                        }
+                //                        HStack{
+                //                            Image("trebleClef")
+                //                                .resizable()
+                //                                .aspectRatio(contentMode: .fit)
+                //                                .frame(width: 127, height: 172)
+                //                                .padding(.top, 15)
+                //
+                //                            Spacer()
+                //                        }
+                //                        HStack(spacing: -30){
+                //                            Spacer()
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .aspectRatio(contentMode: .fit)
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.top, 100)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.top, 73)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.top, 43)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.top, 13)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.bottom, 18)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.bottom, 45)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.bottom, 72)
+                //
+                //                            Image("quarterNote")
+                //                                .resizable()
+                //                                .frame(width: 65, height: 65)
+                //                                .padding(.bottom, 102)
+                //
+                //                        }
+                //
+                //                    }
+                
+                Spacer()
+                
+                ZStack{
+                    Rectangle()
+                        .frame(width: .infinity, height: 360)
+                        .foregroundColor(.black)
+                    
+                    HStack(spacing: 5){
+                        
+                        ForEach(whiteKeys, id: \.self){key in
+                            
+                            Button {
+                                self.vm.play(toneKey: key)
+                                self.tappedKey = key
+                            } label: {
+                                Rectangle()
+                                    .frame(width: 45, height: 305)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                            }
+                        }
+                    }
+                    .padding(.bottom, 50)
+                    HStack(spacing: 7){
+                        
+                        ForEach(blackKeys, id: \.self){key in
+                            
+                            Button {
+                                self.vm.play(toneKey: key)
+                            } label: {
+                                Rectangle()
+                                    .frame(width: 45, height: 200)
+                                    .foregroundColor(.black)
+                                    .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
+                            }
+                            .padding(.trailing, key == 63 ? 45 : 0)
+                            .padding(.leading, key == 61 ? 25 : 0)
+                        }
+                        Spacer()
+                    }
+                    .padding(.bottom, 160)
+                    
+                    
+                }
+            }
+            .ignoresSafeArea()
+            
+            Rectangle()
+                .frame(width: .infinity, height: .infinity)
+                .ignoresSafeArea()
+                .opacity(0.7)
+            
+            VStack{
+                Image("clefPage1")
+                    .resizable()
+                    .frame(width: 365, height: 126, alignment: .center)
+                
+                Image("clefPage1.1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 321, height: 149, alignment: .center)
+                    .padding(.bottom, 200)
+                
+                Text("Tap anywhere to next")
+                    .foregroundColor(.white)
+                
+            }
+            .onTapGesture {
+                
+            }
+            
+        }
+        .navigationBarTitleDisplayMode(.inline)
+
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "questionmark.circle.fill")
+                        .resizable()
+                        .frame(width: 27, height: 27)
+                        .foregroundColor(.black)
+                }
+            }
+        }
+    }
+}
+    
+struct clefTutorial2_Previews: PreviewProvider {
+    static var previews: some View {
+        clefTutorial2()
+    }
+}
