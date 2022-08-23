@@ -35,6 +35,8 @@
 		CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195B28B2871200A1AD67 /* AppDelegate.swift */; };
 		CB8C196028B32BD700A1AD67 /* ScalesQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195F28B32BD700A1AD67 /* ScalesQuizView.swift */; };
 		CB8C196228B338FD00A1AD67 /* ScaleQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C196128B338FD00A1AD67 /* ScaleQuizModel.swift */; };
+		CB8C196628B3CFFB00A1AD67 /* SRPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C196528B3CFFB00A1AD67 /* SRPlayerManager.swift */; };
+		CB8C196828B494A400A1AD67 /* TapIndicatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C196728B494A400A1AD67 /* TapIndicatorState.swift */; };
 		CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */; };
 		CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1628AE55B100FF8EA8 /* LearnView.swift */; };
 		CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */; };
@@ -73,6 +75,8 @@
 		CB8C195B28B2871200A1AD67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8C195F28B32BD700A1AD67 /* ScalesQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesQuizView.swift; sourceTree = "<group>"; };
 		CB8C196128B338FD00A1AD67 /* ScaleQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleQuizModel.swift; sourceTree = "<group>"; };
+		CB8C196528B3CFFB00A1AD67 /* SRPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRPlayerManager.swift; sourceTree = "<group>"; };
+		CB8C196728B494A400A1AD67 /* TapIndicatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapIndicatorState.swift; sourceTree = "<group>"; };
 		CBE98F1428AE458C00FF8EA8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		CBE98F1628AE55B100FF8EA8 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		CBE98F1828AE8E7600FF8EA8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				CB8C195528B13FFF00A1AD67 /* SRHelper.swift */,
+				CB8C196528B3CFFB00A1AD67 /* SRPlayerManager.swift */,
+				CB8C196728B494A400A1AD67 /* TapIndicatorState.swift */,
 			);
 			path = SightReading;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
+				CB8C196828B494A400A1AD67 /* TapIndicatorState.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
 				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
@@ -511,6 +518,7 @@
 				0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */,
 				CB8C196028B32BD700A1AD67 /* ScalesQuizView.swift in Sources */,
 				CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */,
+				CB8C196628B3CFFB00A1AD67 /* SRPlayerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +676,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = PSKBVM3X2F;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

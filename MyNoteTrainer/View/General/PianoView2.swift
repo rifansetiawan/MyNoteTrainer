@@ -17,6 +17,7 @@ class InstrumentEXSConductor: ObservableObject {
     let engine = AudioEngine()
     private var instrument = MIDISampler(name: "Instrument 1")
     @Published var noteNumber: Int8?
+    @Published var onTapNote: ((_ noteNumber: Int8) -> ())?
 
     func noteOn(pitch: Pitch, point _: CGPoint) {
         instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 90, channel: 0)
