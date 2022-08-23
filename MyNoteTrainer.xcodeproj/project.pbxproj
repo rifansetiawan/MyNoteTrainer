@@ -43,6 +43,13 @@
 		CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = CB3CEF8E28B1256700A2D8F0 /* Sounds */; };
 		CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */; };
 		CB3CEF9428B125E600A2D8F0 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */; };
+		CB729A8828B5536400A025AD /* TapIndicatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A8628B5536400A025AD /* TapIndicatorViewModel.swift */; };
+		CB729A8928B5536400A025AD /* SightReadingParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A8728B5536400A025AD /* SightReadingParentView.swift */; };
+		CB729A8D28B5546300A025AD /* SRSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A8A28B5546300A025AD /* SRSongs.swift */; };
+		CB729A8E28B5546300A025AD /* SRPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A8B28B5546300A025AD /* SRPlayerManager.swift */; };
+		CB729A8F28B5546300A025AD /* TapIndicatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A8C28B5546300A025AD /* TapIndicatorState.swift */; };
+		CB729A9128B5554700A025AD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A9028B5554700A025AD /* Array+Ext.swift */; };
+		CB729A9328B5557A00A025AD /* ScalesQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB729A9228B5557A00A025AD /* ScalesQuizView.swift */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -95,6 +102,13 @@
 		CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emuaps_8mb.sf2; sourceTree = "<group>"; };
 		CB3CEF8E28B1256700A2D8F0 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView2.swift; sourceTree = "<group>"; };
+		CB729A8628B5536400A025AD /* TapIndicatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapIndicatorViewModel.swift; sourceTree = "<group>"; };
+		CB729A8728B5536400A025AD /* SightReadingParentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SightReadingParentView.swift; sourceTree = "<group>"; };
+		CB729A8A28B5546300A025AD /* SRSongs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSongs.swift; sourceTree = "<group>"; };
+		CB729A8B28B5546300A025AD /* SRPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRPlayerManager.swift; sourceTree = "<group>"; };
+		CB729A8C28B5546300A025AD /* TapIndicatorState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapIndicatorState.swift; sourceTree = "<group>"; };
+		CB729A9028B5554700A025AD /* Array+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		CB729A9228B5557A00A025AD /* ScalesQuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScalesQuizView.swift; path = MyNoteTrainer/View/ScalesQuiz/ScalesQuizView.swift; sourceTree = SOURCE_ROOT; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -242,6 +256,7 @@
 		CBE98EFE28AE41C600FF8EA8 /* ScalesQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				CB729A9228B5557A00A025AD /* ScalesQuizView.swift */,
 			);
 			path = ScalesQuiz;
 			sourceTree = "<group>";
@@ -249,6 +264,8 @@
 		CBE98EFF28AE41D400FF8EA8 /* SightReading */ = {
 			isa = PBXGroup;
 			children = (
+				CB729A8728B5536400A025AD /* SightReadingParentView.swift */,
+				CB729A8628B5536400A025AD /* TapIndicatorViewModel.swift */,
 				CB8C195128B1364900A1AD67 /* SRParanadaView.swift */,
 				CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */,
 			);
@@ -350,6 +367,9 @@
 		CBE98F0B28AE427A00FF8EA8 /* SightReading */ = {
 			isa = PBXGroup;
 			children = (
+				CB729A8B28B5546300A025AD /* SRPlayerManager.swift */,
+				CB729A8A28B5546300A025AD /* SRSongs.swift */,
+				CB729A8C28B5546300A025AD /* TapIndicatorState.swift */,
 				CB8C195528B13FFF00A1AD67 /* SRHelper.swift */,
 			);
 			path = SightReading;
@@ -408,6 +428,7 @@
 		CBE98F1128AE42EE00FF8EA8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CB729A9028B5554700A025AD /* Array+Ext.swift */,
 				CBE98F2328AEA27200FF8EA8 /* Color+Ext.swift */,
 				CBE98F2528AEA2AC00FF8EA8 /* View+Ext.swift */,
 			);
@@ -539,10 +560,14 @@
 				CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */,
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
+				CB729A9128B5554700A025AD /* Array+Ext.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
+				CB729A8828B5536400A025AD /* TapIndicatorViewModel.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
+				CB729A8E28B5546300A025AD /* SRPlayerManager.swift in Sources */,
 				CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */,
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
+				CB729A9328B5557A00A025AD /* ScalesQuizView.swift in Sources */,
 				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
 				C8C2D23428B321B9008CCF78 /* ClefLearnScreen.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
@@ -552,8 +577,10 @@
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
 				C8C2D26E28B32374008CCF78 /* ClefAudioPlayer.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
+				CB729A8928B5536400A025AD /* SightReadingParentView.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
+				CB729A8F28B5546300A025AD /* TapIndicatorState.swift in Sources */,
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
@@ -565,6 +592,7 @@
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
 				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
+				CB729A8D28B5546300A025AD /* SRSongs.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
 				CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */,
 			);
@@ -695,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = X97QK42J7B;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -724,7 +752,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = X97QK42J7B;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
