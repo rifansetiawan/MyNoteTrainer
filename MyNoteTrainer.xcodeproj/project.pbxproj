@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A12512E28B4D92300CDD2AA /* SRSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A12512D28B4D92300CDD2AA /* SRSongs.swift */; };
 		0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A12512D28B4D92300CDD2AA /* SRSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRSongs.swift; sourceTree = "<group>"; };
 		0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				CB8C195528B13FFF00A1AD67 /* SRHelper.swift */,
 				CB8C196528B3CFFB00A1AD67 /* SRPlayerManager.swift */,
 				CB8C196728B494A400A1AD67 /* TapIndicatorState.swift */,
+				0A12512D28B4D92300CDD2AA /* SRSongs.swift */,
 			);
 			path = SightReading;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
+				0A12512E28B4D92300CDD2AA /* SRSongs.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
 				CB8C196228B338FD00A1AD67 /* ScaleQuizModel.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
@@ -676,7 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = PSKBVM3X2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AudioKit/SoundpipeAudioKit.git",
       "state" : {
-        "revision" : "5f3b1056778e298482b8fb710f25de4f0568643f",
-        "version" : "5.5.0"
+        "revision" : "e49400311f926ad6c0c26fdb7f4f2d6fca1c3191",
+        "version" : "5.5.2"
       }
     },
     {

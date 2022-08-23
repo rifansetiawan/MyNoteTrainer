@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PracticeView: View {
+    var songs: SRSongs = SRSongs()
+    @State var bpm : Int = 120
     var body: some View {
         ZStack {
             ZStack(alignment: .top) {
@@ -16,7 +18,11 @@ struct PracticeView: View {
                 
                 VStack(spacing: 15){
                     
-                    NavigationLink(destination: SightReadingView()){
+                    NavigationLink(destination: SightReadingView(
+//                        vm: SRPlayerManager(notes: songs.twinkle, bpm: 120, offsetBpm: 1),
+                        notes: songs.twinkle,
+                        bpm: $bpm,
+                        notesBlock: SRHelper.generateBlock(offsetBeat: 1, notes: songs.twinkle))){
                         ZStack{
                             Rectangle()
                                 .frame(width: 345, height: 105)

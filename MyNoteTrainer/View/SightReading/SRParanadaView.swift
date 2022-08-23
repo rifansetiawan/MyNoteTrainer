@@ -8,42 +8,47 @@
 import SwiftUI
 
 struct SRParanadaView: View {
-    
-    @ObservedObject var vm: SRPlayerManager
+    @StateObject var vm : SRPlayerManager
+    @Binding var isPlaying: Bool
+//    @ObservedObject var vm: SRPlayerManager
     var tapIndicatorState : TapIndicatorState
    
-    var notes: [Note] = [
-        Note(noteType: .quarterNote, sound: Sound(tone: .C)), //0
-        Note(noteType: .quarterNote, sound: Sound(tone: .D)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .E)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .F)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .G)),
+    var notes: [Note]
+//    = [
+//        Note(noteType: .quarterNote, sound: Sound(tone: .C)), //0
+//        Note(noteType: .quarterNote, sound: Sound(tone: .D)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .E)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .F)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .G)),
 //        Note(noteType: .quarterNote, sound: Sound(tone: .A)),
 //        Note(noteType: .quarterNote, sound: Sound(tone: .B)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-    ]
-    var notesBlock: [[Int]] = SRHelper.generateBlock(offsetBeat: 1, notes: [
-        Note(noteType: .quarterNote, sound: Sound(tone: .C)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .D)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .E)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .F)),
-        Note(noteType: .quarterNote, sound: Sound(tone: .G)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5))
+//    ]
+    let notesBlock: [[Int]]
+//    = SRHelper.generateBlock(offsetBeat: 1, notes: [
+//        Note(noteType: .quarterNote, sound: Sound(tone: .C)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .D)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .E)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .F)),
+//        Note(noteType: .quarterNote, sound: Sound(tone: .G)),
 //        Note(noteType: .quarterNote, sound: Sound(tone: .A)),
 //        Note(noteType: .quarterNote, sound: Sound(tone: .B)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-    ])
+//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5))
+//    ])
 //    [[1, 0], [0], [1, 1], [0], [1, 2], [0], [1, 3], [0], [1, 4], [0], [1, 5], [0], [1, 6], [0], [1, 7], [0], [1, 8], [0]]
-    
 
+    @Binding var startTime: TimeInterval
+    @Binding var endTime: TimeInterval
+    @Binding var playingTimestamp: TimeInterval
+    @Binding var playingIndex: Int
+    
+    var scale: Scale = Scale.FSharpMaj
+    var offsetParanada: Double = 18
     
     var body: some View {
         ZStack(alignment: .trailing){
             
-            VStack(spacing: 18){
+            VStack(spacing: 15){
                 ForEach((1...5).reversed(), id: \.self) {_ in
                     Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 3).ignoresSafeArea()
@@ -54,7 +59,22 @@ struct SRParanadaView: View {
             
             HStack {
                 Image("kunciG")
-            
+                    .padding(.leading, 50)
+//                    .background(.green)
+                HStack(spacing: -5) {
+                    ForEach(scale.accTones, id:\.self) { acd in
+                        ZStack{
+                            VStack{
+                                Image(scale.scaleAcc.image)
+                                    .offset(x: 0, y: 6)
+                            }
+//                                                        .background(acd.rawValue == conductor.noteNumber )
+                            .offset(x: 0, y: acd.accidentalPosition * offsetParanada)
+                            
+                        }
+                        .frame(maxHeight: 71, alignment: .bottom)
+                    }
+                }
                 ZStack{
                     
                     HStack{
@@ -72,7 +92,7 @@ struct SRParanadaView: View {
                                         
                                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
 //                                                                .background(.pink)
-                                        .offset(x: -25, y: block.count > 1 && block[1] > 0 ? notes[block[1]-1].sound.position * 18 : 0)
+                                        .offset(x: -25, y: block.count > 1 && block[1] > 0 ? notes[block[1]-1].sound.position * offsetParanada : 0)
                                      //naik satu nada -10,5
                                     
                                 }
@@ -86,11 +106,13 @@ struct SRParanadaView: View {
                                         
                         .offset(
 //                            x: 80,
-                            x: vm.playingTimestamp < vm.startTime ? 80 : countOffset(),
+                            x:  countOffset(),
                                 y: 0)
 //                        .background(Color.white)
                         
-                    }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                    }
+                    .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+//                    .background(.blue)
                     
                     
                     HStack{
@@ -98,13 +120,15 @@ struct SRParanadaView: View {
                             
                             Rectangle()
                                 .frame(width: 80, height: 80)
-                                .foregroundColor(tapIndicatorState.color)
+                                .foregroundColor(.clear)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.bgColor.opacity(0.3), tapIndicatorState.color]), startPoint: .leading, endPoint: .trailing))
                                 .opacity(0.5)
                             
                             Rectangle()
                                 .frame(width: 5, height: 100)
                                 .foregroundColor(tapIndicatorState.color)
-                        }
+                        }.frame(width: 80, height: 100, alignment: .trailing)
+//                            .background(.green)
                         Spacer()
                     }
                     
@@ -113,11 +137,36 @@ struct SRParanadaView: View {
                     .clipped()
                 
             }
+            
             .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .leading)
-            
-            
-            
         }
+        .onChange(of: isPlaying, perform: { i in
+            if (i) {
+                vm.start()
+            } else {
+                vm.stop()
+            }
+        })
+        .onChange(of: vm.isPlaying, perform: {i in
+            if(!i) {
+                isPlaying = false
+            }
+        })
+        .onChange(of: vm.startTime, perform: { i in
+            self.startTime = vm.startTime
+            self.endTime = vm.endTime
+        })
+        .onChange(of: vm.playingTimestamp, perform: { i in
+            self.playingTimestamp = vm.playingTimestamp
+        })
+        .onChange(of: vm.playingIndex, perform: { i in
+            self.playingIndex = vm.playingIndex
+        })
+        
+    
+//        .onChange(of: noteNumber, perform: { i in
+//            print(noteNumber)
+//        })
         .frame(maxWidth: .infinity, maxHeight: 200)
         //            .background(Color.blue)
         
@@ -125,7 +174,9 @@ struct SRParanadaView: View {
     
     func countOffset() -> CGFloat {
 //        let x = 80
-   
+        if(vm.playingTimestamp < vm.startTime) {
+            return 80
+        }
         let percentageTime = (vm.playingTimestamp - vm.startTime) / vm.totalInterval
         let offsetSong = Double(notesBlock.count * 50) * Double(percentageTime) * -1.00
         
@@ -135,9 +186,9 @@ struct SRParanadaView: View {
     }
 }
 
-struct SRParanadaView_Previews: PreviewProvider {
-    static var previews: some View {
-        SRParanadaView(vm: SRPlayerManager(notes: [], offsetBpm: 1), tapIndicatorState: .neutral)
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct SRParanadaView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SRParanadaView(vm: SRPlayerManager(notes: SRSongs().twinkle, offsetBpm: 1), tapIndicatorState: .green, notes: SRSongs().twinkle, notesBlock: SRHelper.generateBlock(offsetBeat: 1, notes: SRSongs().twinkle))
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}

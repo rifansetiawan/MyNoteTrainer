@@ -21,7 +21,7 @@ class InstrumentEXSConductor: ObservableObject {
 
     func noteOn(pitch: Pitch, point _: CGPoint) {
         instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 90, channel: 0)
-        self.noteNumber = pitch.midiNoteNumber
+//        self.noteNumber = pitch.midiNoteNumber
     }
 
     func noteOff(pitch: Pitch) {
@@ -55,13 +55,35 @@ class InstrumentEXSConductor: ObservableObject {
     }
 }
 
+//struct InstrumentEXSView: View {
+//    @ObservedObject var conductor: InstrumentEXSConductor
+//
+//    var body: some View {
+//        ZStack {
+//            Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(85)),
+//                     noteOn: conductor.noteOn,
+//                     noteOff: conductor.noteOff)
+//                .onAppear {
+//                    self.conductor.start()
+//                }
+//                .onDisappear {
+//                    self.conductor.stop()
+//            }
+//        }.background(Color.primaryColor)
+//    }
+//}
+
 struct InstrumentEXSView: View {
-    @ObservedObject var conductor: InstrumentEXSConductor
+    @StateObject var conductor: InstrumentEXSConductor = InstrumentEXSConductor()
+    var onNoteOn: (_ noteNumber: Int8) -> ()
 
     var body: some View {
         ZStack {
             Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(85)),
-                     noteOn: conductor.noteOn,
+                     noteOn: { (pitch, point) in
+                conductor.noteOn(pitch: pitch, point: point)
+                self.onNoteOn(pitch.midiNoteNumber)
+            },
                      noteOff: conductor.noteOff)
                 .onAppear {
                     self.conductor.start()
@@ -73,10 +95,10 @@ struct InstrumentEXSView: View {
     }
 }
 
-struct InstrumentEXSView_Previews: PreviewProvider {
-    static var previews: some View {
-        InstrumentEXSView(conductor: InstrumentEXSConductor())
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct InstrumentEXSView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InstrumentEXSView(conductor: InstrumentEXSConductor())
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}
 
