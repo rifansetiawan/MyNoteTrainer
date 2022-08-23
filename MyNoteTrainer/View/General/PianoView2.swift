@@ -19,7 +19,7 @@ class InstrumentEXSConductor: ObservableObject {
     @Published var noteNumber: Int8?
     @Published var onTapNote: ((_ noteNumber: Int8) -> ())?
 
-    func noteOn(pitch: Pitch, point _: CGPoint) {
+    func noteOn(pitch: Pitch, point _: CGPoint?) {
         instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 90, channel: 0)
 //        self.noteNumber = pitch.midiNoteNumber
     }
