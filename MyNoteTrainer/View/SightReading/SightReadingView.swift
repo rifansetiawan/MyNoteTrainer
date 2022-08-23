@@ -20,20 +20,15 @@ struct SightReadingView: View {
 //        Note(noteType: .quarterNote, sound: Sound(tone: .B)),
 //        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
 //    ], bpm: 60, offsetBpm: 1)
+    
+   
     var notes: [Note]
     @Binding var bpm: Int
     var bpmOptions: [Int] = [60,120,180]
-    @State var tapIndicatorState: TapIndicatorState = .neutral {
-        didSet {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                if tapIndicatorState != .neutral {
-                    tapIndicatorState = .neutral
-                }
-            }
-        }
-    }
+    
     
     var notesBlock : [[Int]]
+    var tapIndicatorVM: TapIndicatorViewModel
     
 //    init(notes: [Note]) {
 //        self.notes = notes
@@ -63,7 +58,6 @@ struct SightReadingView: View {
                         SRParanadaView(
                             vm: SRPlayerManager(notes: notes, bpm: bpm, offsetBpm: 1, noteInterval: self.noteInterval!, noteTiming : self.noteTiming!),
                             isPlaying: $isPlaying,
-//                            tapIndicatorState: tapIndicatorState,
                             notes: notes,
                             notesBlock: notesBlock,
                             startTime: $startTime,
@@ -72,23 +66,10 @@ struct SightReadingView: View {
                             playingIndex: $playingIndex
                         )
                         
-                        HStack{
-                            ZStack(alignment: .trailing){
-                                
-                                Rectangle()
-                                    .frame(width: 80, height: 80)
-                                    .foregroundColor(.clear)
-                                    .background(LinearGradient(gradient: Gradient(colors: [Color.bgColor.opacity(0.3), tapIndicatorState.color]), startPoint: .leading, endPoint: .trailing))
-                                    .opacity(0.5)
-                                
-                                Rectangle()
-                                    .frame(width: 5, height: 100)
-                                    .foregroundColor(tapIndicatorState.color)
-                            }.frame(width: 80, height: 100, alignment: .trailing)
-    //                            .background(.green)
-                            Spacer()
-                        }
+                        
                     }
+                    
+                    
 
                     InstrumentEXSView(onNoteOn: { i in
                         self.onTapNote(noteNumber: i, timestamp: self.playingTimestamp)
@@ -158,6 +139,9 @@ struct SightReadingView: View {
         .onChange(of: bpm, perform: { i in
             self.setupIntervalandTiming()
         })
+//        .onChange(of: tapIndicatorVM.tapIndicatorState, perform: { i in
+//            self.tapIndicatorState = tapIndicatorVM.tapIndicatorState
+//        })
 //        .onReceive(conductor.$noteNumber, perform: { i in
 //            guard let i = i else {return}
 //            print(i, vm.playingTimestamp)
@@ -196,7 +180,7 @@ struct SightReadingView: View {
         let currentIndex = self.playingIndex
 //
         if(currentIndex >= notes.count-1) {
-            tapIndicatorState = .red
+            tapIndicatorVM.changeState(state: .red)
             return
         }
         let nextIndex = currentIndex + 1 // -1 -> 0
@@ -207,11 +191,12 @@ struct SightReadingView: View {
         let offsetTiming = 0.25
 //
         if(abs(timestamp - nextIndexTiming) < offsetTiming && (noteNumber == notes[nextIndex].sound.key)) {
-            tapIndicatorState = .green
+            tapIndicatorVM.changeState(state: .green)
+            
         } else if (abs(timestamp - currentIndexTiming) < offsetTiming && (noteNumber == notes[currentIndex].sound.key)) {
-            tapIndicatorState = .green
+            tapIndicatorVM.changeState(state: .green)
         } else {
-            tapIndicatorState = .red
+            tapIndicatorVM.changeState(state: .red)
         }
         
         

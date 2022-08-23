@@ -18,7 +18,7 @@ struct PracticeView: View {
                 
                 VStack(spacing: 15){
                     
-                    NavigationLink(destination: SightReadingView(
+                    NavigationLink(destination: SightReadingParentView(
 //                        vm: SRPlayerManager(notes: songs.twinkle, bpm: 120, offsetBpm: 1),
                         notes: songs.twinkle,
                         bpm: $bpm,
