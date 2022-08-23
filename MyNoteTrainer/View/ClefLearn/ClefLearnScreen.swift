@@ -7,6 +7,21 @@
 
 import SwiftUI
 import AVKit
+import Foundation
+
+enum TapIndicatorState {
+    case right
+    case wrong
+    case neutral
+}
+
+enum TapButtonState: String {
+    case start = "Start"
+    case tap = "Tap"
+    case ready = "Ready"
+    case restart = "Restart"
+}
+
 
 struct ClefLearnScreen: View {
     @State var audioPlayer: AVAudioPlayer!
@@ -16,11 +31,50 @@ struct ClefLearnScreen: View {
     var notes: [Note] = []
     @State private var tappedKey: Int8 = -1
     
+//    var generatedBlock : [[Int]]
+//    var totalTime: TimeInterval
+//    var onStart: () -> ()
+//    @Binding var x: CGFloat
+//    @State var totalX: CGFloat
+//    @ObservedObject var coachmarkManager: CoachmarkManager
+//
+//    var onTap: (_ tapTime: TimeInterval) -> ()
+//    @Binding var tapIndicatorState : TapIndicatorState
+//
+//    var blockWidth = CGFloat(Config.BLOCK_WIDTH)
+//
+//    @State var isPressed : Bool = false
+//    @State var buttonLabel : TapButtonState = .start
+//
+//    @State var indicatorFrame : CGRect?
+//    @State var indicatorSize : CGSize?
+//
+//
+//    var coachmarkStepIndex : Int = 0
+    
     var body: some View {
         NavigationView{
             ZStack{
-                
-                
+//                let isShowIndicatorCm = coachmarkManager.coachmarkIndex == 0
+//                let isShowMetronomeCm = coachmarkManager.coachmarkIndex == 1
+//                let isShowIndicatorColorGreenCm = coachmarkManager.coachmarkIndex == 3
+//                let isShowIndicatorColorRedCm = coachmarkManager.coachmarkIndex == 2
+//                let shadowColor : Color = isShowIndicatorCm || isShowIndicatorColorGreenCm || isShowIndicatorColorRedCm ? .white : .clear
+//                let foregroundColor: Color = isShowIndicatorCm ? .blue : isShowIndicatorColorGreenCm ? .green : isShowIndicatorColorRedCm ? .red : tapIndicatorState == .right ? .green : tapIndicatorState == .wrong ? .red : .blue
+//                Rectangle()
+//                    .frame(width: blockWidth, height: 50, alignment: .center)
+//                    .foregroundColor(foregroundColor)
+//                    .offset(x: 0, y: 0)
+//                    .opacity(0.3)
+//                    .shadow(color: shadowColor, radius: 10)
+//                    .shadow(color: shadowColor, radius: 10)
+//                    .shadow(color: shadowColor, radius: 10)
+//                    .background(reader(isShowCoachmark: isShowIndicatorCm || isShowIndicatorColorGreenCm || isShowIndicatorColorRedCm, type: .tap, coachmarkManager: coachmarkManager))
+//                    .zIndex(isShowIndicatorCm || isShowIndicatorColorGreenCm || isShowIndicatorColorRedCm ? 1 : 0)
+//                Rectangle()
+//                    .frame(width: 1, height: 50, alignment: .center)
+//                    .foregroundColor(.black)
+//                    .offset(x: 0, y: 0)
                 VStack{
                     Spacer()
                     ledgerLines(tappedKey: tappedKey)
@@ -48,18 +102,21 @@ struct ClefLearnScreen: View {
                         }
                         .padding(.bottom, 50)
                         HStack(spacing: 7){
+                            
                             ForEach(blackKeys, id: \.self){key in
                                 
                                 Button {
                                     self.vm.play(toneKey: key)
                                 } label: {
                                     Rectangle()
-                                        .frame(width: 50, height: 200)
+                                        .frame(width: 45, height: 200)
                                         .foregroundColor(.black)
                                         .cornerRadius(radius: 7, corners: [.bottomLeft, .bottomRight])
                                 }
-                                .padding(.trailing, key == 63 ? 85 : 0)
+                                .padding(.trailing, key == 63 ? 45 : 0)
+                                .padding(.leading, key == 61 ? 25 : 0)
                             }
+                            Spacer()
                         }
                         .padding(.bottom, 160)
                     }

@@ -27,6 +27,11 @@
 		C8C2D26828B32207008CCF78 /* 69.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25B28B32207008CCF78 /* 69.wav */; };
 		C8C2D26E28B32374008CCF78 /* ClefAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */; };
 		C8C2D27028B32508008CCF78 /* ClefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */; };
+		C8E4303B28B3D2A3009C1BA2 /* CoachmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4303A28B3D2A3009C1BA2 /* CoachmarkManager.swift */; };
+		C8E4303F28B3D2B6009C1BA2 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4303C28B3D2B6009C1BA2 /* Extentions.swift */; };
+		C8E4304028B3D2B6009C1BA2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4303D28B3D2B6009C1BA2 /* Config.swift */; };
+		C8E4304128B3D2B6009C1BA2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4303E28B3D2B6009C1BA2 /* Helper.swift */; };
+		C8E4304328B3D2C2009C1BA2 /* CoachmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4304228B3D2C2009C1BA2 /* CoachmarkView.swift */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
 		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
@@ -82,6 +87,11 @@
 		C8C2D25B28B32207008CCF78 /* 69.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 69.wav; sourceTree = "<group>"; };
 		C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefAudioPlayer.swift; sourceTree = "<group>"; };
 		C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefViewModel.swift; sourceTree = "<group>"; };
+		C8E4303A28B3D2A3009C1BA2 /* CoachmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachmarkManager.swift; sourceTree = "<group>"; };
+		C8E4303C28B3D2B6009C1BA2 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		C8E4303D28B3D2B6009C1BA2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C8E4303E28B3D2B6009C1BA2 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C8E4304228B3D2C2009C1BA2 /* CoachmarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachmarkView.swift; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -217,6 +227,11 @@
 				C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */,
 				C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */,
 				C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */,
+				C8E4304228B3D2C2009C1BA2 /* CoachmarkView.swift */,
+				C8E4303A28B3D2A3009C1BA2 /* CoachmarkManager.swift */,
+				C8E4303D28B3D2B6009C1BA2 /* Config.swift */,
+				C8E4303C28B3D2B6009C1BA2 /* Extentions.swift */,
+				C8E4303E28B3D2B6009C1BA2 /* Helper.swift */,
 			);
 			path = ClefLearn;
 			sourceTree = "<group>";
@@ -536,6 +551,7 @@
 				CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */,
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
+				C8E4303B28B3D2A3009C1BA2 /* CoachmarkManager.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
 				CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */,
@@ -557,9 +573,13 @@
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
 				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
+				C8E4304128B3D2B6009C1BA2 /* Helper.swift in Sources */,
 				C8C2D27028B32508008CCF78 /* ClefViewModel.swift in Sources */,
+				C8E4304328B3D2C2009C1BA2 /* CoachmarkView.swift in Sources */,
+				C8E4304028B3D2B6009C1BA2 /* Config.swift in Sources */,
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
+				C8E4303F28B3D2B6009C1BA2 /* Extentions.swift in Sources */,
 				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
 				CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */,
