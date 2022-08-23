@@ -11,7 +11,7 @@ struct SRParanadaView: View {
     @StateObject var vm : SRPlayerManager
     @Binding var isPlaying: Bool
 //    @ObservedObject var vm: SRPlayerManager
-    var tapIndicatorState : TapIndicatorState
+//    var tapIndicatorState : TapIndicatorState
    
     var notes: [Note]
 //    = [
@@ -115,22 +115,22 @@ struct SRParanadaView: View {
 //                    .background(.blue)
                     
                     
-                    HStack{
-                        ZStack(alignment: .trailing){
-                            
-                            Rectangle()
-                                .frame(width: 80, height: 80)
-                                .foregroundColor(.clear)
-                                .background(LinearGradient(gradient: Gradient(colors: [Color.bgColor.opacity(0.3), tapIndicatorState.color]), startPoint: .leading, endPoint: .trailing))
-                                .opacity(0.5)
-                            
-                            Rectangle()
-                                .frame(width: 5, height: 100)
-                                .foregroundColor(tapIndicatorState.color)
-                        }.frame(width: 80, height: 100, alignment: .trailing)
-//                            .background(.green)
-                        Spacer()
-                    }
+//                    HStack{
+//                        ZStack(alignment: .trailing){
+//
+//                            Rectangle()
+//                                .frame(width: 80, height: 80)
+//                                .foregroundColor(.clear)
+//                                .background(LinearGradient(gradient: Gradient(colors: [Color.bgColor.opacity(0.3), tapIndicatorState.color]), startPoint: .leading, endPoint: .trailing))
+//                                .opacity(0.5)
+//
+//                            Rectangle()
+//                                .frame(width: 5, height: 100)
+//                                .foregroundColor(tapIndicatorState.color)
+//                        }.frame(width: 80, height: 100, alignment: .trailing)
+////                            .background(.green)
+//                        Spacer()
+//                    }
                     
                 }.frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .leading)
 //                    .background(Color.brownColor)

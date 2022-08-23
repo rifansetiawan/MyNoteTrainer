@@ -59,23 +59,39 @@ struct SightReadingView: View {
             
             if(noteInterval != nil && noteTiming != nil) {
                 VStack(spacing: 0){
-                   
-                    SRParanadaView(
-                        vm: SRPlayerManager(notes: notes, bpm: bpm, offsetBpm: 1, noteInterval: self.noteInterval!, noteTiming : self.noteTiming!),
-                        isPlaying: $isPlaying,
-                        tapIndicatorState: tapIndicatorState,
-                        notes: notes,
-                        notesBlock: notesBlock,
-                        startTime: $startTime,
-                        endTime: $endTime,
-                        playingTimestamp: $playingTimestamp,
-                        playingIndex: $playingIndex
-                    )
-
-                    //            Text("\(conductor.noteNumber ?? -1)")
+                    ZStack{
+                        SRParanadaView(
+                            vm: SRPlayerManager(notes: notes, bpm: bpm, offsetBpm: 1, noteInterval: self.noteInterval!, noteTiming : self.noteTiming!),
+                            isPlaying: $isPlaying,
+//                            tapIndicatorState: tapIndicatorState,
+                            notes: notes,
+                            notesBlock: notesBlock,
+                            startTime: $startTime,
+                            endTime: $endTime,
+                            playingTimestamp: $playingTimestamp,
+                            playingIndex: $playingIndex
+                        )
+                        
+                        HStack{
+                            ZStack(alignment: .trailing){
+                                
+                                Rectangle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(.clear)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.bgColor.opacity(0.3), tapIndicatorState.color]), startPoint: .leading, endPoint: .trailing))
+                                    .opacity(0.5)
+                                
+                                Rectangle()
+                                    .frame(width: 5, height: 100)
+                                    .foregroundColor(tapIndicatorState.color)
+                            }.frame(width: 80, height: 100, alignment: .trailing)
+    //                            .background(.green)
+                            Spacer()
+                        }
+                    }
 
                     InstrumentEXSView(onNoteOn: { i in
-                        self.onTapNote(noteNumber: i, timestamp: Date().timeIntervalSinceReferenceDate)
+                        self.onTapNote(noteNumber: i, timestamp: self.playingTimestamp)
     //                        print(i, vm.playingTimestamp)
     //                        if(vm.isPlaying) {
         //                        onTapNote(noteNumber: i, timestamp: vm.playingTimestamp)
@@ -177,25 +193,26 @@ struct SightReadingView: View {
         // kalo 1, cek timing index 1 dan index 2 (jika next index nya ada)
         // check next index timing
     
-//        let currentIndex = vm.playingIndex
+        let currentIndex = self.playingIndex
 //
-//        if(currentIndex >= notes.count-1) {
-////            tapIndicatorState = .red
-//            return
-//        }
-//        let nextIndex = currentIndex + 1 // -1 -> 0
-//        let nextIndexTiming = vm.noteTiming[nextIndex] + vm.startTime
-//        let currentIndexTiming = currentIndex > -1 ? vm.noteTiming[currentIndex] + vm.startTime : -1
+        if(currentIndex >= notes.count-1) {
+            tapIndicatorState = .red
+            return
+        }
+        let nextIndex = currentIndex + 1 // -1 -> 0
+        let nextIndexTiming = self.noteTiming![nextIndex] + self.startTime
+        
+        let currentIndexTiming = currentIndex > -1 ? self.noteTiming![currentIndex] + self.startTime : -1
 //
-//        let offsetTiming = 0.25
+        let offsetTiming = 0.25
 //
-//        if(abs(timestamp - nextIndexTiming) < offsetTiming && (noteNumber == notes[nextIndex].sound.key)) {
-////            tapIndicatorState = .green
-//        } else if (abs(timestamp - currentIndexTiming) < offsetTiming && (noteNumber == notes[currentIndex].sound.key)) {
-////            tapIndicatorState = .green
-//        } else {
-////            tapIndicatorState = .red
-//        }
+        if(abs(timestamp - nextIndexTiming) < offsetTiming && (noteNumber == notes[nextIndex].sound.key)) {
+            tapIndicatorState = .green
+        } else if (abs(timestamp - currentIndexTiming) < offsetTiming && (noteNumber == notes[currentIndex].sound.key)) {
+            tapIndicatorState = .green
+        } else {
+            tapIndicatorState = .red
+        }
         
         
         // set warna tap indicator di state
