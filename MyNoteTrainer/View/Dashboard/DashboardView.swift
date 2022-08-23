@@ -55,7 +55,7 @@ struct DashboardView: View {
                             }
                         })
                         
-                        Button(action: {}, label: {
+                    NavigationLink(destination: ClefLearnScreen()) {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)
@@ -90,7 +90,7 @@ struct DashboardView: View {
                                 .frame(width: 345, height: 105, alignment: .leading)
                                 
                             }
-                        })
+                        }
                     NavigationLink(destination: ScalesLearnView()) {
                             ZStack{
                                 Rectangle()
