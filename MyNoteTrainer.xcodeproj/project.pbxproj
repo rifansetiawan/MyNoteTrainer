@@ -11,7 +11,6 @@
 		BB7DF33F28B51FE2007F19D7 /* MusicalNoteLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */; };
 		BB7DF34328B51FF9007F19D7 /* bad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7DF34028B51FF9007F19D7 /* bad.mp3 */; };
 		BB7DF34428B51FF9007F19D7 /* black.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7DF34128B51FF9007F19D7 /* black.mp3 */; };
-		BBBC58D228B5301700FB161E /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBBC58D128B5301700FB161E /* whole-not.mp3 */; };
 		BBBC58D428B5376700FB161E /* half-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBBC58D328B5376700FB161E /* half-not.mp3 */; };
 		BBBC58D828B53B4000FB161E /* ClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC58D728B53B4000FB161E /* ClefQuizView.swift */; };
 		BBBC58DA28B53CCC00FB161E /* PopUpCorrectClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */; };
@@ -34,6 +33,7 @@
 		CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = CB3CEF8E28B1256700A2D8F0 /* Sounds */; };
 		CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */; };
 		CB3CEF9428B125E600A2D8F0 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */; };
+		CB8A6B7E28B5595500FABB52 /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B7D28B5595500FABB52 /* whole-not.mp3 */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -61,7 +61,6 @@
 		BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteLearnView.swift; sourceTree = "<group>"; };
 		BB7DF34028B51FF9007F19D7 /* bad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bad.mp3; sourceTree = "<group>"; };
 		BB7DF34128B51FF9007F19D7 /* black.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = black.mp3; sourceTree = "<group>"; };
-		BBBC58D128B5301700FB161E /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "whole-not.mp3"; path = "../../../../../../Music/GarageBand/whole-not.mp3"; sourceTree = "<group>"; };
 		BBBC58D328B5376700FB161E /* half-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "half-not.mp3"; sourceTree = "<group>"; };
 		BBBC58D728B53B4000FB161E /* ClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView.swift; sourceTree = "<group>"; };
 		BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCorrectClefQuizView.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emuaps_8mb.sf2; sourceTree = "<group>"; };
 		CB3CEF8E28B1256700A2D8F0 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView2.swift; sourceTree = "<group>"; };
+		CB8A6B7D28B5595500FABB52 /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "whole-not.mp3"; path = "../../../../../Library/Messages/Attachments/9d/13/F4406A64-0432-4748-824F-24D90C7B337F/whole-not.mp3"; sourceTree = "<group>"; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -372,9 +372,9 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				CB8A6B7D28B5595500FABB52 /* whole-not.mp3 */,
 				BB7DF34028B51FF9007F19D7 /* bad.mp3 */,
 				BBBC58D328B5376700FB161E /* half-not.mp3 */,
-				BBBC58D128B5301700FB161E /* whole-not.mp3 */,
 				BB7DF34128B51FF9007F19D7 /* black.mp3 */,
 				CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */,
 			);
@@ -494,11 +494,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8A6B7E28B5595500FABB52 /* whole-not.mp3 in Resources */,
 				BB7DF34328B51FF9007F19D7 /* bad.mp3 in Resources */,
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				BB7DF34428B51FF9007F19D7 /* black.mp3 in Resources */,
 				BBBC58D428B5376700FB161E /* half-not.mp3 in Resources */,
-				BBBC58D228B5301700FB161E /* whole-not.mp3 in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
@@ -675,7 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = AK3CFW6FWF;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -704,7 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = AK3CFW6FWF;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
