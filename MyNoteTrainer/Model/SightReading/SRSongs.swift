@@ -9,6 +9,11 @@ import Foundation
 
 class SRSongs {
     let twinkle: [Note] = [
+        Note(noteType: .fullNote, sound: Sound(tone: .F)),
+        Note(noteType: .halfNote, sound: Sound(tone: .F)),
+        Note(noteType: .eighthNote, sound: Sound(tone: .F)),
+        Note(noteType: .fullRest, sound: Sound(tone: .F)),
+        Note(noteType: .halfRest, sound: Sound(tone: .F)),
         Note(noteType: .quarterNote, sound: Sound(tone: .C)),
         Note(noteType: .quarterNote, sound: Sound(tone: .C)),
         Note(noteType: .quarterNote, sound: Sound(tone: .G)),
@@ -58,4 +63,5 @@ class SRSongs {
         Note(noteType: .quarterNote, sound: Sound(tone: .C)),
         Note(noteType: .quarterRest, sound: Sound(tone: .F))
     ]
+    
 }

@@ -15,7 +15,7 @@ struct SightReadingParentView: View {
     
     @StateObject var tapIndicatorVM: TapIndicatorViewModel = TapIndicatorViewModel()
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top){
             SightReadingView(notes: notes,
                              bpm: $bpm,
                              notesBlock: notesBlock,
@@ -39,6 +39,9 @@ struct SightReadingParentView: View {
 //                            .background(.green)
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: 200)
+            .padding(.leading, 209)
+            
             
         }.onChange(of: tapIndicatorVM.tapIndicatorState, perform: {i in
             self.tapIndicatorState = i
@@ -47,8 +50,9 @@ struct SightReadingParentView: View {
     }
 }
 
-//struct SightReadingParentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SightReadingParentView()
-//    }
-//}
+struct SightReadingParentView_Previews: PreviewProvider {
+    static var previews: some View {
+        SightReadingParentView(notes: [], bpm: .constant(60), notesBlock: [[]])
+            .previewInterfaceOrientation(.landscapeLeft)
+    }
+}
