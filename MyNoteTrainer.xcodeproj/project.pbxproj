@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A12512E28B4D92300CDD2AA /* SRSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A12512D28B4D92300CDD2AA /* SRSongs.swift */; };
 		0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */; };
+		0A8A4BB128B52FD700AB5925 /* SightReadingParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB028B52FD700AB5925 /* SightReadingParentView.swift */; };
+		0A8A4BB328B533CB00AB5925 /* TapIndicatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB228B533CB00AB5925 /* TapIndicatorViewModel.swift */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		0A12512D28B4D92300CDD2AA /* SRSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRSongs.swift; sourceTree = "<group>"; };
 		0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		0A8A4BB028B52FD700AB5925 /* SightReadingParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingParentView.swift; sourceTree = "<group>"; };
+		0A8A4BB228B533CB00AB5925 /* TapIndicatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapIndicatorViewModel.swift; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 			children = (
 				CB8C195128B1364900A1AD67 /* SRParanadaView.swift */,
 				CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */,
+				0A8A4BB028B52FD700AB5925 /* SightReadingParentView.swift */,
+				0A8A4BB228B533CB00AB5925 /* TapIndicatorViewModel.swift */,
 			);
 			path = SightReading;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
+				0A8A4BB128B52FD700AB5925 /* SightReadingParentView.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
 				0A12512E28B4D92300CDD2AA /* SRSongs.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
@@ -511,6 +518,7 @@
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
+				0A8A4BB328B533CB00AB5925 /* TapIndicatorViewModel.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				CB8C196828B494A400A1AD67 /* TapIndicatorState.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
@@ -651,7 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = PSKBVM3X2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -680,7 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = PSKBVM3X2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
