@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */; };
+		BB7DF33F28B51FE2007F19D7 /* MusicalNoteLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */; };
+		BB7DF34328B51FF9007F19D7 /* bad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7DF34028B51FF9007F19D7 /* bad.mp3 */; };
+		BB7DF34428B51FF9007F19D7 /* black.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7DF34128B51FF9007F19D7 /* black.mp3 */; };
+		BBBC58D228B5301700FB161E /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBBC58D128B5301700FB161E /* whole-not.mp3 */; };
+		BBBC58D428B5376700FB161E /* half-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBBC58D328B5376700FB161E /* half-not.mp3 */; };
+		BBBC58D828B53B4000FB161E /* ClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC58D728B53B4000FB161E /* ClefQuizView.swift */; };
+		BBBC58DA28B53CCC00FB161E /* PopUpCorrectClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
@@ -51,6 +58,13 @@
 
 /* Begin PBXFileReference section */
 		0A4C3B1B28B38AAA00AB424C /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteLearnView.swift; sourceTree = "<group>"; };
+		BB7DF34028B51FF9007F19D7 /* bad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bad.mp3; sourceTree = "<group>"; };
+		BB7DF34128B51FF9007F19D7 /* black.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = black.mp3; sourceTree = "<group>"; };
+		BBBC58D128B5301700FB161E /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "whole-not.mp3"; path = "../../../../../../Music/GarageBand/whole-not.mp3"; sourceTree = "<group>"; };
+		BBBC58D328B5376700FB161E /* half-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "half-not.mp3"; sourceTree = "<group>"; };
+		BBBC58D728B53B4000FB161E /* ClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView.swift; sourceTree = "<group>"; };
+		BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCorrectClefQuizView.swift; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +192,7 @@
 		CBE98EF928AE415F00FF8EA8 /* MusicalNoteLearn */ = {
 			isa = PBXGroup;
 			children = (
+				BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */,
 			);
 			path = MusicalNoteLearn;
 			sourceTree = "<group>";
@@ -199,6 +214,8 @@
 		CBE98EFC28AE418E00FF8EA8 /* ClefQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				BBBC58D728B53B4000FB161E /* ClefQuizView.swift */,
+				BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */,
 			);
 			path = ClefQuiz;
 			sourceTree = "<group>";
@@ -355,6 +372,10 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				BB7DF34028B51FF9007F19D7 /* bad.mp3 */,
+				BBBC58D328B5376700FB161E /* half-not.mp3 */,
+				BBBC58D128B5301700FB161E /* whole-not.mp3 */,
+				BB7DF34128B51FF9007F19D7 /* black.mp3 */,
 				CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */,
 			);
 			path = Sound;
@@ -473,7 +494,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7DF34328B51FF9007F19D7 /* bad.mp3 in Resources */,
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
+				BB7DF34428B51FF9007F19D7 /* black.mp3 in Resources */,
+				BBBC58D428B5376700FB161E /* half-not.mp3 in Resources */,
+				BBBC58D228B5301700FB161E /* whole-not.mp3 in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
@@ -497,6 +522,7 @@
 				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
+				BBBC58DA28B53CCC00FB161E /* PopUpCorrectClefQuizView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
@@ -504,6 +530,7 @@
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
 				CB8C196228B338FD00A1AD67 /* ScaleQuizModel.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
+				BBBC58D828B53B4000FB161E /* ClefQuizView.swift in Sources */,
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
@@ -515,6 +542,7 @@
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
 				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
+				BB7DF33F28B51FE2007F19D7 /* MusicalNoteLearnView.swift in Sources */,
 				0A4C3B1C28B38AAA00AB424C /* Array+Ext.swift in Sources */,
 				CB8C196028B32BD700A1AD67 /* ScalesQuizView.swift in Sources */,
 				CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */,
@@ -647,7 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = PSKBVM3X2F;
+				DEVELOPMENT_TEAM = AK3CFW6FWF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -676,7 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = AK3CFW6FWF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
