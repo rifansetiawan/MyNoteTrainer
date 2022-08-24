@@ -11,8 +11,6 @@
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
-		C86595A528B488EE0032B9FD /* MusicalNoteQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86595A428B488EE0032B9FD /* MusicalNoteQuiz.swift */; };
-		C8C2D23428B321B9008CCF78 /* ClefLearnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */; };
 		C8C2D25C28B32207008CCF78 /* 64.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D24F28B32206008CCF78 /* 64.wav */; };
 		C8C2D25D28B32207008CCF78 /* 62.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25028B32206008CCF78 /* 62.wav */; };
 		C8C2D25E28B32207008CCF78 /* 72.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25128B32207008CCF78 /* 72.wav */; };
@@ -26,8 +24,10 @@
 		C8C2D26628B32207008CCF78 /* 70.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25928B32207008CCF78 /* 70.wav */; };
 		C8C2D26728B32207008CCF78 /* 67.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25A28B32207008CCF78 /* 67.wav */; };
 		C8C2D26828B32207008CCF78 /* 69.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C2D25B28B32207008CCF78 /* 69.wav */; };
-		C8C2D26E28B32374008CCF78 /* ClefAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */; };
-		C8C2D27028B32508008CCF78 /* ClefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */; };
+		C8EB934828B5526A0015D030 /* ClefLearnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EB934528B5526A0015D030 /* ClefLearnScreen.swift */; };
+		C8EB934928B5526A0015D030 /* ClefAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EB934628B5526A0015D030 /* ClefAudioPlayer.swift */; };
+		C8EB934A28B5526A0015D030 /* ClefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EB934728B5526A0015D030 /* ClefViewModel.swift */; };
+		C8EB934C28B552A80015D030 /* MusicalNoteQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EB934B28B552A80015D030 /* MusicalNoteQuiz.swift */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
 		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
@@ -67,8 +67,6 @@
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C86595A428B488EE0032B9FD /* MusicalNoteQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuiz.swift; sourceTree = "<group>"; };
-		C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefLearnScreen.swift; sourceTree = "<group>"; };
 		C8C2D24F28B32206008CCF78 /* 64.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 64.wav; sourceTree = "<group>"; };
 		C8C2D25028B32206008CCF78 /* 62.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 62.wav; sourceTree = "<group>"; };
 		C8C2D25128B32207008CCF78 /* 72.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 72.wav; sourceTree = "<group>"; };
@@ -82,8 +80,10 @@
 		C8C2D25928B32207008CCF78 /* 70.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 70.wav; sourceTree = "<group>"; };
 		C8C2D25A28B32207008CCF78 /* 67.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 67.wav; sourceTree = "<group>"; };
 		C8C2D25B28B32207008CCF78 /* 69.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 69.wav; sourceTree = "<group>"; };
-		C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefAudioPlayer.swift; sourceTree = "<group>"; };
-		C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefViewModel.swift; sourceTree = "<group>"; };
+		C8EB934528B5526A0015D030 /* ClefLearnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefLearnScreen.swift; sourceTree = "<group>"; };
+		C8EB934628B5526A0015D030 /* ClefAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefAudioPlayer.swift; sourceTree = "<group>"; };
+		C8EB934728B5526A0015D030 /* ClefViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefViewModel.swift; sourceTree = "<group>"; };
+		C8EB934B28B552A80015D030 /* MusicalNoteQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuiz.swift; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		CBE98EFA28AE417400FF8EA8 /* MusicalNoteQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				C86595A428B488EE0032B9FD /* MusicalNoteQuiz.swift */,
+				C8EB934B28B552A80015D030 /* MusicalNoteQuiz.swift */,
 			);
 			path = MusicalNoteQuiz;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 		CBE98EFB28AE418100FF8EA8 /* ClefLearn */ = {
 			isa = PBXGroup;
 			children = (
-				C8C2D23328B321B9008CCF78 /* ClefLearnScreen.swift */,
-				C8C2D26D28B32374008CCF78 /* ClefAudioPlayer.swift */,
-				C8C2D26F28B32508008CCF78 /* ClefViewModel.swift */,
+				C8EB934628B5526A0015D030 /* ClefAudioPlayer.swift */,
+				C8EB934528B5526A0015D030 /* ClefLearnScreen.swift */,
+				C8EB934728B5526A0015D030 /* ClefViewModel.swift */,
 			);
 			path = ClefLearn;
 			sourceTree = "<group>";
@@ -536,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EB934A28B5526A0015D030 /* ClefViewModel.swift in Sources */,
 				CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */,
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
@@ -544,13 +545,12 @@
 				CB3CEF5528B0D5BE00A2D8F0 /* PianoModel.swift in Sources */,
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
 				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
-				C8C2D23428B321B9008CCF78 /* ClefLearnScreen.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
+				C8EB934928B5526A0015D030 /* ClefAudioPlayer.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
-				C8C2D26E28B32374008CCF78 /* ClefAudioPlayer.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
@@ -560,11 +560,11 @@
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
 				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
-				C86595A528B488EE0032B9FD /* MusicalNoteQuiz.swift in Sources */,
-				C8C2D27028B32508008CCF78 /* ClefViewModel.swift in Sources */,
 				CB3CEF5928B0D64E00A2D8F0 /* PianoKeyModel.swift in Sources */,
 				CB3CEF5728B0D60700A2D8F0 /* PianoSound.swift in Sources */,
+				C8EB934828B5526A0015D030 /* ClefLearnScreen.swift in Sources */,
 				CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */,
+				C8EB934C28B552A80015D030 /* MusicalNoteQuiz.swift in Sources */,
 				BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */,
 				CB8C195828B20BF300A1AD67 /* ScalesParanadaView.swift in Sources */,
 			);
