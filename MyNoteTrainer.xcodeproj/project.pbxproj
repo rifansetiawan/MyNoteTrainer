@@ -19,6 +19,9 @@
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
 		C833726628B5FCB500D495DE /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C833726528B5FCB500D495DE /* whole-not.mp3 */; };
+		C8A8344F28B66F42002C46B5 /* ClefAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A8344C28B66F42002C46B5 /* ClefAudioPlayer.swift */; };
+		C8A8345028B66F42002C46B5 /* ClefLearnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A8344D28B66F42002C46B5 /* ClefLearnScreen.swift */; };
+		C8A8345128B66F42002C46B5 /* ClefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A8344E28B66F42002C46B5 /* ClefViewModel.swift */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
 		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
@@ -70,6 +73,9 @@
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C833726528B5FCB500D495DE /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whole-not.mp3"; sourceTree = "<group>"; };
+		C8A8344C28B66F42002C46B5 /* ClefAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefAudioPlayer.swift; sourceTree = "<group>"; };
+		C8A8344D28B66F42002C46B5 /* ClefLearnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefLearnScreen.swift; sourceTree = "<group>"; };
+		C8A8344E28B66F42002C46B5 /* ClefViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefViewModel.swift; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -207,6 +213,9 @@
 		CBE98EFB28AE418100FF8EA8 /* ClefLearn */ = {
 			isa = PBXGroup;
 			children = (
+				C8A8344C28B66F42002C46B5 /* ClefAudioPlayer.swift */,
+				C8A8344D28B66F42002C46B5 /* ClefLearnScreen.swift */,
+				C8A8344E28B66F42002C46B5 /* ClefViewModel.swift */,
 			);
 			path = ClefLearn;
 			sourceTree = "<group>";
@@ -524,17 +533,20 @@
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				BBBC58DA28B53CCC00FB161E /* PopUpCorrectClefQuizView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
+				C8A8345128B66F42002C46B5 /* ClefViewModel.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
 				CB8C196228B338FD00A1AD67 /* ScaleQuizModel.swift in Sources */,
+				C8A8344F28B66F42002C46B5 /* ClefAudioPlayer.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
 				BBBC58D828B53B4000FB161E /* ClefQuizView.swift in Sources */,
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
+				C8A8345028B66F42002C46B5 /* ClefLearnScreen.swift in Sources */,
 				CB8C196828B494A400A1AD67 /* TapIndicatorState.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
 				CB8C195C28B2871200A1AD67 /* AppDelegate.swift in Sources */,
