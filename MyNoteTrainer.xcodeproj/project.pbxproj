@@ -16,8 +16,6 @@
 		0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */; };
 		0A8A4BBB28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */; };
 		0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */; };
-		0A8A4BCC28B684D400AB5925 /* half-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A4BCA28B684D400AB5925 /* half-not.mp3 */; };
-		0A8A4BCD28B684D400AB5925 /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A4BCB28B684D400AB5925 /* whole-not.mp3 */; };
 		BB25D56B28B6737B00AB9804 /* ClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25D56828B6737B00AB9804 /* ClefQuizView.swift */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
@@ -48,6 +46,7 @@
 		CB8A6B9728B64A1400FABB52 /* Quiz1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B9428B64A1400FABB52 /* Quiz1.mp3 */; };
 		CB8A6B9828B64A1400FABB52 /* Quiz3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B9528B64A1400FABB52 /* Quiz3.mp3 */; };
 		CB8A6B9928B64A1400FABB52 /* Quiz2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B9628B64A1400FABB52 /* Quiz2.mp3 */; };
+		CB8A6B9D28B6832300FABB52 /* half-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B9C28B6832300FABB52 /* half-not.mp3 */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -80,8 +79,6 @@
 		0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachmarkManager.swift; sourceTree = "<group>"; };
 		0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizPlayerManager.swift; sourceTree = "<group>"; };
 		0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		0A8A4BCA28B684D400AB5925 /* half-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "half-not.mp3"; sourceTree = "<group>"; };
-		0A8A4BCB28B684D400AB5925 /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whole-not.mp3"; sourceTree = "<group>"; };
 		BB25D56828B6737B00AB9804 /* ClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView.swift; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
@@ -109,6 +106,7 @@
 		CB8A6B9428B64A1400FABB52 /* Quiz1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Quiz1.mp3; sourceTree = "<group>"; };
 		CB8A6B9528B64A1400FABB52 /* Quiz3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Quiz3.mp3; sourceTree = "<group>"; };
 		CB8A6B9628B64A1400FABB52 /* Quiz2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Quiz2.mp3; sourceTree = "<group>"; };
+		CB8A6B9C28B6832300FABB52 /* half-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "half-not.mp3"; path = "../../../../../Library/Messages/Attachments/ab/11/0E9EA644-BD99-4FB7-8462-A294012C421E/half-not.mp3"; sourceTree = "<group>"; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -410,8 +408,7 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				0A8A4BCA28B684D400AB5925 /* half-not.mp3 */,
-				0A8A4BCB28B684D400AB5925 /* whole-not.mp3 */,
+				CB8A6B9C28B6832300FABB52 /* half-not.mp3 */,
 				CB8A6B9428B64A1400FABB52 /* Quiz1.mp3 */,
 				CB8A6B9628B64A1400FABB52 /* Quiz2.mp3 */,
 				CB8A6B9528B64A1400FABB52 /* Quiz3.mp3 */,
@@ -537,10 +534,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
-				0A8A4BCC28B684D400AB5925 /* half-not.mp3 in Resources */,
+				CB8A6B9D28B6832300FABB52 /* half-not.mp3 in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
 				0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */,
-				0A8A4BCD28B684D400AB5925 /* whole-not.mp3 in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				CB8A6B9928B64A1400FABB52 /* Quiz2.mp3 in Resources */,
 				CB8A6B9828B64A1400FABB52 /* Quiz3.mp3 in Resources */,
@@ -728,15 +724,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = PSKBVM3X2F;
+				DEVELOPMENT_TEAM = AK3CFW6FWF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -757,15 +755,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = PSKBVM3X2F;
+				DEVELOPMENT_TEAM = AK3CFW6FWF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

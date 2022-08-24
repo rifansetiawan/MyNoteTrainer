@@ -14,11 +14,12 @@ struct ClefQuizView: View {
 
     @State var position = CGSize.zero
     
-    @State private var location: CGPoint = CGPoint(x: 188.66, y: 166)
+    @State private var location: CGPoint = CGPoint(x: 188.66, y: 115)
     @GestureState private var fingerLocation: CGPoint? = nil
     @GestureState private var startLocation: CGPoint? = nil // 1
     @State var isShowPopup: Bool = false
     @State var isShowSuccessPopUp: Bool = false
+    @State var isFalse: Bool = false
     var quizes : [MusicalNoteQuizModel] = MusicalNoteQuizModel.quizes
     @State var isShowTutorial: Bool = true
     @State var quizIndex: Int = 0
@@ -39,6 +40,11 @@ struct ClefQuizView: View {
                 }
                 
             }
+            HStack{
+                Image(isFalse ? "false" : "")
+                
+            }.frame(width: 300, height: 100, alignment: .trailing)
+                
             
             HStack(spacing: 1){
                 Image("kunciG")
@@ -59,23 +65,36 @@ struct ClefQuizView: View {
         
         Button(action:
                 {
-            if location.y <= -42 && location.y >= -48{
-                print("something")
-                isShowPopup = true
+            if location.y <= -42 && location.y >= -48 {
+                isShowSuccessPopUp = true
+            }
+            else {
+                isFalse = true
             }
             
+            
         }, label: {
-            Text("Check")
-                .foregroundColor(.white)
-                .background(.blue)
+            Text("Check").frame(width: 300, height: 50, alignment: .center).background(Color.primaryColor)
+                .foregroundColor(Color.black).cornerRadius(30)
+                .font(.body.bold())
+                .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color.primaryColor, lineWidth: 4)
+                )
         })
-        
-        if isShowPopup {
-            PopUpCorrectQuizView()
-                .myCustomPopUp(onTapoutside: {
-                    isShowPopup = false
-                }, withCloseBtn: true)
+        if(isShowSuccessPopUp) {
+            PopUpCorrectQuizView(onPressPrimary: { }, onPressSecondary: {
+                presentationMode.wrappedValue.dismiss()
+            })
+            .myCustomPopUp()
         }
+        
+//        if isShowPopup {
+//            PopUpCorrectQuizView()
+//                .myCustomPopUp(onTapoutside: {
+//                    isShowPopup = false
+//                }, withCloseBtn: true)
+//        }
         
         
         
@@ -85,17 +104,16 @@ struct ClefQuizView: View {
             isShowPopup = true
         }
         if(isShowSuccessPopUp) {
-            PopUpCorrectQuizView(onPressPrimary: quizIndex < quizes.count-1 ? ({
-                if(quizes.count-1 > quizIndex) {
-                    self.quizIndex += 1
-                }
-                isShowSuccessPopUp = false
-            }) : nil, onPressSecondary: {
+            PopUpCorrectQuizView(onPressPrimary: { }, onPressSecondary: {
                 presentationMode.wrappedValue.dismiss()
             })
             .myCustomPopUp()
         }
     }
+    
+//    func falseLocation(){
+//
+//    }
     
     var simpleDrag: some Gesture {
         DragGesture()

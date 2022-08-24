@@ -22,7 +22,7 @@ struct PopupQuizView: View {
                     Image("Popup1")
                         .frame(width: 97, height: 59)
                     VStack(alignment: .leading){
-                        Text("Ear trainng")
+                        Text("Guess the Beat")
                             .foregroundColor(Color.black)
                         
                         HStack{
@@ -66,7 +66,7 @@ struct PopupQuizView: View {
                     Image("Popup3")
                         .frame(width: 97, height: 59)
                     VStack(alignment: .leading){
-                        Text("Guess the Scale")
+                        Text("Scale")
                             .foregroundColor(Color.black)
                         
                         HStack{
