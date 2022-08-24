@@ -30,6 +30,8 @@
 		CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = CB3CEF8E28B1256700A2D8F0 /* Sounds */; };
 		CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */; };
 		CB3CEF9428B125E600A2D8F0 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */; };
+		CB8A6B8428B56BD200FABB52 /* MusicQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8328B56BD200FABB52 /* MusicQuizView.swift */; };
+		CB8A6B8628B58D5000FABB52 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8528B58D5000FABB52 /* QuizView.swift */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -73,6 +75,8 @@
 		CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emuaps_8mb.sf2; sourceTree = "<group>"; };
 		CB3CEF8E28B1256700A2D8F0 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView2.swift; sourceTree = "<group>"; };
+		CB8A6B8328B56BD200FABB52 /* MusicQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicQuizView.swift; sourceTree = "<group>"; };
+		CB8A6B8528B58D5000FABB52 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -163,7 +167,6 @@
 				CBE98EFD28AE41AD00FF8EA8 /* ScalesLearn */,
 				CBE98EFC28AE418E00FF8EA8 /* ClefQuiz */,
 				CBE98EFB28AE418100FF8EA8 /* ClefLearn */,
-				CBE98EFA28AE417400FF8EA8 /* MusicalNoteQuiz */,
 				CBE98EF928AE415F00FF8EA8 /* MusicalNoteLearn */,
 				CBE98EF828AE414C00FF8EA8 /* Dashboard */,
 			);
@@ -186,13 +189,6 @@
 			children = (
 			);
 			path = MusicalNoteLearn;
-			sourceTree = "<group>";
-		};
-		CBE98EFA28AE417400FF8EA8 /* MusicalNoteQuiz */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MusicalNoteQuiz;
 			sourceTree = "<group>";
 		};
 		CBE98EFB28AE418100FF8EA8 /* ClefLearn */ = {
@@ -395,6 +391,8 @@
 				CB3CEF5A28B0D6A800A2D8F0 /* PianoKeyView.swift */,
 				CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */,
 				CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */,
+				CB8A6B8328B56BD200FABB52 /* MusicQuizView.swift */,
+				CB8A6B8528B58D5000FABB52 /* QuizView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -518,7 +516,9 @@
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,
 				CBE98F2428AEA27200FF8EA8 /* Color+Ext.swift in Sources */,
+				CB8A6B8628B58D5000FABB52 /* QuizView.swift in Sources */,
 				0A8A4BB328B533CB00AB5925 /* TapIndicatorViewModel.swift in Sources */,
+				CB8A6B8428B56BD200FABB52 /* MusicQuizView.swift in Sources */,
 				CBE98F1528AE458C00FF8EA8 /* DashboardView.swift in Sources */,
 				CB8C196828B494A400A1AD67 /* TapIndicatorState.swift in Sources */,
 				CB8C195A28B235D500A1AD67 /* ScalesLearnView.swift in Sources */,
@@ -659,7 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = PSKBVM3X2F;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -688,7 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyNoteTrainer/Preview Content\"";
-				DEVELOPMENT_TEAM = PSKBVM3X2F;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
