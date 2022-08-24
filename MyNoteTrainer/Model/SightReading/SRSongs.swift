@@ -7,13 +7,17 @@
 
 import Foundation
 
-class SRSongs {
-    let twinkle: [Note] = [
+struct SRSongs {
+    static let test: [Note] = [
         Note(noteType: .fullNote, sound: Sound(tone: .F)),
         Note(noteType: .halfNote, sound: Sound(tone: .F)),
         Note(noteType: .eighthNote, sound: Sound(tone: .F)),
         Note(noteType: .fullRest, sound: Sound(tone: .F)),
         Note(noteType: .halfRest, sound: Sound(tone: .F)),
+        Note(noteType: .eighthRest, sound: Sound(tone: .F))
+    ]
+    
+    static let twinkle: [Note] = [
         Note(noteType: .quarterNote, sound: Sound(tone: .C)),
         Note(noteType: .quarterNote, sound: Sound(tone: .C)),
         Note(noteType: .quarterNote, sound: Sound(tone: .G)),

@@ -8,34 +8,13 @@
 import SwiftUI
 
 struct SightReadingView: View {
-//    @StateObject var conductor: InstrumentEXSConductor
-//    @StateObject var vm : SRPlayerManager
-//    SRPlayerManager(notes: [
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C)), //0
-//        Note(noteType: .quarterNote, sound: Sound(tone: .D)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .E)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .F)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .G)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .A)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .B)),
-//        Note(noteType: .quarterNote, sound: Sound(tone: .C, octave: 5)),
-//    ], bpm: 60, offsetBpm: 1)
-    
-   
+    var quiz: SRQuizModel
     var notes: [Note]
-    @Binding var bpm: Int
     var bpmOptions: [Int] = [60,120,180]
     
     
     var notesBlock : [[Int]]
     var tapIndicatorVM: TapIndicatorViewModel
-    
-//    init(notes: [Note]) {
-//        self.notes = notes
-//        self.conductor = InstrumentEXSConductor()
-//        self.vm = SRPlayerManager(notes: notes, bpm: 60, offsetBpm: 1)
-//        self.notesBlock = SRHelper.generateBlock(offsetBeat: 1, notes: notes)
-//    }
     
     @State var isPlaying: Bool = false
     @State var noteNumber: Int8 = -1
@@ -43,6 +22,7 @@ struct SightReadingView: View {
     @State var endTime: TimeInterval = -1
     @State var playingTimestamp: TimeInterval = -1
     @State var playingIndex: Int = -1
+    @State var bpmIndex: Int = 0
     
     @State var noteInterval: [TimeInterval]?
     @State var noteTiming: [TimeInterval]?
@@ -56,7 +36,7 @@ struct SightReadingView: View {
                 VStack(spacing: 0){
                     ZStack{
                         SRParanadaView(
-                            vm: SRPlayerManager(notes: notes, bpm: bpm, offsetBpm: 1, noteInterval: self.noteInterval!, noteTiming : self.noteTiming!),
+                            vm: SRPlayerManager(notes: notes, bpm: bpmOptions[bpmIndex], offsetBpm: 1, noteInterval: self.noteInterval!, noteTiming : self.noteTiming!),
                             isPlaying: $isPlaying,
                             notes: notes,
                             notesBlock: notesBlock,
@@ -65,26 +45,14 @@ struct SightReadingView: View {
                             playingTimestamp: $playingTimestamp,
                             playingIndex: $playingIndex
                         )
-                        
-                        
                     }
-                    
-                    
-
                     InstrumentEXSView(onNoteOn: { i in
                         self.onTapNote(noteNumber: i, timestamp: self.playingTimestamp)
-    //                        print(i, vm.playingTimestamp)
-    //                        if(vm.isPlaying) {
-        //                        onTapNote(noteNumber: i, timestamp: vm.playingTimestamp)
-    //                        }
-    //                    guard let i = i else {return}
                        
                     })
                         .frame(maxWidth: .infinity, maxHeight: 175)
-                    //            PianoView(keyInfo: $keyInfo)
                 }
             }
-            
             
             if (!self.isPlaying) {
                 VStack {
@@ -116,9 +84,6 @@ struct SightReadingView: View {
                 }
                 .background(Color.black50Color.opacity(0.01))
             }
-            
-            
-            
         }
         .onAppear{
             AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
@@ -136,23 +101,12 @@ struct SightReadingView: View {
                 UINavigationController.attemptRotationToDeviceOrientation()
             }
         }
-        .onChange(of: bpm, perform: { i in
+        .onChange(of: bpmIndex, perform: { i in
             self.setupIntervalandTiming()
         })
-//        .onChange(of: tapIndicatorVM.tapIndicatorState, perform: { i in
-//            self.tapIndicatorState = tapIndicatorVM.tapIndicatorState
-//        })
-//        .onReceive(conductor.$noteNumber, perform: { i in
-//            guard let i = i else {return}
-//            print(i, vm.playingTimestamp)
-//            if(vm.isPlaying) {
-//                onTapNote(noteNumber: i, timestamp: vm.playingTimestamp)
-//            }
-            
-//        })
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing) {
-                Picker("", selection: $bpm) {
+                Picker("", selection: $bpmIndex) {
                                 ForEach(bpmOptions, id: \.self) { i in
                                     Text("\(i)")
                                 }
@@ -160,12 +114,12 @@ struct SightReadingView: View {
                             .pickerStyle(.menu)
             }
         }
-        .navigationTitle("Twinkle Twinkle")
+        .navigationTitle(quiz.title)
         
     }
     
     func setupIntervalandTiming() {
-        self.noteInterval = SRHelper.convertBeatToTimeInterval(notes: notes, bpm: self.bpm, offsetBpm: 1)
+        self.noteInterval = SRHelper.convertBeatToTimeInterval(notes: notes, bpm: self.bpmOptions[bpmIndex], offsetBpm: 1)
         self.noteTiming = SRHelper.countNoteTiming(noteInterval: noteInterval!)
     }
 //
