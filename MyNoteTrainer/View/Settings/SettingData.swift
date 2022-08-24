@@ -15,7 +15,7 @@ struct AboutUsView: View {
                     HStack{
                         Spacer()
                         VStack{
-                            Image("memoR")
+                            Image("aldi")
                                 .resizable()
                                 .frame(width: 99, height: 99)
                                 .padding(.bottom, -10)
@@ -26,7 +26,7 @@ struct AboutUsView: View {
                                 .font(.caption2)
                         }
                         VStack{
-                            Image("memoM")
+                            Image("kael")
                                 .resizable()
                                 .frame(width: 99, height: 99)
                                 .padding(.bottom, -10)
@@ -37,11 +37,11 @@ struct AboutUsView: View {
                                 .font(.caption2)
                         }
                         VStack{
-                            Image("memoZ")
+                            Image("rifan")
                                 .resizable()
                                 .frame(width: 99, height: 99)
                                 .padding(.bottom, -10)
-                            Text("Zakki")
+                            Text("Rifan")
                                 .bold()
                                 .font(.caption)
                             Text("Developer")
@@ -52,7 +52,7 @@ struct AboutUsView: View {
                     HStack{
                         Spacer()
                         VStack{
-                            Image("memoW")
+                            Image("widya")
                                 .resizable()
                                 .frame(width: 99, height: 99)
                                 .padding(.bottom, -10)
@@ -63,7 +63,7 @@ struct AboutUsView: View {
                                 .font(.caption2)
                         }
                         VStack{
-                            Image("memoJ")
+                            Image("jova")
                                 .resizable()
                                 .frame(width: 99, height: 99)
                                 .padding(.bottom, -10)
