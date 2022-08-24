@@ -13,7 +13,7 @@ struct MusicalNoteQuizModel {
     var song: String
     
     static let quizes : [MusicalNoteQuizModel] = [
-        MusicalNoteQuizModel(id: 1, answer: [.fullNote, .halfNote, .quarterRest, .quarterNote], song: "Quiz1"),
+        MusicalNoteQuizModel(id: 1, answer: [.fullNote, .halfNote, .halfRest, .quarterNote], song: "Quiz1"),
         MusicalNoteQuizModel(id: 2, answer: [.halfNote, .quarterNote, .halfNote, .quarterNote], song: "Quiz2"),
         MusicalNoteQuizModel(id: 3, answer: [.quarterNote, .quarterRest, .quarterNote, .quarterNote], song: "Quiz3"),
     ]
