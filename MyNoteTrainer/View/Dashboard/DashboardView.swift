@@ -55,42 +55,45 @@ struct DashboardView: View {
                             }
                         }
                         
-                        Button(action: {}, label: {
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 345, height: 105)
-                                    .foregroundColor(Color.white)
-                                HStack{
-                                    Image("Clef")
-                                    VStack{
-                                        Text("Clef")
-                                            .font(.system(size: 16, weight: .semibold))
-                                            .frame(width: 145, height: 16, alignment: .leading)
-                                            .foregroundColor(Color.black)
-                                        
-                                        HStack{
-                                            Circle()
-                                                .frame(width: 10, height: 10)
-                                                .foregroundColor(Color.green)
-                                            Text("Beginner")
-                                                .font(.system(size: 12, weight: .regular))
-                                                .foregroundColor(Color.gray)
-                                        }.frame(width: 145, height: 16, alignment: .leading)
-                                        
-                                        HStack{
-                                            Image(systemName: "book")
-                                                .foregroundColor(Color.gray)
-                                            Text("4 Lessons")
-                                                .font(.system(size: 12, weight: .regular))
-                                                .foregroundColor(Color.gray)
-                                        }.frame(width: 145, height: 16, alignment: .leading)
-                                        
-                                    }
+                    NavigationLink {
+                        ClefLearnScreen()
+                    } label: {
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 345, height: 105)
+                                .foregroundColor(Color.white)
+                            HStack{
+                                Image("Clef")
+                                VStack{
+                                    Text("Clef")
+                                        .font(.system(size: 16, weight: .semibold))
+                                        .frame(width: 145, height: 16, alignment: .leading)
+                                        .foregroundColor(Color.black)
+                                    
+                                    HStack{
+                                        Circle()
+                                            .frame(width: 10, height: 10)
+                                            .foregroundColor(Color.green)
+                                        Text("Beginner")
+                                            .font(.system(size: 12, weight: .regular))
+                                            .foregroundColor(Color.gray)
+                                    }.frame(width: 145, height: 16, alignment: .leading)
+                                    
+                                    HStack{
+                                        Image(systemName: "book")
+                                            .foregroundColor(Color.gray)
+                                        Text("4 Lessons")
+                                            .font(.system(size: 12, weight: .regular))
+                                            .foregroundColor(Color.gray)
+                                    }.frame(width: 145, height: 16, alignment: .leading)
+                                    
                                 }
-                                .frame(width: 345, height: 105, alignment: .leading)
-                                
                             }
-                        })
+                            .frame(width: 345, height: 105, alignment: .leading)
+                            
+                        }
+                    }
+                    
                     NavigationLink(destination: ScalesLearnView()) {
                             ZStack{
                                 Rectangle()
