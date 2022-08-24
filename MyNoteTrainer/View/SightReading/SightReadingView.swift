@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SightReadingView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var quiz: SRQuizModel
     var notes: [Note]
     var bpmOptions: [Int] = [60,120,180]
@@ -26,6 +27,10 @@ struct SightReadingView: View {
     
     @State var noteInterval: [TimeInterval]?
     @State var noteTiming: [TimeInterval]?
+    
+    @State var results: [Int:Bool] = [:]
+    
+    @State var percentage: Int = -1
     
     var body: some View {
         ZStack {
@@ -51,10 +56,11 @@ struct SightReadingView: View {
                        
                     })
                         .frame(maxWidth: .infinity, maxHeight: 175)
+                        .padding(.horizontal, 30)
                 }
             }
             
-            if (!self.isPlaying) {
+            if (!self.isPlaying && self.percentage == -1) {
                 VStack {
                     Spacer()
                     VStack {
@@ -84,6 +90,82 @@ struct SightReadingView: View {
                 }
                 .background(Color.black50Color.opacity(0.01))
             }
+            
+            if (!self.isPlaying && self.percentage != -1) {
+                VStack {
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        VStack{
+                            VStack{
+                                ZStack{
+                                    Image("backpop")
+                                    ZStack {
+                                        
+                                        Rectangle()
+                                            .fill(LinearGradient(colors: [.secondaryColor, .primaryColor], startPoint: .top, endPoint: .bottom))
+//                                            .background(Color.secondaryColor)
+                                            
+                                            .frame(width: 120, height: 120, alignment: .center)
+                                            .cornerRadius(180)
+                                            .opacity(0.8)
+                                        
+                                        HStack(alignment: .bottom, spacing: 0){
+                                            Text("\(percentage)")
+                                                .font(.system(size: 50).bold())
+                                                .foregroundColor(.white)
+                                            Text("%")
+                                                .font(.system(size: 30).bold())
+                                                .foregroundColor(.white)
+                                        }
+                                        
+//                                            .background(shadow(color: .grayColor, radius: 10, x: 2, y: 2))
+                                    }
+                                    
+                                }
+                                HStack {
+                                    Text(percentage < 70 ? "Oh no.." : "Awesome")
+                                        .font(.system(size: 18, weight: .semibold))
+                                        .foregroundColor(.white)
+                                }
+                                
+                                HStack(alignment: .center){
+                                    
+                                    Text(percentage < 70 ? "Sorry you haven't finished your sight reading well, let's try again!" : "You have done your sight reading well, let's try other song!")
+                                        .foregroundColor(Color.white)
+                                        .multilineTextAlignment(.center)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                        .padding(15)
+                                }
+                                
+                            }
+                            .frame(width: 350)
+                            HStack{
+                                Button(action: {
+                                    presentationMode.wrappedValue.dismiss()
+                                }, label: {
+                                    Text("Back to home").frame(width: 300, height: 50, alignment: .center).background(.white).foregroundColor(Color.black).cornerRadius(30).font(.body.bold())
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 30)
+                                                .stroke(Color.primaryColor, lineWidth: 4)
+                                        )
+
+                                })
+                                Spacer()
+                                Button(action: {
+                                    isPlaying = true
+                                }, label: {
+                                    Text("Try Again").frame(width: 300, height: 50, alignment: .center).background(Color.primaryColor).foregroundColor(.blackColor).cornerRadius(30)
+                                        .font(.body.bold())
+                                })
+                            }
+                            .padding(.horizontal, 55)
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                }.background(Color.blackColor.opacity(0.65))
+            }
         }
         .onAppear{
             AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
@@ -104,6 +186,13 @@ struct SightReadingView: View {
         .onChange(of: bpmIndex, perform: { i in
             self.setupIntervalandTiming()
         })
+        .onChange(of: isPlaying, perform: { i in
+            if (!i && endTime != -1) {
+                getResultPercentage()
+            } else if (i) {
+                percentage = -1
+            }
+        })
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing) {
                 Picker("", selection: $bpmIndex) {
@@ -121,6 +210,18 @@ struct SightReadingView: View {
     func setupIntervalandTiming() {
         self.noteInterval = SRHelper.convertBeatToTimeInterval(notes: notes, bpm: self.bpmOptions[bpmIndex], offsetBpm: 1)
         self.noteTiming = SRHelper.countNoteTiming(noteInterval: noteInterval!)
+    }
+    
+    func getResultPercentage()  {
+        
+        let filtered = notes.filter{ $0.noteType.isRest != true }
+        print(results, results.count, filtered.count)
+        self.percentage = results.count * 100 / filtered.count
+       
+    }
+    
+    func saveResult(index: Int, result: Bool) {
+        self.results[index] = result
     }
 //
     func onTapNote(noteNumber: Int8, timestamp: TimeInterval) {
@@ -144,11 +245,17 @@ struct SightReadingView: View {
 //
         let offsetTiming = 0.25
 //
-        if(abs(timestamp - nextIndexTiming) < offsetTiming && (noteNumber == notes[nextIndex].sound.key)) {
+        if(abs(timestamp - nextIndexTiming) < offsetTiming
+           && (noteNumber == notes[nextIndex].sound.key && !notes[nextIndex].noteType.isRest)
+        ) {
             tapIndicatorVM.changeState(state: .green)
+            saveResult(index: nextIndex, result: true)
             
-        } else if (abs(timestamp - currentIndexTiming) < offsetTiming && (noteNumber == notes[currentIndex].sound.key)) {
+        } else if (abs(timestamp - currentIndexTiming) < offsetTiming
+                   && (noteNumber == notes[currentIndex].sound.key && !notes[currentIndex].noteType.isRest)
+        ) {
             tapIndicatorVM.changeState(state: .green)
+            saveResult(index: currentIndex, result: true)
         } else {
             tapIndicatorVM.changeState(state: .red)
         }

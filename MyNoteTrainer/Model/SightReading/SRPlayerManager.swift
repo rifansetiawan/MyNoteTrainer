@@ -75,6 +75,7 @@ class SRPlayerManager: ObservableObject {
                 if (playingIndex+1 < noteTiming.count) {
                     if(abs(playingTimestamp - (noteTiming[playingIndex+1] + startTime)) < tolerance) {
                         playingIndex += 1
+                        
                     }
                 }
                 if(displayLink.timestamp > self.endTime + 0.1) {

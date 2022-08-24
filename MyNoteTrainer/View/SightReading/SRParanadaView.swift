@@ -42,7 +42,7 @@ struct SRParanadaView: View {
     @Binding var playingTimestamp: TimeInterval
     @Binding var playingIndex: Int
     
-    var scale: Scale = Scale.CSharpMaj
+    var scale: Scale = Scale.CMaj
     var offsetParanada: Double = 18
     
     var body: some View {
@@ -103,7 +103,7 @@ struct SRParanadaView: View {
                                 }
                                 .frame(width: 50, height: 71)
 //                                                        .background(.purple.opacity(0.5))
-                                                        .border(.yellow)
+//                                                        .border(.yellow)
                                 
                                 
                             }
