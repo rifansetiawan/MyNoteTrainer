@@ -11,7 +11,6 @@
 		BB7DF33F28B51FE2007F19D7 /* MusicalNoteLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */; };
 		BB7DF34328B51FF9007F19D7 /* bad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7DF34028B51FF9007F19D7 /* bad.mp3 */; };
 		BB7DF34428B51FF9007F19D7 /* black.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB7DF34128B51FF9007F19D7 /* black.mp3 */; };
-		BBBC58D228B5301700FB161E /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBBC58D128B5301700FB161E /* whole-not.mp3 */; };
 		BBBC58D428B5376700FB161E /* half-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBBC58D328B5376700FB161E /* half-not.mp3 */; };
 		BBBC58D828B53B4000FB161E /* ClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC58D728B53B4000FB161E /* ClefQuizView.swift */; };
 		BBBC58DA28B53CCC00FB161E /* PopUpCorrectClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */; };
@@ -19,6 +18,7 @@
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
 		BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */; };
+		C833726628B5FCB500D495DE /* whole-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C833726528B5FCB500D495DE /* whole-not.mp3 */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
 		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
@@ -61,7 +61,6 @@
 		BB7DF33E28B51FE2007F19D7 /* MusicalNoteLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteLearnView.swift; sourceTree = "<group>"; };
 		BB7DF34028B51FF9007F19D7 /* bad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bad.mp3; sourceTree = "<group>"; };
 		BB7DF34128B51FF9007F19D7 /* black.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = black.mp3; sourceTree = "<group>"; };
-		BBBC58D128B5301700FB161E /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "whole-not.mp3"; path = "../../../../../../Music/GarageBand/whole-not.mp3"; sourceTree = "<group>"; };
 		BBBC58D328B5376700FB161E /* half-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "half-not.mp3"; sourceTree = "<group>"; };
 		BBBC58D728B53B4000FB161E /* ClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView.swift; sourceTree = "<group>"; };
 		BBBC58D928B53CCC00FB161E /* PopUpCorrectClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCorrectClefQuizView.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC593B628A64A6B00DEEF74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C833726528B5FCB500D495DE /* whole-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whole-not.mp3"; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -372,9 +372,9 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				C833726528B5FCB500D495DE /* whole-not.mp3 */,
 				BB7DF34028B51FF9007F19D7 /* bad.mp3 */,
 				BBBC58D328B5376700FB161E /* half-not.mp3 */,
-				BBBC58D128B5301700FB161E /* whole-not.mp3 */,
 				BB7DF34128B51FF9007F19D7 /* black.mp3 */,
 				CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */,
 			);
@@ -496,9 +496,9 @@
 			files = (
 				BB7DF34328B51FF9007F19D7 /* bad.mp3 in Resources */,
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
+				C833726628B5FCB500D495DE /* whole-not.mp3 in Resources */,
 				BB7DF34428B51FF9007F19D7 /* black.mp3 in Resources */,
 				BBBC58D428B5376700FB161E /* half-not.mp3 in Resources */,
-				BBBC58D228B5301700FB161E /* whole-not.mp3 in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
