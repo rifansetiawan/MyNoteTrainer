@@ -10,7 +10,7 @@ import SwiftUI
 struct ScalesParanadaView: View {
     
     //wait
-    @ObservedObject var conductor: InstrumentEXSConductor
+    var noteNumber: Int8
     
     var scale: Scale
     
@@ -47,10 +47,10 @@ struct ScalesParanadaView: View {
                 }
                 
                 HStack(spacing: 20){
-                    ForEach(Array(scale.notes.enumerated()), id: \.offset) { (idx, note) in
+                    ForEach(Array(scale.notes.enumerated()), id: \.offset ) { (idx, note) in
                         ZStack{
                             ZStack(alignment: .bottom){
-                                Image("\(note.noteType.image)\(conductor.noteNumber == note.sound.key ? "Blue" : "")")
+                                Image("\(note.noteType.image)\(self.noteNumber == note.sound.key ? "Blue" : "")")
                                     .resizable()
                                     .aspectRatio(1, contentMode: .fit)
                                     .frame(width: 50, height: 60, alignment: .bottom)
@@ -76,7 +76,7 @@ struct ScalesParanadaView: View {
                             HStack(spacing: 0){
                                 Text("\(note.sound.tone.rawValue)")
                                     .font(.title2.bold())
-                                    .foregroundColor(conductor.noteNumber == note.sound.key ? .primaryColor : .blackColor)
+                                    .foregroundColor(self.noteNumber == note.sound.key ? .primaryColor : .blackColor)
                                 if(note.sound.accidental != nil) {
                                     Image(note.sound.accidental!.image)
                                         .resizable()
@@ -107,7 +107,7 @@ struct ScalesParanadaView: View {
 
 struct ScalesParanadaView_Previews: PreviewProvider {
     static var previews: some View {
-        ScalesParanadaView(conductor: InstrumentEXSConductor(), scale: Scale.AMaj)
+        ScalesParanadaView(noteNumber: 0, scale: Scale.AMaj)
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
