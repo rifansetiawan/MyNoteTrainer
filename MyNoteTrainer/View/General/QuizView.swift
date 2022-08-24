@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
-//  Lock
+//  QuizView.swift
+//  MyNoteTrainer
 //
-//  Created by Balaji on 21/08/20.
+//  Created by Rinaldi Alfian on 20/08/22.
 //
 
 import SwiftUI
@@ -12,9 +12,9 @@ struct QuizView: View {
         
         NavigationView{
             ZStack{
-                Home()
+                MusicalQuiz()
             }
-            .navigationTitle("Music Note")
+            .navigationTitle("Musical Note")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -26,7 +26,7 @@ struct QuizView_Previews: PreviewProvider {
     }
 }
 
-struct Home : View {
+struct MusicalQuiz : View {
     
     @State var berhasil = false
     
@@ -34,7 +34,6 @@ struct Home : View {
         
         ZStack{
             
-            // Lockscreen...
             
             if berhasil{
                 
@@ -87,6 +86,7 @@ struct NoteQuiz: View {
                 .foregroundColor(.red)
                 .fontWeight(.heavy)
             
+            //buttonn start
             Button {
                 self.playAudio.toggle()
             } label: {
@@ -96,7 +96,19 @@ struct NoteQuiz: View {
             }
             .padding()
             
-            Capsule().fill(Color.purple).frame(width: 300, height: 8)
+            // animasi panjang lagu
+            ZStack{
+                Capsule()
+                    .fill(Color.purple)
+                    .frame(width: playAudio ? 0 : 300, height: 5)
+                    // .animation(.linear(duration: lamaLagu))
+                
+                Circle()
+                    .frame(width: 15, height: 15)
+                    .foregroundColor(Color.purple)
+                    .offset(x: playAudio ? -150 : 150)
+                // .animation(.linear(duration: lamaLagu))
+            }
             
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4)){
