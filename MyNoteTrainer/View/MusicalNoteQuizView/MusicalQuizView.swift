@@ -50,7 +50,7 @@ struct MusicalQuizView: View {
             }
             .navigationTitle("Musical Note")
             .navigationBarTitleDisplayMode(.inline)
-        
+            
     }
 }
 

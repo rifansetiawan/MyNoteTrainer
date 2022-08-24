@@ -66,7 +66,11 @@ struct SRParanadaView: View {
                         ZStack{
                             VStack{
                                 Image(scale.scaleAcc.image)
-                                    .offset(x: 0, y: 6)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 15, height: 30)
+                                    .offset(x: 0, y: scale.scaleAcc
+                                            == .sharp ? 6 : 0)
                             }
 //                                                        .background(acd.rawValue == conductor.noteNumber )
                             .offset(x: 0, y: acd.accidentalPosition * offsetParanada)
