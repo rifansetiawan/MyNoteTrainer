@@ -34,6 +34,9 @@
 		CB8A6B8828B5A88300FABB52 /* MusicalNoteLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */; };
 		CB8A6B8A28B5D2C700FABB52 /* MusicalNoteQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */; };
 		CB8A6B8D28B609F600FABB52 /* PopupCorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8C28B609F600FABB52 /* PopupCorrectView.swift */; };
+		CB8A6B9128B6112400FABB52 /* kuis3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B8E28B6112400FABB52 /* kuis3.mp3 */; };
+		CB8A6B9228B6112400FABB52 /* kuis2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B8F28B6112400FABB52 /* kuis2.mp3 */; };
+		CB8A6B9328B6112400FABB52 /* kuis1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8A6B9028B6112400FABB52 /* kuis1.mp3 */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -81,6 +84,9 @@
 		CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicalNoteLearnView.swift; sourceTree = "<group>"; };
 		CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizModel.swift; sourceTree = "<group>"; };
 		CB8A6B8C28B609F600FABB52 /* PopupCorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCorrectView.swift; sourceTree = "<group>"; };
+		CB8A6B8E28B6112400FABB52 /* kuis3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kuis3.mp3; sourceTree = "<group>"; };
+		CB8A6B8F28B6112400FABB52 /* kuis2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kuis2.mp3; sourceTree = "<group>"; };
+		CB8A6B9028B6112400FABB52 /* kuis1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kuis1.mp3; sourceTree = "<group>"; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -375,6 +381,9 @@
 		CBE98F0F28AE42C000FF8EA8 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				CB8A6B9028B6112400FABB52 /* kuis1.mp3 */,
+				CB8A6B8F28B6112400FABB52 /* kuis2.mp3 */,
+				CB8A6B8E28B6112400FABB52 /* kuis3.mp3 */,
 				CB3CEF5E28B0D79200A2D8F0 /* emuaps_8mb.sf2 */,
 			);
 			path = Sound;
@@ -496,6 +505,9 @@
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
+				CB8A6B9328B6112400FABB52 /* kuis1.mp3 in Resources */,
+				CB8A6B9128B6112400FABB52 /* kuis3.mp3 in Resources */,
+				CB8A6B9228B6112400FABB52 /* kuis2.mp3 in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
 			);
