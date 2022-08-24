@@ -18,7 +18,7 @@ struct DashboardView: View {
                 VStack(spacing: 15){
                     
                         
-                        Button(action: {}, label: {
+                    NavigationLink(destination: MusicalNoteLearnView()) {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)
@@ -53,7 +53,7 @@ struct DashboardView: View {
                                 .frame(width: 345, height: 105, alignment: .leading)
                                 
                             }
-                        })
+                        }
                         
                     NavigationLink(destination: ClefLearnScreen()) {
                             ZStack{

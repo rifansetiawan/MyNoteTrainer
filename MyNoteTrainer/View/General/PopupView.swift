@@ -56,7 +56,7 @@ struct PopupViewModifier: ViewModifier {
                         }
                     }
                     
-                }.frame(width: UIScreen.main.bounds.width, height: 600, alignment: .top)
+                }.frame(width: UIScreen.main.bounds.width, height: 650, alignment: .top)
                     
                     .background(
                         GeometryReader { proxy in

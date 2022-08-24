@@ -27,7 +27,7 @@ struct PianoKeyView: View {
     }
 
     private func getSize() -> CGSize {
-        let w: CGFloat = model.color == .white ? 50 : 38
+        let w: CGFloat = model.color == .white ? 50 : 34
         let h: CGFloat = model.color == .white ? 150 : 90
         return CGSize(width: w, height: h)
     }
@@ -42,8 +42,12 @@ struct PianoKeyView: View {
 
     private func makeShape(geometry: GeometryProxy) -> some View {
         self.model.isHit = hit(geometry: geometry)
-        return KeyShape(radius: 8, type: model.type)
+        return ZStack(alignment: .bottom){
+            KeyShape(radius: 8, type: model.type)
             .fill(model.getColor())
+            Text("\(model.noteName)")
+                .padding(.bottom, 5)
+        }
     }
 
     func onEvent(handler: @escaping ((KeyInfo) -> Void)) -> some View {

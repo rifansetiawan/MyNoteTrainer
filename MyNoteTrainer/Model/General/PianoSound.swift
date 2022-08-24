@@ -81,7 +81,10 @@ class PianoSound {
 
     func play(keyInfo: KeyInfo) {
         let note = convert(keyInfo: keyInfo)
-        self.unitSampler.startNote(note, withVelocity: 80, onChannel: 0)
+        DispatchQueue.global().async {
+            self.unitSampler.startNote(note, withVelocity: 80, onChannel: 0)
+        }
+        
     }
 
 //    func fadeOut(note: UInt8, pressure: UInt8 = 80) {
