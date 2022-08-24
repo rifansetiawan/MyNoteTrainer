@@ -13,20 +13,25 @@ struct ScalesLearnView: View {
     @State var onTap = false
     
     let scales: [Scale] = [.CMaj, .GMaj, .DMaj, .AMaj, .EMaj, .BMaj, .FSharpMaj, .CSharpMaj]
+    @State var noteNumber: Int8 = -1
     @State var scaleIndex: Int = 0 {
         didSet {
-            conductor.noteNumber = scales[scaleIndex].notes[0].sound.key
+            self.noteNumber = scales[scaleIndex].notes[0].sound.key
         }
     }
+    
+    
     var body: some View {
         ZStack {
             Color.bgColor
                 .ignoresSafeArea()
             
             VStack{
-                ScalesParanadaView(conductor: conductor, scale: scales[scaleIndex])
+                ScalesParanadaView(noteNumber: noteNumber, scale: scales[scaleIndex])
                 Spacer()
-                InstrumentEXSView(conductor: conductor)
+                InstrumentEXSView(conductor: conductor, onNoteOn: { i in
+                    self.noteNumber = i
+                })
                     .frame(maxWidth: .infinity, maxHeight: 120)
             }
             .onAppear{

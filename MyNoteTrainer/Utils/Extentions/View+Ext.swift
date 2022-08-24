@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func myCustomPopUp(onTapoutside: @escaping () -> Void, withCloseBtn: Bool = false) -> some View {
+    func myCustomPopUp(onTapoutside: (() -> Void)? = nil, withCloseBtn: Bool = false) -> some View {
         modifier(PopupViewModifier(onTapoutside: onTapoutside, withCloseBtn: withCloseBtn))
     }
 }
