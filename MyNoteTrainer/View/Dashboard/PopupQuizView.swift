@@ -39,7 +39,7 @@ struct PopupQuizView: View {
                 .padding()
             })
             
-            Button(action: {}, label: {
+            NavigationLink(destination: ClefQuizView(), label:{
                 HStack{
                     Image("Popup2")
                     
@@ -59,7 +59,7 @@ struct PopupQuizView: View {
                     Spacer()
                 }
                 .padding()
-            })
+            } )
             
             NavigationLink(destination: ScalesQuizView(), label: {
                 HStack{
