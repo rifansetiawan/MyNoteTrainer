@@ -54,6 +54,8 @@ struct NoteQuiz: View {
     @AppStorage("jawaban") var key = "1223"
     @Binding var jawaban : Bool
     @State var jawabanSalah = false
+    @State private var playAudio: Bool = false
+    
     let height = UIScreen.main.bounds.width
     
     var body: some View{
@@ -80,21 +82,30 @@ struct NoteQuiz: View {
                 }
             }
             
-            // KeyPad....
-            
-            
+        
             Text(jawabanSalah ? "Incorrect Answer" : "")
                 .foregroundColor(.red)
                 .fontWeight(.heavy)
             
+            Button {
+                self.playAudio.toggle()
+            } label: {
+                Image(playAudio ? "pause" : "play")
+                    .resizable()
+                    .frame(width: 85, height: 85)
+            }
+            .padding()
+            
+            Capsule().fill(Color.purple).frame(width: 300, height: 8)
+            
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4)){
                 
-                // Password Button ....
+                // Note Button ....
                 
                 ForEach(1...8,id: \.self){value in
                     
-                    NoteButton(value: "\(value)",noteTap: $noteList, key: $key, answerOnButton: $jawaban, wrongAnswer: $jawabanSalah)
+                NoteButton(value: "\(value)",noteTap: $noteList, key: $key, answerOnButton: $jawaban, wrongAnswer: $jawabanSalah)
                 }
                 
                 NoteButton(value: "delete.fill",noteTap: $noteList, key: $key, answerOnButton: $jawaban, wrongAnswer: $jawabanSalah)
@@ -171,7 +182,7 @@ struct NoteButton : View {
 
                 }
             }
-            .padding()
+            .padding(5)
 
         })
     }
