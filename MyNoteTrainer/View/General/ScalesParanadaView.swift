@@ -35,8 +35,12 @@ struct ScalesParanadaView: View {
                     ForEach(scale.accTones, id:\.self) { acd in
                         ZStack{
                             VStack{
-                                Image(scale.scaleAcc.image)
-                                    .offset(x: 0, y: 6)
+                                Image("\(scale.scaleAcc.image)")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 15, height: 30)
+                                    .offset(x: 0, y: scale.scaleAcc
+                                            == .sharp ? 6 : 0)
                             }
 //                                                        .background(acd.rawValue == conductor.noteNumber )
                             .offset(x: 0, y: acd.accidentalPosition * offsetParanada)
@@ -78,10 +82,10 @@ struct ScalesParanadaView: View {
                                     .font(.title2.bold())
                                     .foregroundColor(self.noteNumber == note.sound.key ? .primaryColor : .blackColor)
                                 if(note.sound.accidental != nil) {
-                                    Image(note.sound.accidental!.image)
+                                    Image("\(note.sound.accidental!.image)\(self.noteNumber == note.sound.key ? "Blue" : "")")
                                         .resizable()
-                                        .aspectRatio(1, contentMode: .fit)
-                                        .frame(width: 12, height: 30)
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 12, height: 18)
                                 }
                                 
                             }.offset(x: 0, y: 80)

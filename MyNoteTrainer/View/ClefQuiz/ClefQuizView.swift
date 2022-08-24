@@ -46,10 +46,16 @@ struct ClefQuizView: View {
                 .gesture(
                     simpleDrag
                 )
-
+        }
+        
+        Button {
+            checkLocation()
+        } label: {
+            Text("Check")
+                .foregroundColor(.white)
+                .background(.blue)
         }
 
-        
         
     }
     func checkLocation(){

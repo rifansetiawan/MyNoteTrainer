@@ -6,14 +6,32 @@
 //
 
 import Foundation
-struct QuizModel  {
-    var img : String?
-    var answer : [String]
-    var correct : Int?
+struct ScaleQuizModel  {
+    var scale: Scale
+    
+    static var scaleQuizes : [ScaleQuizModel] = [
+        ScaleQuizModel(scale: .CMaj),
+        ScaleQuizModel(scale: .DMaj),
+        ScaleQuizModel(scale: .AMaj),
+        ScaleQuizModel(scale: .BMaj),
+        ScaleQuizModel(scale: .GMaj),
+        ScaleQuizModel(scale: .EMaj)
+    ]
+    
 }
-var scaleQuiz : [QuizModel] = [
-    QuizModel(img: "kunciG", answer: ["A","D","E","G"], correct: 3),
-    QuizModel(img: "kunciG", answer: ["B","C","B","F"], correct: 2),
-    QuizModel(img: "kunciG", answer: ["C","E","B","A"], correct: 2),
-    QuizModel(img: "kunciG", answer: ["C","E","B","A"], correct: 2)
-]
+
+struct ScaleQuizButtonModel {
+    var name: String
+    var scale: Scale
+    
+    static var scaleQuizButtons : [ScaleQuizButtonModel] = [
+        ScaleQuizButtonModel(name: "C", scale: .CMaj),
+        ScaleQuizButtonModel(name: "D", scale: .DMaj),
+        ScaleQuizButtonModel(name: "E", scale: .EMaj),
+        ScaleQuizButtonModel(name: "G", scale: .GMaj),
+        ScaleQuizButtonModel(name: "A", scale: .AMaj),
+        ScaleQuizButtonModel(name: "B", scale: .BMaj)
+    ]
+    
+}
+
