@@ -22,6 +22,10 @@ struct ClefQuizView: View {
     
     var body: some View {
         ZStack{
+            Text("E Note")
+            .font(.system(size: 18, weight: .semibold))
+        }
+        ZStack{
                 VStack(spacing: 20){
                 ForEach((1...5).reversed(), id: \.self) {_ in
                     Rectangle()
@@ -48,14 +52,27 @@ struct ClefQuizView: View {
                 )
         }
         
-        Button {
-            checkLocation()
-        } label: {
+        Button(action:
+                {
+            if location.y <= -42 && location.y >= -48{
+                print("something")
+                isShowPopup = true
+            }
+            
+        }, label: {
             Text("Check")
                 .foregroundColor(.white)
                 .background(.blue)
+        })
+        
+        if isShowPopup {
+            PopUpCorrectQuizView()
+                .myCustomPopUp(onTapoutside: {
+                    isShowPopup = false
+                }, withCloseBtn: true)
         }
-
+        
+        
         
     }
     func checkLocation(){
