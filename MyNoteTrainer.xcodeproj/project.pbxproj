@@ -15,6 +15,7 @@
 		0A8A4BB728B60BB000AB5925 /* CoachmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB628B60BAF00AB5925 /* CoachmarkView.swift */; };
 		0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */; };
 		0A8A4BBB28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */; };
+		0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		0A8A4BB628B60BAF00AB5925 /* CoachmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachmarkView.swift; sourceTree = "<group>"; };
 		0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachmarkManager.swift; sourceTree = "<group>"; };
 		0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizPlayerManager.swift; sourceTree = "<group>"; };
+		0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		BBC593A328A64A6800DEEF74 = {
 			isa = PBXGroup;
 			children = (
+				0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */,
 				CB3CEF8E28B1256700A2D8F0 /* Sounds */,
 				BBC593AE28A64A6800DEEF74 /* MyNoteTrainer */,
 				BBC593AD28A64A6800DEEF74 /* Products */,
@@ -517,6 +520,7 @@
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
+				0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				CB8A6B9928B64A1400FABB52 /* Quiz2.mp3 in Resources */,
 				CB8A6B9828B64A1400FABB52 /* Quiz3.mp3 in Resources */,

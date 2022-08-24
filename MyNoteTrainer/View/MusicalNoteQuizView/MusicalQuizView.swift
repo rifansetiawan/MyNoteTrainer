@@ -159,7 +159,6 @@ struct NoteQuiz: View {
                     .frame(width: 85, height: 85)
             }
             .padding()
-            Text("\(vm.playbackProgress)")
             // animasi panjang lagu
             ZStack{
                 HStack{
