@@ -18,6 +18,11 @@ struct ClefQuizView: View {
     @GestureState private var fingerLocation: CGPoint? = nil
     @GestureState private var startLocation: CGPoint? = nil // 1
     @State var isShowPopup: Bool = false
+    @State var isShowSuccessPopUp: Bool = false
+    var quizes : [MusicalNoteQuizModel] = MusicalNoteQuizModel.quizes
+    @State var isShowTutorial: Bool = true
+    @State var quizIndex: Int = 0
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     
     var body: some View {
@@ -79,11 +84,16 @@ struct ClefQuizView: View {
         if location.y < -41 {
             isShowPopup = true
         }
-        if isShowPopup {
-            PopupQuizView()
-                .myCustomPopUp(onTapoutside: {
-                    isShowPopup = false
-                }, withCloseBtn: true)
+        if(isShowSuccessPopUp) {
+            PopUpCorrectQuizView(onPressPrimary: quizIndex < quizes.count-1 ? ({
+                if(quizes.count-1 > quizIndex) {
+                    self.quizIndex += 1
+                }
+                isShowSuccessPopUp = false
+            }) : nil, onPressSecondary: {
+                presentationMode.wrappedValue.dismiss()
+            })
+            .myCustomPopUp()
         }
     }
     

@@ -22,14 +22,14 @@ struct PopupQuizView: View {
                     Image("Popup1")
                         .frame(width: 97, height: 59)
                     VStack(alignment: .leading){
-                        Text("Musical Note")
+                        Text("Ear trainng")
                             .foregroundColor(Color.black)
                         
                         HStack{
                             Circle()
                                 .frame(width: 10, height: 10)
                                 .foregroundColor(Color.green)
-                            Text("Beginner")
+                            Text("Musical Note")
                                 .font(.system(size: 12, weight: .regular))
                                 .foregroundColor(Color.gray)
                         }
@@ -44,14 +44,14 @@ struct PopupQuizView: View {
                     Image("Popup2")
                     
                     VStack(alignment: .leading){
-                        Text("Clef")
+                        Text("Note Position")
                             .foregroundColor(Color.black)
                         
                         HStack{
                             Circle()
                                 .frame(width: 10, height: 10)
                                 .foregroundColor(Color.green)
-                            Text("Beginner")
+                            Text("Clef")
                                 .font(.system(size: 12, weight: .regular))
                                 .foregroundColor(Color.gray)
                         }
@@ -66,14 +66,14 @@ struct PopupQuizView: View {
                     Image("Popup3")
                         .frame(width: 97, height: 59)
                     VStack(alignment: .leading){
-                        Text("Music Scale")
+                        Text("Guess the Scale")
                             .foregroundColor(Color.black)
                         
                         HStack{
                             Circle()
                                 .frame(width: 10, height: 10)
                                 .foregroundColor(Color.brownColor)
-                            Text("Intermediate")
+                            Text("Music Scale")
                                 .font(.system(size: 12, weight: .regular))
                                 .foregroundColor(Color.gray)
                         }
