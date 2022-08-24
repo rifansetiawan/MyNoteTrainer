@@ -18,7 +18,7 @@ struct MusicalNoteLearnView : View {
     @State var player : AVAudioPlayer!
     @State var playing = false
     @State var width : CGFloat = 0
-    @State var songs = ["whole-not"]
+    @State var songs = ["half-not"]
     @State var current = 0
     @State var finish = false
     @State var del = AVdelegate()
@@ -28,13 +28,13 @@ struct MusicalNoteLearnView : View {
     @State var currentColor2 = Color.black.opacity(0.08)
     var colorCircle2: [Color] = [Color("blue-1")]
     @State var currentColor3 = Color.black.opacity(0.08)
-    var colorCircle3: [Color] = [Color("blue-1")]
+    var colorCircle3: [Color] = [Color("yellow-1")]
     @State var currentColor4 = Color.black.opacity(0.08)
-    var colorCircle4: [Color] = [Color("blue-1")]
+    var colorCircle4: [Color] = [Color("yellow-1")]
     @State var currentColor5 = Color.black.opacity(0.08)
-    var colorCircle5: [Color] = [Color("yellow-1")]
+    var colorCircle5: [Color] = [Color("blue-1")]
     @State var currentColor6 = Color.black.opacity(0.08)
-    var colorCircle6: [Color] = [Color("yellow-1")]
+    var colorCircle6: [Color] = [Color("blue-1")]
     @State var currentColor7 = Color.black.opacity(0.08)
     var colorCircle7: [Color] = [Color("yellow-1")]
     @State var currentColor8 = Color.black.opacity(0.08)
@@ -45,10 +45,13 @@ struct MusicalNoteLearnView : View {
         
        
         
-        
+        ZStack{
+            Text("Half Note")
+            .font(.system(size: 20, weight: .semibold))
+        }.padding(.bottom, 10)
         VStack(spacing: 20){
             
-            Image(uiImage: self.data.count == 0 ? UIImage(named: self.signifierchangeimage == true ? changeImages() : "musical-note-1")! : UIImage(data: self.data)!)
+            Image(uiImage: self.data.count == 0 ? UIImage(named: self.signifierchangeimage == true ? "half-note-2" : "half-note-1")! : UIImage(data: self.data)!)
             .resizable()
             .frame(width: self.data.count == 0 ? 250 : nil, height: 250)
             .cornerRadius(15)
@@ -131,31 +134,32 @@ struct MusicalNoteLearnView : View {
                             self.player.play()
                             self.playing = true
                             
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
                                 self.currentColor1 = self.colorCircle1.randomElement()!
                             }
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                                self.currentColor2 = self.colorCircle2.randomElement()!
+                            }
                             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                                self.currentColor2 = self.colorCircle3.randomElement()!
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                                self.currentColor3 = self.colorCircle4.randomElement()!
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4) {
-                                self.currentColor4 = self.colorCircle4.randomElement()!
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
-                                self.currentColor5 = self.colorCircle5.randomElement()!
+                                self.currentColor3 = self.colorCircle3.randomElement()!
                                 self.signifierchangeimage = true
                             }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6) {
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.9) {
+                                self.currentColor4 = self.colorCircle4.randomElement()!
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.8) {
+                                self.currentColor5 = self.colorCircle5.randomElement()!
+                                self.signifierchangeimage = false
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4.75) {
                                 self.currentColor6 = self.colorCircle6.randomElement()!
                             }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 7) {
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5.72) {
                                 self.currentColor7 = self.colorCircle7.randomElement()!
+                                self.signifierchangeimage = true
                             }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 8) {
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.7) {
                                 self.currentColor8 = self.colorCircle8.randomElement()!
-                                self.signifierchangeimage = false
                             }
                         }
                         
