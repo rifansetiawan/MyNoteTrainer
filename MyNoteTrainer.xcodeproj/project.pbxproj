@@ -33,6 +33,7 @@
 		CB8A6B8428B56BD200FABB52 /* MusicQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8328B56BD200FABB52 /* MusicQuizView.swift */; };
 		CB8A6B8628B58D5000FABB52 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8528B58D5000FABB52 /* QuizView.swift */; };
 		CB8A6B8828B5A88300FABB52 /* MusicalNoteLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */; };
+		CB8A6B8A28B5D2C700FABB52 /* MusicalNoteQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -79,6 +80,7 @@
 		CB8A6B8328B56BD200FABB52 /* MusicQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicQuizView.swift; sourceTree = "<group>"; };
 		CB8A6B8528B58D5000FABB52 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicalNoteLearnView.swift; sourceTree = "<group>"; };
+		CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizModel.swift; sourceTree = "<group>"; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		CBE98F0628AE424700FF8EA8 /* MusicalNoteQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */,
 			);
 			path = MusicalNoteQuiz;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			files = (
 				CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */,
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
+				CB8A6B8A28B5D2C700FABB52 /* MusicalNoteQuizModel.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
