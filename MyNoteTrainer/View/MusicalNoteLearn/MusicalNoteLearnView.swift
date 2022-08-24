@@ -18,7 +18,7 @@ struct MusicalNoteLearnView : View {
     @State var player : AVAudioPlayer!
     @State var playing = false
     @State var width : CGFloat = 0
-    @State var songs = ["half-not"]
+    @State var songs = ["half-not-learn-musical"]
     @State var current = 0
     @State var finish = false
     @State var del = AVdelegate()
