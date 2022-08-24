@@ -36,6 +36,7 @@
 		CB8A6B8428B56BD200FABB52 /* MusicalQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8328B56BD200FABB52 /* MusicalQuizView.swift */; };
 		CB8A6B8828B5A88300FABB52 /* MusicalNoteLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */; };
 		CB8A6B8A28B5D2C700FABB52 /* MusicalNoteQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */; };
+		CB8A6B8D28B609F600FABB52 /* PopupCorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6B8C28B609F600FABB52 /* PopupCorrectView.swift */; };
 		CB8C195228B1364900A1AD67 /* SRParanadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195128B1364900A1AD67 /* SRParanadaView.swift */; };
 		CB8C195428B13F9900A1AD67 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195328B13F9900A1AD67 /* Note.swift */; };
 		CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C195528B13FFF00A1AD67 /* SRHelper.swift */; };
@@ -85,6 +86,7 @@
 		CB8A6B8328B56BD200FABB52 /* MusicalQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalQuizView.swift; sourceTree = "<group>"; };
 		CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicalNoteLearnView.swift; sourceTree = "<group>"; };
 		CB8A6B8928B5D2C700FABB52 /* MusicalNoteQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizModel.swift; sourceTree = "<group>"; };
+		CB8A6B8C28B609F600FABB52 /* PopupCorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCorrectView.swift; sourceTree = "<group>"; };
 		CB8C195128B1364900A1AD67 /* SRParanadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParanadaView.swift; sourceTree = "<group>"; };
 		CB8C195328B13F9900A1AD67 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB8C195528B13FFF00A1AD67 /* SRHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHelper.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				CB3CEF9028B125A400A2D8F0 /* PianoView2.swift */,
 				CB8C195728B20BF300A1AD67 /* ScalesParanadaView.swift */,
 				0A8A4BB628B60BAF00AB5925 /* CoachmarkView.swift */,
+				CB8A6B8C28B609F600FABB52 /* PopupCorrectView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				CBE98F1D28AE8EBA00FF8EA8 /* TabBarView.swift in Sources */,
 				0A8A4BB128B52FD700AB5925 /* SightReadingParentView.swift in Sources */,
 				CB8A6B8828B5A88300FABB52 /* MusicalNoteLearnView.swift in Sources */,
+				CB8A6B8D28B609F600FABB52 /* PopupCorrectView.swift in Sources */,
 				CB3CEF5D28B0D6E700A2D8F0 /* KeyShape.swift in Sources */,
 				0A12512E28B4D92300CDD2AA /* SRSongs.swift in Sources */,
 				CB8C195628B13FFF00A1AD67 /* SRHelper.swift in Sources */,
