@@ -19,7 +19,13 @@ struct MusicalQuizView: View {
         
             ZStack{
                 VStack {
-                    Text("\(quizIndex)")
+                    HStack(alignment: .center) {
+                        Text("Guess the right Note based on the audio")
+                            .font(.system(size: 24, weight: .semibold))
+                        .frame(alignment: .center)
+                        .multilineTextAlignment(.center)
+                    }
+                    .padding()
                     ZStack{
                         NoteQuiz(
                             quiz: quizes[quizIndex],
