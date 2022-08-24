@@ -133,7 +133,7 @@ struct NoteQuiz: View {
                 
                 HStack(spacing: 10){
                     ForEach(0..<4,id: \.self){i in
-                        ZStack{
+                        ZStack(alignment: .bottom){
                             Rectangle()
                                 .frame(width: 77, height: 80)
                                 .foregroundColor(
@@ -145,6 +145,8 @@ struct NoteQuiz: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 50, height: 50)
+//                                    .background(.green)
+                                    .offset(x: 0, y: -5)
                             }
                         }
                     }
