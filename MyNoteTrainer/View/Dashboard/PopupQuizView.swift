@@ -17,7 +17,7 @@ struct PopupQuizView: View {
                 Spacer()
             }.padding()
             
-            Button(action: {}, label: {
+            NavigationLink(destination: MusicalQuizView(), label: {
                 HStack{
                     Image("Popup1")
                         .frame(width: 97, height: 59)
@@ -82,8 +82,8 @@ struct PopupQuizView: View {
                 }
                 .padding()
             })
-           
-        }
+            
+        }.padding(.bottom, 100)
     }
 }
 

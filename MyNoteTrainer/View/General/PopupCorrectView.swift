@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct PopUpCorrectClefQuizView: View {
+struct PopUpCorrectQuizView: View {
     
-   var buttonColor : Color = Color("buttonNextPopUp")
+    var buttonColor : Color = Color("buttonNextPopUp")
+    var onPressPrimary: (() -> ())? = nil
+    var onPressSecondary: (() -> ())? = nil
     var body: some View {
         VStack(alignment: .center, spacing: 25){
             ZStack {
@@ -20,33 +22,45 @@ struct PopUpCorrectClefQuizView: View {
                 Text("Awesome")
                     .font(.system(size: 18, weight: .semibold))
             }
-                
-            HStack{
+            
+            HStack(alignment: .center){
                 
                 Text("Congratulations you have done a great lesson. Keep it up!")
                     .foregroundColor(Color.black)
-                
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(15)
             }
             
-            NavigationLink(destination: ScalesQuizView(), label: {
-                Text("Next").frame(width: 300, height: 50, alignment: .center).background(Color.primaryColor).foregroundColor(Color.black).cornerRadius(30)
-            })
-            NavigationLink(destination: MusicalNoteLearnView(), label: {
-                Text("Back to learn").frame(width: 300, height: 50, alignment: .center).background(.white).foregroundColor(Color.black).cornerRadius(30).overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color.primaryColor, lineWidth: 4)
-                )
-            })
+            if(onPressPrimary != nil) {
+                Button(action: {
+                    onPressPrimary!()
+                }, label: {
+                    Text("Next").frame(width: 300, height: 50, alignment: .center).background(Color.primaryColor).foregroundColor(.blackColor).cornerRadius(30)
+                        .font(.body.bold())
+                })
+            }
             
-            
-
-           
+            if(onPressSecondary != nil) {
+                Button(action: {
+                    onPressSecondary!()
+                }, label: {
+                    Text("Back to learn").frame(width: 300, height: 50, alignment: .center).background(.white).foregroundColor(Color.black).cornerRadius(30).font(.body.bold())
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.primaryColor, lineWidth: 4)
+                        )
+                })
+            }
         }
+        .padding(.horizontal, 25)
+        .padding(.top, 45)
+        .padding(.bottom, 65)
     }
 }
 
 struct PopUpCorrectClefQuizView_Previews: PreviewProvider {
     static var previews: some View {
-        PopUpCorrectClefQuizView()
+        PopUpCorrectQuizView()
     }
 }

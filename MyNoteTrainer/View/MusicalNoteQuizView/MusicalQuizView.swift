@@ -8,26 +8,55 @@
 
 import SwiftUI
 
-struct QuizView: View {
+struct MusicalQuizView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var quizes : [MusicalNoteQuizModel] = MusicalNoteQuizModel.quizes
     @State var isShowTutorial: Bool = true
+    @State var quizIndex: Int = 0
+    
+    @State var isShowSuccessPopUp: Bool = false
     var body: some View {
         
-        NavigationView{
             ZStack{
-                MusicalQuiz()
+                VStack {
+                    Text("\(quizIndex)")
+                    ZStack{
+                        NoteQuiz(
+                            quiz: quizes[quizIndex],
+                            goToNextQuiz: {
+                            
+                            self.isShowSuccessPopUp = true
+                            
+                            },
+                            vm: MusicalNoteQuizPlayerManager(fileName: quizes[quizIndex].song, ext: "mp3"))
+                        
+                    }
+                }
                 if(isShowTutorial) {
                     MusicalNoteQuizTutorial()
                 }
+                if(isShowSuccessPopUp) {
+                    PopUpCorrectQuizView(onPressPrimary: quizIndex < quizes.count-1 ? ({
+                        if(quizes.count-1 > quizIndex) {
+                            self.quizIndex += 1
+                        }
+                        isShowSuccessPopUp = false
+                    }) : nil, onPressSecondary: {
+                        presentationMode.wrappedValue.dismiss()
+                    })
+                    .myCustomPopUp()
+                }
+                
             }
             .navigationTitle("Musical Note")
             .navigationBarTitleDisplayMode(.inline)
-        }
+        
     }
 }
 
-struct QuizView_Previews: PreviewProvider {
+struct MusicalQuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView()
+        MusicalQuizView()
     }
 }
 
@@ -44,26 +73,6 @@ struct MusicalNoteQuizTutorial: View {
     }
 }
 
-struct MusicalQuiz : View {
-    var quizes : [MusicalNoteQuizModel] = MusicalNoteQuizModel.quizes
-    @State var quizIndex: Int = 0
-    
-    
-    var body: some View{
-        
-        VStack {
-            Text("\(quizIndex)")
-            ZStack{
-                NoteQuiz(quiz: quizes[quizIndex], goToNextQuiz: {
-                    if(quizes.count-1 > quizIndex) {
-                        self.quizIndex += 1
-                    }
-                    
-                })
-            }
-        }
-    }
-}
 
 enum NoteAnswerState {
     case correct
@@ -85,6 +94,7 @@ enum NoteAnswerState {
 struct NoteQuiz: View {
     var quiz: MusicalNoteQuizModel
     var goToNextQuiz: () -> ()
+    @ObservedObject var vm : MusicalNoteQuizPlayerManager
     @State private var playAudio: Bool = false
     
     let height = UIScreen.main.bounds.width
@@ -97,7 +107,7 @@ struct NoteQuiz: View {
         Note(noteType: .fullRest, sound: Sound(tone: .F)),
         Note(noteType: .halfRest, sound: Sound(tone: .F)),
         Note(noteType: .quarterRest, sound: Sound(tone: .F)),
-        Note(noteType: .eighthNote, sound: Sound(tone: .F))
+        Note(noteType: .eighthRest, sound: Sound(tone: .F))
     ]
     
     @State var answerList: [Note] = []
@@ -143,29 +153,52 @@ struct NoteQuiz: View {
                     .frame(width: 85, height: 85)
             }
             .padding()
-            
+            Text("\(vm.playbackProgress)")
             // animasi panjang lagu
             ZStack{
-                Capsule()
-                    .fill(Color.purple)
-                    .frame(width: playAudio ? 0 : 300, height: 5)
+                HStack{
+                    Capsule()
+                        .fill(Color.purple)
+                        .frame(width: 300 * CGFloat(vm.playbackProgress), height: 5, alignment: .leading)
+                }.frame(width: 300, alignment: .leading)
+                
                 // .animation(.linear(duration: lamaLagu))
                 
                 Circle()
                     .frame(width: 15, height: 15)
                     .foregroundColor(Color.purple)
-                    .offset(x: playAudio ? -150 : 150)
+                    .offset(x: 300 * CGFloat(vm.playbackProgress) + 150 * -1)
                 // .animation(.linear(duration: lamaLagu))
             }
             
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4)){
-                ForEach(buttons,id: \.id){note in
-                    NoteButton(note: note, onTap: onTapButton)
+            
+            VStack{
+                HStack{
+                    ForEach(0..<4,id: \.self){i in
+                        NoteButton(note: buttons[i], onTap: onTapButton)
+                    }
+                }
+                HStack{
+                    ForEach(4..<8,id: \.self){i in
+                        NoteButton(note: buttons[i], onTap: onTapButton)
+                    }
                 }
             }
             .padding()
-            
         }
+        .onChange(of: quiz.id, perform: { i in
+            answerList.removeAll()
+        })
+        .onChange(of: playAudio, perform: { i in
+            if(i) {
+                vm.play()
+            } else {
+                vm.stop()
+            }
+        })
+        .onChange(of: vm.isPlaying, perform: {i in
+                self.playAudio = i
+        })
     }
     
     func checkAnswer(i: Int) -> NoteAnswerState {
@@ -183,22 +216,22 @@ struct NoteQuiz: View {
         }
         
         if(answerList.count == 4) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                var success = true
-                print(answerList.count, quiz.answer.count)
-                for (index, i) in quiz.answer.enumerated() {
-                    if(i.beat != answerList[index].noteType.beat || i.isRest != answerList[index].noteType.isRest){
-                        success = false
-                        break;
-                    }
+            var success = true
+            print(answerList.count, quiz.answer.count)
+            for (index, i) in quiz.answer.enumerated() {
+                if(i.beat != answerList[index].noteType.beat || i.isRest != answerList[index].noteType.isRest){
+                    success = false
+                    break;
                 }
-                if(success) {
-                    self.answerList = []
-                    self.goToNextQuiz()
-                } else {
+            }
+            if(success) {
+                self.goToNextQuiz()
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                     answerList.removeAll()
-                }
-            })
+                })
+                
+            }
         }
     }
 }
