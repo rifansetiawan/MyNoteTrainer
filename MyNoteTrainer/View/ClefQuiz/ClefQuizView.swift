@@ -27,76 +27,80 @@ struct ClefQuizView: View {
     
     
     var body: some View {
-        ZStack{
+
+        VStack{
             Text("E Note")
-            .font(.system(size: 18, weight: .semibold))
-        }
-        ZStack{
-                VStack(spacing: 20){
-                ForEach((1...5).reversed(), id: \.self) {_ in
-                    Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 4).ignoresSafeArea()
-                    .foregroundColor(Color.black)
+                .font(.system(size: 18, weight: .semibold)).padding(.top, 100)
+            ZStack{
+                    VStack(spacing: 20){
+                    ForEach((1...5).reversed(), id: \.self) {_ in
+                        Rectangle()
+                        .frame(maxWidth: .infinity, maxHeight: 4).ignoresSafeArea()
+                        .foregroundColor(Color.black)
+                    }
+                    
+                }
+                HStack{
+                    Image(isFalse ? "false" : "")
+                    
+                }.frame(width: 300, height: 100, alignment: .trailing)
+                    
+                
+                HStack(spacing: 1){
+                    Image("kunciG")
+                    Spacer()
+                }
+
+               
+            }.padding(.top, 100)
+            ZStack{
+                Print(location.y)
+                Rectangle().fill(Color.white, stroke: StrokeStyle(lineWidth:w, dash:d)).frame(width: 110, height: 110)
+                Image("blue_musical_note")
+                    .position(location)
+                    .gesture(
+                        simpleDrag
+                    )
+            }
+            
+            Button(action:
+                    {
+                if location.y <= -42 && location.y >= -48 {
+                    isShowSuccessPopUp = true
+                }
+                else {
+                    isFalse = true
                 }
                 
-            }
-            HStack{
-                Image(isFalse ? "false" : "")
                 
-            }.frame(width: 300, height: 100, alignment: .trailing)
-                
-            
-            HStack(spacing: 1){
-                Image("kunciG")
-                Spacer()
-            }
-
-           
-        }.padding(.top, 200)
-        ZStack{
-            Print(location.y)
-            Rectangle().fill(Color.white, stroke: StrokeStyle(lineWidth:w, dash:d)).frame(width: 110, height: 110)
-            Image("blue_musical_note")
-                .position(location)
-                .gesture(
-                    simpleDrag
-                )
-        }
-        
-        Button(action:
-                {
-            if location.y <= -42 && location.y >= -48 {
-                isShowSuccessPopUp = true
-            }
-            else {
-                isFalse = true
-            }
-            
-            
-        }, label: {
-            Text("Check").frame(width: 300, height: 50, alignment: .center).background(Color.primaryColor)
-                .foregroundColor(Color.black).cornerRadius(30)
-                .font(.body.bold())
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color.primaryColor, lineWidth: 4)
-                )
-        })
-        if(isShowSuccessPopUp) {
-            PopUpCorrectQuizView(onPressPrimary: { }, onPressSecondary: {
-                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Check").frame(width: 300, height: 50, alignment: .center).background(Color.primaryColor)
+                    .foregroundColor(Color.black).cornerRadius(30)
+                    .font(.body.bold())
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.primaryColor, lineWidth: 4)
+                    )
             })
-            .myCustomPopUp()
+            if(isShowSuccessPopUp) {
+                PopUpCorrectQuizView(onPressPrimary: { }, onPressSecondary: {
+                    presentationMode.wrappedValue.dismiss()
+                })
+                .myCustomPopUp()
+            }
+            
+    //        if isShowPopup {
+    //            PopUpCorrectQuizView()
+    //                .myCustomPopUp(onTapoutside: {
+    //                    isShowPopup = false
+    //                }, withCloseBtn: true)
+    //        }
+            
+            
         }
-        
-//        if isShowPopup {
-//            PopUpCorrectQuizView()
-//                .myCustomPopUp(onTapoutside: {
-//                    isShowPopup = false
-//                }, withCloseBtn: true)
-//        }
-        
-        
+        .navigationTitle("Treble Clef")
+        .navigationBarTitleDisplayMode(.inline)
+
         
     }
     func checkLocation(){

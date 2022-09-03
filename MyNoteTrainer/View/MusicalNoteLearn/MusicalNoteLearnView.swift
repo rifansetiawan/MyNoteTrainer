@@ -46,10 +46,10 @@ struct MusicalNoteLearnView : View {
        
         
         ZStack{
-            Text("Half Note")
-            .font(.system(size: 20, weight: .semibold))
-        }.padding(.bottom, 10)
+            ProgressBarViewView()
+        }
         VStack(spacing: 20){
+           
             
             Image(uiImage: self.data.count == 0 ? UIImage(named: self.signifierchangeimage == true ? "half-note-2" : "half-note-1")! : UIImage(data: self.data)!)
             .resizable()
@@ -114,6 +114,7 @@ struct MusicalNoteLearnView : View {
 
                 
                     Button(action: {
+                        
                         
                         if self.player.isPlaying{
                             
@@ -231,6 +232,8 @@ struct MusicalNoteLearnView : View {
                 self.finish = true
             }
         }
+        .navigationTitle("Half Note")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func changeImages()-> String{
@@ -289,6 +292,37 @@ struct MusicalNoteLearnView : View {
 
     }
     
+    
+    struct ProgressBar: View {
+        @Binding var value: Float
+        
+        var body: some View {
+            GeometryReader { geometry in
+                ZStack(alignment: .leading) {
+                    Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
+                        .opacity(0.3)
+                        .foregroundColor(Color("secondaryColor"))
+                    
+                    Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: geometry.size.height)
+                        .foregroundColor(Color("secondaryColor"))
+                        .animation(.linear)
+                }.cornerRadius(45.0)
+            }
+        }
+    }
+    struct ProgressBarViewView: View {
+        @State var progressValue: Float = 0.0
+        
+        var body: some View {
+            VStack {
+                ProgressBar(value: $progressValue).frame(height: 20)
+                Spacer()
+            }.padding()
+            
+        }
+    }
+
+    
    
 }
 
@@ -299,3 +333,4 @@ class AVdelegate : NSObject,AVAudioPlayerDelegate{
         NotificationCenter.default.post(name: NSNotification.Name("Finish"), object: nil)
     }
 }
+
