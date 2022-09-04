@@ -19,7 +19,12 @@
 		0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */; };
 		0A8A4BBB28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */; };
 		0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */; };
+		0AF078DC28C42A9E0056AF25 /* MNLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF078DB28C42A9E0056AF25 /* MNLearnView.swift */; };
+		0AF078DE28C42F550056AF25 /* MNLearnContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF078DD28C42F550056AF25 /* MNLearnContentView.swift */; };
 		BB25D56B28B6737B00AB9804 /* ClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25D56828B6737B00AB9804 /* ClefQuizView.swift */; };
+		BB6F315228C3440B00B9C44F /* quarter-not-fix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB6F314F28C3440B00B9C44F /* quarter-not-fix.mp3 */; };
+		BB6F315328C3440B00B9C44F /* eight-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB6F315028C3440B00B9C44F /* eight-not.mp3 */; };
+		BB6F315428C3440B00B9C44F /* whole-not-fix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB6F315128C3440B00B9C44F /* whole-not-fix.mp3 */; };
 		BBC593B028A64A6800DEEF74 /* MyNoteTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */; };
 		BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC593B128A64A6800DEEF74 /* ContentView.swift */; };
 		BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC593B328A64A6B00DEEF74 /* Assets.xcassets */; };
@@ -84,7 +89,12 @@
 		0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachmarkManager.swift; sourceTree = "<group>"; };
 		0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizPlayerManager.swift; sourceTree = "<group>"; };
 		0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0AF078DB28C42A9E0056AF25 /* MNLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNLearnView.swift; sourceTree = "<group>"; };
+		0AF078DD28C42F550056AF25 /* MNLearnContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNLearnContentView.swift; sourceTree = "<group>"; };
 		BB25D56828B6737B00AB9804 /* ClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView.swift; sourceTree = "<group>"; };
+		BB6F314F28C3440B00B9C44F /* quarter-not-fix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "quarter-not-fix.mp3"; sourceTree = "<group>"; };
+		BB6F315028C3440B00B9C44F /* eight-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "eight-not.mp3"; sourceTree = "<group>"; };
+		BB6F315128C3440B00B9C44F /* whole-not-fix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whole-not-fix.mp3"; sourceTree = "<group>"; };
 		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,8 +211,8 @@
 		CBE98EF728AE414300FF8EA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB8A6B8B28B5ECDE00FABB52 /* MusicalNoteQuizView */,
 				CBE98F2028AEA11700FF8EA8 /* General */,
+				CB8A6B8B28B5ECDE00FABB52 /* MusicalNoteQuizView */,
 				CBE98F0228AE420800FF8EA8 /* Onboarding */,
 				CBE98F0128AE41EB00FF8EA8 /* Settings */,
 				CBE98F0028AE41DF00FF8EA8 /* Practice */,
@@ -232,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */,
+				0AF078DB28C42A9E0056AF25 /* MNLearnView.swift */,
+				0AF078DD28C42F550056AF25 /* MNLearnContentView.swift */,
 			);
 			path = MusicalNoteLearn;
 			sourceTree = "<group>";
@@ -413,6 +425,9 @@
 			isa = PBXGroup;
 			children = (
 				0A0AEFCD28B69E2B0054A7B7 /* half-not.mp3 */,
+				BB6F315028C3440B00B9C44F /* eight-not.mp3 */,
+				BB6F314F28C3440B00B9C44F /* quarter-not-fix.mp3 */,
+				BB6F315128C3440B00B9C44F /* whole-not-fix.mp3 */,
 				0A0AEFCC28B69E2B0054A7B7 /* whole-not.mp3 */,
 				0A0AEFD028B69E9B0054A7B7 /* half-not-learn-musical.mp3 */,
 				CB8A6B9428B64A1400FABB52 /* Quiz1.mp3 */,
@@ -524,6 +539,10 @@
 				CB3CEF6328B1244E00A2D8F0 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 				CB3CEF6628B124EC00A2D8F0 /* XCRemoteSwiftPackageReference "Keyboard" */,
 				CB3CEF9228B125E600A2D8F0 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				BB1B19A528C0EB9F0070CC95 /* XCRemoteSwiftPackageReference "Keyboard" */,
+				BB1B19A628C0EBAE0070CC95 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				BB1B19A728C0EBC00070CC95 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				BB1B19A828C0EBCD0070CC95 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 			);
 			productRefGroup = BBC593AD28A64A6800DEEF74 /* Products */;
 			projectDirPath = "";
@@ -541,15 +560,18 @@
 			files = (
 				BBC593B728A64A6B00DEEF74 /* Preview Assets.xcassets in Resources */,
 				CB3CEF5F28B0D79200A2D8F0 /* emuaps_8mb.sf2 in Resources */,
+				BB6F315428C3440B00B9C44F /* whole-not-fix.mp3 in Resources */,
 				0A0AEFD128B69E9B0054A7B7 /* half-not-learn-musical.mp3 in Resources */,
 				0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */,
 				0A0AEFCE28B69E2B0054A7B7 /* whole-not.mp3 in Resources */,
 				CB3CEF8F28B1256700A2D8F0 /* Sounds in Resources */,
 				CB8A6B9928B64A1400FABB52 /* Quiz2.mp3 in Resources */,
+				BB6F315328C3440B00B9C44F /* eight-not.mp3 in Resources */,
 				CB8A6B9828B64A1400FABB52 /* Quiz3.mp3 in Resources */,
 				BBC593B428A64A6B00DEEF74 /* Assets.xcassets in Resources */,
 				CB8A6B9728B64A1400FABB52 /* Quiz1.mp3 in Resources */,
 				0A0AEFCF28B69E2B0054A7B7 /* half-not.mp3 in Resources */,
+				BB6F315228C3440B00B9C44F /* quarter-not-fix.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +586,7 @@
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
 				0A8A4BB728B60BB000AB5925 /* CoachmarkView.swift in Sources */,
 				CB8A6B8A28B5D2C700FABB52 /* MusicalNoteQuizModel.swift in Sources */,
+				0AF078DC28C42A9E0056AF25 /* MNLearnView.swift in Sources */,
 				0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
@@ -574,6 +597,7 @@
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
 				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
+				0AF078DE28C42F550056AF25 /* MNLearnContentView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
@@ -813,6 +837,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB1B19A528C0EB9F0070CC95 /* XCRemoteSwiftPackageReference "Keyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Keyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BB1B19A628C0EBAE0070CC95 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BB1B19A728C0EBC00070CC95 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BB1B19A828C0EBCD0070CC95 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		CB3CEF6028B1243300A2D8F0 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AudioKit/AudioKit.git";

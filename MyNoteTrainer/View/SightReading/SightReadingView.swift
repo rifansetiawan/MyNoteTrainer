@@ -48,7 +48,8 @@ struct SightReadingView: View {
                             startTime: $startTime,
                             endTime: $endTime,
                             playingTimestamp: $playingTimestamp,
-                            playingIndex: $playingIndex
+                            playingIndex: $playingIndex,
+                            scale: quiz.scale
                         )
                     }
                     InstrumentEXSView(onNoteOn: { i in
