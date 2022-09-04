@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct MNLearnView: View {
-    var musicalNotes : [[NoteType]] = [[.fullNote, .fullRest], [.halfNote, .halfRest], [.quarterNote, .quarterRest], [.eighthNote, .eighthRest]]
+    var musicalNotes : [[NoteType]] = [[.wholeNote, .wholeRest], [.halfNote, .halffRest], [.quarterNote, .quarterRest], [.eighthNote, .eighthRest]]
     var songs : [String] = ["whole-not-fix", "half-not-learn-musical", "quarter-not-fix", "eight-not"]
     @State var progressIndex : Int = 0
+    @State var percent: CGFloat = 95
+    var color1 = Color.primaryColor
+    var color2 = Color.purple
 
     
     var body: some View {
-        VStack{
+        VStack(spacing: 50){
             ZStack {
                 GeometryReader { geometry in
                     ZStack(alignment: .leading) {
-                        Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
-                            .opacity(0.3)
-                            .foregroundColor(Color("secondaryColor"))
+                        Rectangle()
+                            .frame(width: 390, height: 18)
+                            .foregroundColor(.white)
                         
-                        Rectangle().frame(width: CGFloat(Double(self.progressIndex)/Double(musicalNotes.count))*geometry.size.width, height: geometry.size.height)
-                            .foregroundColor(Color("secondaryColor"))
+                        Rectangle().frame(width: percent + CGFloat(Double(self.progressIndex)/Double(musicalNotes.count))*geometry.size.width, height: geometry.size.height)
+                            .background(
+                                LinearGradient(gradient: Gradient(colors: [color1,color2]), startPoint: .leading, endPoint: .trailing)
+                            )
+                            .foregroundColor(.clear)
                             
                     }
                     .cornerRadius(45.0)
@@ -37,7 +43,7 @@ struct MNLearnView: View {
                 intervals: countChangeInterval(beat: 8, musicalNote: self.musicalNotes[progressIndex]))
             
         }
-        .navigationTitle("Half Note")
+        .navigationTitle("Musical Note")
             .navigationBarTitleDisplayMode(.inline)
     }
     

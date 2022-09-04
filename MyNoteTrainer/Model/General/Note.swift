@@ -148,14 +148,17 @@ struct NoteType {
     var beat: Beat
     var isRest: Bool = false
     
-    static let fullNote = NoteType(name: "Full", image: "wholeNote", beat: .full)
-    static let halfNote = NoteType(name: "Half", image: "halfNote", beat: .half)
-    static let quarterNote = NoteType(name: "Quarter", image: "quarterNote", beat: .quarter)
-    static let eighthNote = NoteType(name: "Eighth", image: "eightNote", beat: .eighth)
-    static let fullRest = NoteType(name: "FullRest", image: "fullRest", beat: .full, isRest: true)
-    static let halfRest = NoteType(name: "HalfRest", image: "halfRest", beat: .half, isRest: true)
-    static let quarterRest = NoteType(name: "QuarterRest", image: "quarterRest", beat: .quarter, isRest: true)
-    static let eighthRest = NoteType(name: "EightRest", image: "eighthRest", beat: .eighth, isRest: true)
+    static let fullNote = NoteType(name: "Whole Note", image: "wholeNote", beat: .full)
+    static let halfNote = NoteType(name: "Half Note", image: "halfNote", beat: .half)
+    static let quarterNote = NoteType(name: "Quarter Note", image: "quarterNote", beat: .quarter)
+    static let eighthNote = NoteType(name: "Eighth Note", image: "eightNote", beat: .eighth)
+    static let fullRest = NoteType(name: "Full Rest", image: "fullRest", beat: .full, isRest: true)
+    static let halfRest = NoteType(name: "Half Rest", image: "halfRest", beat: .half, isRest: true)
+    static let quarterRest = NoteType(name: "Quarter Rest", image: "quarterRest", beat: .quarter, isRest: true)
+    static let eighthRest = NoteType(name: "Eight Rest", image: "eighthRest", beat: .eighth, isRest: true)
+    static let wholeNote = NoteType(name: "Whole Note", image: "wholeNote", beat: .full)
+    static let wholeRest = NoteType(name: "Whole Rest", image: "wholeRest", beat: .full, isRest: true)
+    static let halffRest = NoteType(name: "Half Rest", image: "halffRest", beat: .half, isRest: true)
 }
 
 

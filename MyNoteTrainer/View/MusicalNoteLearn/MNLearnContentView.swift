@@ -22,7 +22,41 @@ struct MNLearnContentView: View {
     
     
     var body: some View {
-        VStack {
+        VStack(spacing: 50) {
+            VStack(spacing: 20) {
+                
+                Image(musicalNote[currentNoteIndex].image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 250, height: 250)
+            .cornerRadius(15)
+                
+                Text("\(musicalNote[currentNoteIndex].name)")
+                    .font(.system(size: 35, weight: .bold))
+                
+            }
+            
+            ZStack {
+                HStack(spacing:0){
+                    ForEach((1...8), id: \.self) {_ in
+                        Rectangle()
+                            .fill(.white)
+                            .frame(width: 45, height: 100)
+                            .border(.gray, width: 1)
+                    }
+                }
+                HStack(spacing:0) {
+                    ForEach(rectColor, id:\.self) { i in
+                        Rectangle()
+                            .fill(i)
+                            .frame(width: 45, height: 100)
+                            .border(.gray, width: 1)
+                    }
+    
+                }.frame(width: 360, height: 100, alignment: .leading)
+                
+            }
+            
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
                 
@@ -47,24 +81,9 @@ struct MNLearnContentView: View {
     //                        self.player.currentTime = Double(percent) * self.player.duration
                         }))
                 }
-                .padding(.top)
-            }
-            Text("\(currentNoteIndex) \(currentIntervalIndex)")
-            Image(musicalNote[currentNoteIndex].image)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 250, height: 250)
-            .cornerRadius(15)
-            
-            HStack {
-                ForEach(rectColor, id:\.self) { i in
-                    Rectangle().fill(i).frame(width: 45, height: 100)
-                }
                 
             }
-            
             HStack{
-                
                 Button(action: {
                     self.rectColor = []
                     self.currentNoteIndex = 0
@@ -86,6 +105,7 @@ struct MNLearnContentView: View {
                     Image("next").font(.title)
                 }
             }
+            
         }
         
         .onChange(of: progressIndex, perform: { i in
