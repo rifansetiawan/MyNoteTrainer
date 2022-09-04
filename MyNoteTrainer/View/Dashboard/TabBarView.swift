@@ -38,7 +38,7 @@ struct TabBarFixedNew: View {
                     .tag(3)
             }
             
-            .accentColor(Color(#colorLiteral(red: 0.3679022491, green: 0.761993885, blue: 0.884503603, alpha: 1)))
+            .accentColor(Color.primaryColor)
             // global, for all child views
             
             .navigationBarTitle(Text(navigationBarTitle), displayMode: .large)
