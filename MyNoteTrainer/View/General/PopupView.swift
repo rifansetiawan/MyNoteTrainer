@@ -59,6 +59,7 @@ struct PopupViewModifier: ViewModifier {
                                 Spacer()
                                 
                             }
+                            
                         }
                         
                     }
@@ -74,7 +75,6 @@ struct PopupViewModifier: ViewModifier {
                     .cornerRadius(22, corners: [.topLeft, .topRight])
                     .frame(width: UIScreen.main.bounds.width, height: 0, alignment: .bottom)
                     .offset(y: y)
-                    
                         
                         
 //                }.frame(minWidth: UIScreen.main.bounds.width, alignment: .bottom)
@@ -83,12 +83,14 @@ struct PopupViewModifier: ViewModifier {
             }
             .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height)
             
+            
         }.ignoresSafeArea().zIndex(1)
             .onAppear{
                 withAnimation(.linear(duration: 0.2).delay(0.15)){
                     y = 0
                 }
             }
+            
     }
     
     func onTap() {

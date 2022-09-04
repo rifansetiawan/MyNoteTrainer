@@ -207,8 +207,8 @@
 		CBE98EF728AE414300FF8EA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB8A6B8B28B5ECDE00FABB52 /* MusicalNoteQuizView */,
 				CBE98F2028AEA11700FF8EA8 /* General */,
+				CB8A6B8B28B5ECDE00FABB52 /* MusicalNoteQuizView */,
 				CBE98F0228AE420800FF8EA8 /* Onboarding */,
 				CBE98F0128AE41EB00FF8EA8 /* Settings */,
 				CBE98F0028AE41DF00FF8EA8 /* Practice */,

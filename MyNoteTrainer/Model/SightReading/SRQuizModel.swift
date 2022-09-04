@@ -19,7 +19,8 @@ struct SRQuizModel {
     static let quizes: [SRQuizModel] = [
         SRQuizModel(id: 1, title: "Twinkle twinkle", image: "Twinkle Twinkle", song: SRSongs.twinkle, scale: .CMaj, bpmOptions: [60, 120, 150]),
         SRQuizModel(id: 2, title: "Jingle Bells", image: "Jingle Bells", song: SRSongs.twinkle, scale: .CMaj, bpmOptions: [60, 120, 150]),
-        SRQuizModel(id: 3, title: "Symphony", image: "Symphony", song: SRSongs.twinkle, scale: .CMaj, bpmOptions: [60, 120, 150])
+        SRQuizModel(id: 3, title: "Symphony", image: "Symphony", song: SRSongs.twinkle, scale: .CMaj, bpmOptions: [60, 120, 150]),
+        SRQuizModel(id: 4, title: "菊花台(Ju Hua Tai)", image: "Jingle Bells", song: SRSongs.jaychou, scale: .CMaj, bpmOptions: [60, 120, 150])
     ]
 
 }
