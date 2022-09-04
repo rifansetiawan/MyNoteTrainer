@@ -18,7 +18,7 @@ struct DashboardView: View {
                 VStack(spacing: 15){
                     
                         
-                    NavigationLink(destination: MusicalNoteLearnView()) {
+                    NavigationLink(destination: MNLearnView()) {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 345, height: 105)

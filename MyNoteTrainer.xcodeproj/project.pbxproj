@@ -19,6 +19,8 @@
 		0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */; };
 		0A8A4BBB28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */; };
 		0A8A4BC328B665A300AB5925 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */; };
+		0AF078DC28C42A9E0056AF25 /* MNLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF078DB28C42A9E0056AF25 /* MNLearnView.swift */; };
+		0AF078DE28C42F550056AF25 /* MNLearnContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF078DD28C42F550056AF25 /* MNLearnContentView.swift */; };
 		BB25D56B28B6737B00AB9804 /* ClefQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25D56828B6737B00AB9804 /* ClefQuizView.swift */; };
 		BB6F315228C3440B00B9C44F /* quarter-not-fix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB6F314F28C3440B00B9C44F /* quarter-not-fix.mp3 */; };
 		BB6F315328C3440B00B9C44F /* eight-not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB6F315028C3440B00B9C44F /* eight-not.mp3 */; };
@@ -87,6 +89,8 @@
 		0A8A4BB828B60BC500AB5925 /* CoachmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachmarkManager.swift; sourceTree = "<group>"; };
 		0A8A4BBA28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalNoteQuizPlayerManager.swift; sourceTree = "<group>"; };
 		0A8A4BC228B665A300AB5925 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0AF078DB28C42A9E0056AF25 /* MNLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNLearnView.swift; sourceTree = "<group>"; };
+		0AF078DD28C42F550056AF25 /* MNLearnContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNLearnContentView.swift; sourceTree = "<group>"; };
 		BB25D56828B6737B00AB9804 /* ClefQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView.swift; sourceTree = "<group>"; };
 		BB6F314F28C3440B00B9C44F /* quarter-not-fix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "quarter-not-fix.mp3"; sourceTree = "<group>"; };
 		BB6F315028C3440B00B9C44F /* eight-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "eight-not.mp3"; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				CB8A6B8728B5A88300FABB52 /* MusicalNoteLearnView.swift */,
+				0AF078DB28C42A9E0056AF25 /* MNLearnView.swift */,
+				0AF078DD28C42F550056AF25 /* MNLearnContentView.swift */,
 			);
 			path = MusicalNoteLearn;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				CB3CEF5B28B0D6A800A2D8F0 /* PianoKeyView.swift in Sources */,
 				0A8A4BB728B60BB000AB5925 /* CoachmarkView.swift in Sources */,
 				CB8A6B8A28B5D2C700FABB52 /* MusicalNoteQuizModel.swift in Sources */,
+				0AF078DC28C42A9E0056AF25 /* MNLearnView.swift in Sources */,
 				0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
@@ -590,6 +597,7 @@
 				CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */,
 				CB3CEF9128B125A400A2D8F0 /* PianoView2.swift in Sources */,
 				CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */,
+				0AF078DE28C42F550056AF25 /* MNLearnContentView.swift in Sources */,
 				CBE98F1728AE55B100FF8EA8 /* LearnView.swift in Sources */,
 				CBE98F1928AE8E7600FF8EA8 /* PracticeView.swift in Sources */,
 				CBE98F2228AEA13C00FF8EA8 /* PopupView.swift in Sources */,
