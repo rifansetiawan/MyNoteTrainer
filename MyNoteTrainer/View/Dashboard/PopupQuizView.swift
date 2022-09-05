@@ -39,7 +39,7 @@ struct PopupQuizView: View {
                 .padding()
             })
             
-            NavigationLink(destination: ClefQuizView(), label:{
+            NavigationLink(destination: ClefQuizViewParent(), label:{
                 HStack{
                     Image("Popup2")
                     
