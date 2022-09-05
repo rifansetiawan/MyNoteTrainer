@@ -33,6 +33,8 @@
 		C840366F28B678C9004DE6ED /* ClefAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C840366C28B678C9004DE6ED /* ClefAudioPlayer.swift */; };
 		C840367028B678C9004DE6ED /* ClefLearnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C840366D28B678C9004DE6ED /* ClefLearnScreen.swift */; };
 		CB37B44F28C496CF00C19F19 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB37B44E28C496CF00C19F19 /* ProgressBarView.swift */; };
+		CB37B45128C620D100C19F19 /* ClefQuizView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB37B45028C620D100C19F19 /* ClefQuizView2.swift */; };
+		CB37B45328C620EC00C19F19 /* ClefQuizView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB37B45228C620EC00C19F19 /* ClefQuizView3.swift */; };
 		CB3CEF4F28AF351B00A2D8F0 /* SightReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */; };
 		CB3CEF5128AF3DED00A2D8F0 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */; };
 		CB3CEF5328B0D55300A2D8F0 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */; };
@@ -105,6 +107,8 @@
 		C840366C28B678C9004DE6ED /* ClefAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefAudioPlayer.swift; sourceTree = "<group>"; };
 		C840366D28B678C9004DE6ED /* ClefLearnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefLearnScreen.swift; sourceTree = "<group>"; };
 		CB37B44E28C496CF00C19F19 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		CB37B45028C620D100C19F19 /* ClefQuizView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView2.swift; sourceTree = "<group>"; };
+		CB37B45228C620EC00C19F19 /* ClefQuizView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClefQuizView3.swift; sourceTree = "<group>"; };
 		CB3CEF4E28AF351B00A2D8F0 /* SightReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReadingView.swift; sourceTree = "<group>"; };
 		CB3CEF5028AF3DED00A2D8F0 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		CB3CEF5228B0D55300A2D8F0 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				BB25D56828B6737B00AB9804 /* ClefQuizView.swift */,
+				CB37B45028C620D100C19F19 /* ClefQuizView2.swift */,
+				CB37B45228C620EC00C19F19 /* ClefQuizView3.swift */,
 			);
 			path = ClefQuiz;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				0A8A4BB928B60BC500AB5925 /* CoachmarkManager.swift in Sources */,
 				CB8C195428B13F9900A1AD67 /* Note.swift in Sources */,
 				CBE98F2928AEA33900FF8EA8 /* RoundedCorner.swift in Sources */,
+				CB37B45128C620D100C19F19 /* ClefQuizView2.swift in Sources */,
 				BB25D56B28B6737B00AB9804 /* ClefQuizView.swift in Sources */,
 				CBE98F1F28AE9BD500FF8EA8 /* PopupQuizView.swift in Sources */,
 				C840366E28B678C9004DE6ED /* ClefViewModel.swift in Sources */,
@@ -615,6 +622,7 @@
 				C840367028B678C9004DE6ED /* ClefLearnScreen.swift in Sources */,
 				BBC593B228A64A6800DEEF74 /* ContentView.swift in Sources */,
 				CBE98F1B28AE8E9600FF8EA8 /* SettingView.swift in Sources */,
+				CB37B45328C620EC00C19F19 /* ClefQuizView3.swift in Sources */,
 				C840366F28B678C9004DE6ED /* ClefAudioPlayer.swift in Sources */,
 				0A8A4BBB28B61AD100AB5925 /* MusicalNoteQuizPlayerManager.swift in Sources */,
 				CBE98F2628AEA2AC00FF8EA8 /* View+Ext.swift in Sources */,

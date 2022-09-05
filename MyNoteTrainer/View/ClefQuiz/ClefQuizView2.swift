@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ClefQuizView: View {
+struct ClefQuizView2: View {
     // stroke line width, dash
     let w: CGFloat   = 2
     let d: [CGFloat] = [5,2]
@@ -34,7 +34,7 @@ struct ClefQuizView: View {
                     .font(.system(size: 22, weight: .semibold))
                     .foregroundColor(Color.primaryColor)
                 
-                Text("E Note")
+                Text("F Note")
                     .font(.system(size: 36, weight: .semibold))
                 
             }.padding(.top, 50)
@@ -74,7 +74,7 @@ struct ClefQuizView: View {
             
             Button(action:
                     {
-                if location.y <= -42 && location.y >= -48 {
+                if location.y <= -52 && location.y >= -57 {
                     isShowSuccessPopUp = true
                 }
                 else {
@@ -148,27 +148,10 @@ struct ClefQuizView: View {
     }
 }
 
-struct ClefQuizView_Previews: PreviewProvider {
+struct ClefQuizView2_Previews: PreviewProvider {
     static var previews: some View {
-        ClefQuizView()
-    }
-}
-extension Shape {
-    /// fills and strokes a shape
-    public func fill<S:ShapeStyle>(
-        _ fillContent: S,
-        stroke       : StrokeStyle
-    ) -> some View {
-        ZStack {
-            self.fill(fillContent)
-            self.stroke(style:stroke)
-        }
+        ClefQuizView2()
     }
 }
 
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
-}
+
