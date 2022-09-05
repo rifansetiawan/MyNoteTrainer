@@ -24,6 +24,7 @@ struct ClefQuizView: View {
     @State var isShowTutorial: Bool = true
     @State var quizIndex: Int = 0
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Binding var index: Int 
     
     
     var body: some View {
@@ -92,7 +93,9 @@ struct ClefQuizView: View {
                     )
             })
             if(isShowSuccessPopUp) {
-                PopUpCorrectQuizView(onPressPrimary: { }, onPressSecondary: {
+                PopUpCorrectQuizView(onPressPrimary: {
+                    index = 1
+                }, onPressSecondary: {
                     presentationMode.wrappedValue.dismiss()
                 })
                 .myCustomPopUp()
@@ -117,7 +120,7 @@ struct ClefQuizView: View {
             isShowPopup = true
         }
         if(isShowSuccessPopUp) {
-            PopUpCorrectQuizView(onPressPrimary: { }, onPressSecondary: {
+            PopUpCorrectQuizView(onPressPrimary: { index = 1 }, onPressSecondary: {
                 presentationMode.wrappedValue.dismiss()
             })
             .myCustomPopUp()
@@ -150,7 +153,7 @@ struct ClefQuizView: View {
 
 struct ClefQuizView_Previews: PreviewProvider {
     static var previews: some View {
-        ClefQuizView()
+        ClefQuizView(index: .constant(1))
     }
 }
 extension Shape {
