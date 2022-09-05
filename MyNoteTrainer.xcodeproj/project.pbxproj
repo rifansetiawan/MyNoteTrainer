@@ -98,7 +98,7 @@
 		BB6F314F28C3440B00B9C44F /* quarter-not-fix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "quarter-not-fix.mp3"; sourceTree = "<group>"; };
 		BB6F315028C3440B00B9C44F /* eight-not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "eight-not.mp3"; sourceTree = "<group>"; };
 		BB6F315128C3440B00B9C44F /* whole-not-fix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whole-not-fix.mp3"; sourceTree = "<group>"; };
-		BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC593AC28A64A6800DEEF74 /* MusicalNoteTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicalNoteTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC593AF28A64A6800DEEF74 /* MyNoteTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTrainerApp.swift; sourceTree = "<group>"; };
 		BBC593B128A64A6800DEEF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC593B328A64A6B00DEEF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		BBC593AD28A64A6800DEEF74 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */,
+				BBC593AC28A64A6800DEEF74 /* MusicalNoteTrainer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				CB3CEF9328B125E600A2D8F0 /* SoundpipeAudioKit */,
 			);
 			productName = MyNoteTrainer;
-			productReference = BBC593AC28A64A6800DEEF74 /* MyNoteTrainer.app */;
+			productReference = BBC593AC28A64A6800DEEF74 /* MusicalNoteTrainer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -786,11 +786,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quint.mynotetrainer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quint.musicnotetrainer;
+				PRODUCT_NAME = MusicalNoteTrainer;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -817,11 +817,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quint.mynotetrainer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quint.musicnotetrainer;
+				PRODUCT_NAME = MusicalNoteTrainer;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
