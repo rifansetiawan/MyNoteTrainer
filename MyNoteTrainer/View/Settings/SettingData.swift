@@ -99,7 +99,7 @@ struct AboutUsView: View {
                         Text("What does this mean to us? ")
                             .font(.headline)
                             .bold()
-                        Text("It would mean the world to us - literally. As indie developers working on Note Trainer as a side project, the feedback from our users is precious. So we will really appreciate your 15 seconds and will be more than happy to finish our day reading your reviews.")
+                        Text("It would mean the world to us - literally. As indie developers working on Musical Note Trainer as a side project, the feedback from our users is precious. So we will really appreciate your 15 seconds and will be more than happy to finish our day reading your reviews.")
                             .font(.subheadline)
                     }
                     .padding([.leading, .trailing],30)
@@ -199,9 +199,9 @@ struct PrivacyPolicyView: View {
                             .bold()
                             .padding(.bottom, -5)
                         Text("""
-    Note Trainer app does not collect any personal data. All counters’ information that you input into the Note Trainer app remains privately stored on your device.
+    Musical Note Trainer app does not collect any personal data. All counters’ information that you input into the Musical Note Trainer app remains privately stored on your device.
 
-    We take your privacy very seriously. Note Trainer app always want make better development decisions and choose where to focus development effort. Note Trainer app does not share, sell or rent your data, and the anonymous information is only collected to help make the app better.
+    We take your privacy very seriously. Musical Note Trainer app always want make better development decisions and choose where to focus development effort. Musical Note Trainer app does not share, sell or rent your data, and the anonymous information is only collected to help make the app better.
     """)
                      .padding(.bottom)
                         
@@ -209,7 +209,7 @@ struct PrivacyPolicyView: View {
                             .bold()
                             .padding(.bottom, -5)
                         Text("""
-    By using Note Trainer app, you consent to this privacy policy. Changes to this Privacy Policy We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. These changes are effective immediately after they are posted on this page. Contact Us If you have any questions or suggestions, you can contact us at contact [at] notetrainer [dot] com If you contact us through this email, we will see your name and email address. Your information is only to assist us in providing customer support to you and won’t be added to a mailing list or sold to a third-party company. If you wish, you may email us to remove your name and email address from our inbox.
+    By using Musical Note Trainer app, you consent to this privacy policy. Changes to this Privacy Policy We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. These changes are effective immediately after they are posted on this page. Contact Us If you have any questions or suggestions, you can contact us at contact [at] notetrainer [dot] com If you contact us through this email, we will see your name and email address. Your information is only to assist us in providing customer support to you and won’t be added to a mailing list or sold to a third-party company. If you wish, you may email us to remove your name and email address from our inbox.
     """)
                      .padding(.bottom)
                     
@@ -217,7 +217,7 @@ struct PrivacyPolicyView: View {
                             .bold()
                             .padding(.bottom, -5)
                         Text("""
-    By using Note Trainer app, you consent to this privacy policy.
+    By using Musical Note Trainer app, you consent to this privacy policy.
     """)
                      .padding(.bottom)
                         

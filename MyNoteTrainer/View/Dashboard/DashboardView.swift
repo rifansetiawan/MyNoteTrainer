@@ -142,10 +142,10 @@ struct DashboardView: View {
                                 
                                 Image("Quiz")
                                 
-                                Text("Quiz")
-                                    .font(.system(size: 24, weight: .bold))
-                                    .foregroundColor(Color.white)
-                                    .shadow(color: .black, radius: 3)
+//                                Text("Quiz")
+//                                    .font(.system(size: 24, weight: .bold))
+//                                    .foregroundColor(Color.white)
+//                                    .shadow(color: .black, radius: 3)
                             }
                         })
                     }
