@@ -58,6 +58,9 @@ struct ClefQuizView3: View {
                 
                 HStack(spacing: 1){
                     Image("kunciG")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150)
                     Spacer()
                 }
 
@@ -75,7 +78,7 @@ struct ClefQuizView3: View {
             
             Button(action:
                     {
-                if location.y <= -67 && location.y >= -75 {
+                if location.y <= -78 && location.y >= -85 {
                     isShowSuccessPopUp = true
                 }
                 else {

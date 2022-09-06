@@ -85,17 +85,34 @@ struct MNLearnContentView: View {
             }
             HStack{
                 Button(action: {
-                    self.rectColor = []
-                    self.currentNoteIndex = 0
-                    self.currentIntervalIndex = 0
-                    self.vm.play()
+                    
+                    withAnimation(.easeInOut(duration: 0.5)){
+                        if self.progressIndex > 0{
+                            self.progressIndex -= 1
+                        }
+                        
+                    }
+
+                }) {
+            
+                    Image("back").font(.title)
+                    
+                }
+                .disabled(self.progressIndex == 0)
+                
+                Button(action: {
+                        self.rectColor = []
+                        self.currentNoteIndex = 0
+                        self.currentIntervalIndex = 0
+                        self.vm.play()
+                    
                     
                     
                 }) {
             
-                    Image(self.vm.isPlaying ? "pause" : "play").font(.title)
+                    Image("play").font(.title)
                     
-                }
+                }.disabled(self.vm.isPlaying)
                 
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)){
@@ -104,8 +121,12 @@ struct MNLearnContentView: View {
                 }) {
                     Image("next").font(.title)
                 }
+                .disabled(self.progressIndex == 2)
             }
             
+        }
+        .onDisappear{
+            self.vm.stop()
         }
         
         .onChange(of: progressIndex, perform: { i in

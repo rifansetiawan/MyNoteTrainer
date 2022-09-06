@@ -61,6 +61,7 @@ class MusicalNoteQuizPlayerManager: NSObject, ObservableObject, AVAudioPlayerDel
     
     func pause() {
         audioPlayer?.pause()
+        isPlaying = false
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {

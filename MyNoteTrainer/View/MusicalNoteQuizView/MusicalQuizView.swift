@@ -37,7 +37,9 @@ struct MusicalQuizView: View {
                             vm: MusicalNoteQuizPlayerManager(fileName: quizes[quizIndex].song, ext: "mp3"))
                         
                     }
+                    
                 }
+                
                 if(isShowTutorial) {
                     MusicalNoteQuizTutorial()
                 }
@@ -192,6 +194,10 @@ struct NoteQuiz: View {
                 }
             }
             .padding()
+        }
+        .onDisappear{
+            print("apaaja")
+            self.vm.stop()
         }
         .onChange(of: quiz.id, perform: { i in
             answerList.removeAll()

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MNLearnView: View {
-    var musicalNotes : [[NoteType]] = [[.wholeNote, .wholeRest], [.halfNote, .halffRest], [.quarterNote, .quarterRest], [.eighthNote, .eighthRest]]
+    var musicalNotes : [[NoteType]] = [[.wholeNote, .wholeRest], [.halfNote, .halffRest], [.quarterNote, .quarterRest]]
     var songs : [String] = ["whole-not-fix", "half-not-learn-musical", "quarter-not-fix", "eight-not"]
     @State var progressIndex : Int = 0
-    @State var percent: CGFloat = 95
+    @State var percent: CGFloat = 130
     var color1 = Color.primaryColor
     var color2 = Color.purple
 
